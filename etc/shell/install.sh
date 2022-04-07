@@ -27,5 +27,3 @@ sed -i s/-MYSQL_DATABASE-/$MYSQL_DATABASE/g ../../web/app/Config/Database.php
 
 docker-compose up -d --build
 docker exec -it $PROJECT-PHP service cron start
-# docker exec -it $PROJECT-PHP echo "$(hostname -i)\t$(hostname) $(hostname).localhost" >> /etc/hosts
-# docker exec -it $PROJECT-PHP service sendmail start
