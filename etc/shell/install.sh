@@ -9,6 +9,7 @@ cp -f ../../etc/shell/before.conf ../../etc/nginx/default.conf
 sed -i s/-DOMAIN-/$DOMAIN/g ../../etc/nginx/default.conf 
 
 # docker-compose
+sed -i s/-WEBPORT-/$WEBPORT/g ./docker-compose.yml
 sed -i s/-DOMAIN-/$DOMAIN/g ./docker-compose.yml
 sed -i s/-DBPORT-/$DBPORT/g ./docker-compose.yml
 sed -i s/-MYSQL_DATABASE-/$MYSQL_DATABASE/g ./docker-compose.yml
