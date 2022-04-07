@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<?=$meta??''?>
+
+	<title><?=$siteinfo['title']?></title>
+    <?=csrf_meta().PHP_EOL?>
+    <link href="//pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet"/>
+    <link href="/plugins/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai_sublime.css" rel="stylesheet">
+    <link href="/plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
+
+<!--- 부트스트랩 기본 예제 S --->
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <link href="/css/front.css?<?=date('YmdHis')?>" rel="stylesheet"/>
+
+	<script src="/plugins/jquery/jquery.min.js"></script>
+    <script src="<?=(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on')?'//ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js':'//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js'?>"></script>
+    <script src="/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="/plugins/validation/jquery.validate.min.js"></script>
+    <script src="/plugins/validation/additional-methods.min.js"></script>
+    <script src="/plugins/ckeditor/ckeditor.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" rel="stylesheet" type="text/css" />
+
+<!--- 부트스트랩 기본 예제 S --->
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--- 부트스트랩 기본 예제 E --->
+
+    <script src="/js/common.js?<?=date('YmdHis')?>"></script>
+    <script src="/js/front.js?<?=date('YmdHis')?>"></script>
+    <script src="/js/front-board.js?<?=date('YmdHis')?>"></script>
+
+<?=$script?>
+    
+    <link rel="shortcut icon" href="<?=$siteinfo['favicon']['path']?>">
+    <link rel="icon" href="<?=$siteinfo['favicon']['path']?>">
+<script>
+if( /MSIE \d|Trident.*rv:/.test(navigator.userAgent) ){
+    window.location.href = "microsoft-edge:" + window.location.href;
+    setTimeout(function(){
+        window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+    },1);
+}
+</script>
+</head>
+<body>
+<?=$widget::popups()?>
+    

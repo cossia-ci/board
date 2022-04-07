@@ -1,0 +1,137 @@
+<div class="head-title">
+	<h4>회원등록</h4>
+    <a href="/admin/member/member-regist" class="btn btn-add">등록</a>
+</div>
+
+<div class="content">
+    <div class="row">
+        <div class="col-12">
+            <form method="get" action="?" >
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="icon-search4"> 검색</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table-col">
+                        <colgroup>
+                            <col width="170px">
+                            <col>
+                            <col width="170px">
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>아이디</th>
+                            <td>
+                                <input name="key" type="hidden" value="id">
+                                <input name="keyword" type="text" value="<?=$_GET['keyword']??''?>">
+                            </td>
+                            <th>승인</th>
+                            <td>
+                                <input name="app[]" type="checkbox" value="y" id="app-y" <?=in_array('y', $_GET['app'])?'checked':''?>>
+                                <label for="app-y">승인</label>
+                                <input name="app[]" type="checkbox" value="n" id="app-n" <?=in_array('n', $_GET['app'])?'checked':''?>>
+                                <label for="app-n">미승인</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>기간검색</th>
+                            <td colspan="3">
+                                <input name="sDate" type="date" class="date" value="<?=$_GET['sDate']??''?>">
+                                ~
+                                <input name="eDate" type="date" class="date" value="<?=$_GET['eDate']??''?>">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card-footer text-center">
+                    <button type="submit" class="btn btn-find">검색</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header header-elements-inline">
+                    <h5 class="icon-paragraph-justify3"> 리스트</h5>
+                </div>
+                <div class="card-body">
+                    <div class="body-header header-elements-inline">
+                        <div class="header-total">
+                            검색 <span><?=isset($page)?number_format($page->getTotal()):0?></span>
+                            /
+                            전체 <span><?=isset($total)?number_format($total):0?></span>
+                        </div>
+                        <?=per_page($_GET['perPage'])?>
+                    </div>
+                    <table class="table-row">
+                        <colgroup>
+                            <col width="1%">
+                            <col width="60px">
+                            <col><col><col><col><col><col>
+                            <col width="150px">
+                            <col width="60px">
+                        </colgroup>
+                        <thead>
+                            <th>
+                                <input type="checkbox" id="all" class="js-all-click" data-target="anos[]">
+                                <label for="all"></label>
+                            </th>
+                            <th>승인</th>
+                            <th>등급</th>
+                            <th>아이디</th>
+                            <th>개인정보</th>
+                            <th>사업자정보</th>
+                            <th>부가정보</th>
+                            <th>관리자메모</th>
+                            <th>등록일</th>
+                            <th>수정</th>
+                        </thead>
+                        <tbody>
+                            <?php
+                            if( isset($data) && count($data) ) :
+                                foreach( $data as $row ) :
+                            ?>
+                            <tr>
+                                <td class="text-center">
+                                    <input type="checkbox" name="anos[]" id="ano-<?=$row['ano']?>" value="<?=$row['ano']?>" >
+                                    <label for="ano-<?=$row['ano']?>"></label>
+                                </td>
+                                <td class="text-center"><?=strtoupper($row['app'])?></td>
+                                <td class="text-center"><?=get_member_level($row['level'])?></td>
+                                <td class="text-center"><?=$row['id']?></td>
+                                <td class="text-center"><?=is_array($row['info'])?'있음':'없음'?></td>
+                                <td class="text-center"><?=is_array($row['biz'])?'있음':'없음'?></td>
+                                <td class="text-center"><?=is_array($row['etc'])?'있음':'없음'?></td>
+                                <td class="text-center"><?=$row['memo']?></td>
+                                <td class="text-center"><?=substr($row['regDt'], 0, 10)?></td>
+                                <td class="text-center">
+                                    <a href="/admin/member/member-regist?ano=<?=$row['ano']?>" class="btn btn-edit" >수정</a>
+                                </td>
+                            </tr>
+                            <?php
+                                endforeach;
+                            else :
+                            ?>
+                            <tr>
+                                <td colspan="10" class="text-center">검색결과가 없습니다.</td>
+                            </tr>
+                            <?php endif; ?>
+                        </tbody>
+                        <tfoot>
+                            <td colspan="10">
+                                <label class="label-checked"></label>
+                                <button type="button" class="btn btn-white btn-sm js-del-row" data-table="member">삭제</button>
+                            </td>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="card-footer text-right">
+                    <?=isset($page) ? $page->links() : '' ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

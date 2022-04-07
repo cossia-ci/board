@@ -1,0 +1,28 @@
+<div class="navbar navbar-expand-lg navbar-light">
+    <div class="text-center d-lg-none w-100">
+        <button type="button" class="navbar-toggler" data-toggle="collapse">
+            &copy; <a href="//cossia.kr">Cossia Board</a>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar-footer">
+        <span class="navbar-text">
+            &copy; <a href="//cossia.kr">Cossia Board</a>
+        </span>
+    </div>
+</div>
+</div>
+</div>
+
+<!--- !! 절대 지우지 마세요 !! --->
+<iframe name="ifrm" style="display: none"></iframe>
+<script>
+$(function(){
+    <?=session('error')?'alert( "'.session('error').'", "", "error" );':''?>
+    <?=session('success')?'alert( "'.session('success').'", "", "success" );':''?>
+    <?=session('info')?'alert( "'.session('info').'", "", "info" );':''?>
+})
+</script>
+<!--- !! 절대 지우지 마세요 !! --->
+
+</body>
+</html>

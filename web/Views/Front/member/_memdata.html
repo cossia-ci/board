@@ -1,0 +1,279 @@
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <colgroup>
+            <col width="170px">
+            <col>
+        </colgroup>
+        <tr>
+            <th><?=$cfg['id']=='email'?'이메일':'아이디'?> <span class="required"></span></th>
+            <td>
+                <?=isset($data['id'])?$data['id']:'<input name="id" type="text">'?>
+            </td>
+        </tr>
+        <tr>
+            <th>비밀번호 <span class="required"></span></th>
+            <td id="pw-td">
+                <?=isset($data['id'])?'<button type="button" class="btn btn-warning pw-change" >변경</button>':'<input name="password" type="password">'?>
+            </td>
+        </tr>
+        <!-- personal S -->
+        <?php if( $cfg['personal']['name'] != 'n' ) : ?>
+        <tr>
+            <th>이름 <?=$cfg['personal']['name']=='m'?'<span class="required"></span>':''?></th>
+            <td><input name="info[name]" value="<?=$data['info']['name']??''?>" type="text" ></td>
+        </tr>
+        <?php endif; if( isset($cfg['personal']['email'] )&&$cfg['personal']['email'] == 'm' ) : ?>
+        <tr>
+            <th>이메일 <?=$cfg['personal']['email']=='m'?'<span class="required"></span>':''?></th>
+            <td><input name="info[email]" value="<?=$data['info']['email']??''?>" type="email"></td>
+        </tr>
+        <?php endif; if( $cfg['personal']['nick'] != 'n' ) : ?>
+        <tr>
+            <th>닉네임 <?=$cfg['personal']['nick']=='m'?'<span class="required"></span>':''?></th>
+            <td><input name="info[nick]" value="<?=$data['info']['nick']??''?>" type="text"></td>
+        </tr>
+        <?php endif; if( $cfg['personal']['tel'] != 'n' ) : ?>
+        <tr>
+            <th>전화번호 <?=$cfg['personal']['tel']=='m'?'<span class="required"></span>':''?></th>
+            <td><input name="info[tel]" value="<?=$data['info']['tel']??''?>" type="text" class="phone"></td>
+        </tr>
+        <?php endif; if( $cfg['personal']['phone'] != 'n' ) : ?>
+        <tr>
+            <th>휴대폰 <?=$cfg['personal']['phone']=='m'?'<span class="required"></span>':''?></th>
+            <td><input name="info[phone]" value="<?=$data['info']['phone']??''?>" type="text" class="phone"></td>
+        </tr>
+        <?php endif; if( $cfg['personal']['add'] != 'n' ) : ?>
+        <tr>
+            <th>주소 <?=$cfg['personal']['add']=='m'?'<span class="required"></span>':''?></th>
+            <td>
+                <input name="info[add][post]" value="<?=$data['info']['add']['post']??''?>" type="text" placeholder="우편번호" style="width: 150px" id="post-input" onClick="set_post(this)" data-post="info[add][post]" data-add="info[add][addH]" data-focus="info[add][addT]" readonly>
+                <label for="post-input" class="btn btn-sm btn-white">우편번호검색</label><br>
+                <input name="info[add][addH]" value="<?=$data['info']['add']['addH']??''?>" type="text" placeholder="주소"  readonly>
+                <input name="info[add][addT]" value="<?=$data['info']['add']['addT']??''?>" type="text" placeholder="상세주소">
+
+                
+            </td>
+        </tr>
+        <?php endif; ?>
+        <!-- personal E -->
+
+
+        <?php if($cfg['biz']['use'] == 'y') : ?>
+        <!-- biz S -->
+        <?php if( $cfg['biz']['compNm'] != 'n' ) : ?>
+        <tr>
+            <th>회사명 <?=$cfg['biz']['compNm']=='m'?'<span class="required"></span>':''?></th>
+            <td><input name="biz[compNm]" value="<?=$data['biz']['compNm']??''?>" type="text"></td>
+        </tr>
+        <?php endif; if( $cfg['biz']['compNo'] != 'n' ) : ?>
+        <tr>
+            <th>사업자번호 <?=$cfg['biz']['compNo']=='m'?'<span class="required"></span>':''?></th>
+            <td><input name="biz[compNo]" value="<?=$data['biz']['compNo']??''?>" type="text" class="bizNo"></td>
+        </tr>
+        <?php endif; if( $cfg['biz']['ceoNm'] != 'n' ) : ?>
+        <tr>
+            <th>대표명 <?=$cfg['biz']['ceoNm']=='m'?'<span class="required"></span>':''?></th>
+            <td><input name="biz[ceoNm]" value="<?=$data['biz']['ceoNm']??''?>" type="text"></td>
+        </tr>
+        <?php endif; if( $cfg['biz']['service'] != 'n' ) : ?>
+        <tr>
+            <th>업태 <?=$cfg['biz']['service']=='m'?'<span class="required"></span>':''?></th>
+            <td><input name="biz[service]" value="<?=$data['biz']['service']??''?>" type="text"></td>
+        </tr>
+        <?php endif; if( $cfg['biz']['item'] != 'n' ) : ?>
+        <tr>
+            <th>종목 <?=$cfg['biz']['item']=='m'?'<span class="required"></span>':''?></th>
+            <td><input name="biz[item]" value="<?=$data['biz']['item']??''?>" type="text"></td>
+        </tr>
+        <?php endif; if( $cfg['biz']['tel'] != 'n' ) : ?>
+        <tr>
+            <th>사업장 전화번호 <?=$cfg['biz']['tel']=='m'?'<span class="required"></span>':''?></th>
+            <td><input name="biz[tel]" value="<?=$data['biz']['tel']??''?>" type="text" class="phone"></td>
+        </tr>
+        <?php endif; if( $cfg['biz']['file'] != 'n' ) : ?>
+        <tr>
+            <th>사업자등록증 <?=$cfg['biz']['file']=='m'?'<span class="required"></span>':''?></th>
+            <td>
+                <?php if( isset( $data['biz']['file']['path'] ) && $data['biz']['file']['path'] ) : ?>
+                <a href="<?=$data['biz']['file']['path']?>" target="_blank"><img src="<?=$data['biz']['file']['path']?>" style="height: 100px;"></a>
+                <?php endif; ?>
+                <input name="biz[file][name]" type="hidden" value="<?=$data['biz']['file']['name']??''?>">
+                <input name="biz[file][path]" type="hidden" value="<?=$data['biz']['file']['path']??''?>">
+                <input name="biz[file]" type="file">
+            </td>
+        </tr>
+        <?php endif; if( $cfg['biz']['add'] != 'n' ) : ?>
+        <tr>
+            <th>사업장 주소 <?=$cfg['biz']['add']=='m'?'<span class="required"></span>':''?></th>
+            <td>
+                <input name="biz[add][post]" value="<?=$data['biz']['add']['post']??''?>" type="text" placeholder="우편번호" style="width: 150px" id="post-input" onClick="set_post(this)" data-post="biz[add][post]" data-add="biz[add][addH]" data-focus="biz[add][addT]" readonly>
+                <label for="post-input" class="btn btn-sm btn-white">우편번호검색</label><br>
+                <input name="biz[add][addH]" value="<?=$data['biz']['add']['addH']??''?>" type="text" placeholder="주소"  readonly>
+                <input name="biz[add][addT]" value="<?=$data['biz']['add']['addT']??''?>" type="text" placeholder="상세주소">
+                
+            </td>
+        </tr>
+        <?php endif; ?>
+        <!-- biz E -->
+        <?php endif; ?>
+
+
+        <?php if($cfg['etc']['use'] == 'y') : ?>
+        <!-- etc S -->
+        <?php if( $cfg['etc']['birthday'] != 'n' ) : ?>
+        <tr>
+            <th>생년월일 <?=$cfg['etc']['birthday']=='m'?'<span class="required"></span>':''?></th>
+            <td><input name="etc[birthday]" value="<?=$data['etc']['birthday']??''?>" type="date"></td>
+        </tr>
+        <?php endif; if( $cfg['etc']['gender'] != 'n' ) : ?>
+        <tr>
+            <th>성별 <?=$cfg['etc']['gender']=='m'?'<span class="required"></span>':''?></th>
+            <td>
+                <input name="etc[gender]" type="radio" id="gender-m" value="m" checked>
+                <label for="gender-m">남성</label>
+                <input name="etc[gender]" type="radio" id="gender-f" value="f" <?=isset($data['etc']['gender'])&&$data['etc']['gender']=='f'?'checked':''?>>
+                <label for="gender-f">여성</label>
+            </td>
+        </tr>
+        <?php endif; if( $cfg['etc']['fax'] != 'n' ) : ?>
+        <tr>
+            <th>팩스번호 <?=$cfg['etc']['fax']=='m'?'<span class="required"></span>':''?></th>
+            <td><input name="etc[fax]" type="text" value="<?=$data['etc']['fax']??''?>" class="phone"></td>
+        </tr>
+        <?php endif; if( $cfg['etc']['marriage'] != 'n' ) : ?>
+        <tr>
+            <th>결혼여부 <?=$cfg['etc']['marriage']=='m'?'<span class="required"></span>':''?></th>
+            <td>
+                <input name="etc[marriage]" type="radio" id="marriage-n" value="n" checked>
+                <label for="marriage-n">미혼</label>
+                <input name="etc[marriage]" type="radio" id="marriage-y" value="y" <?=isset($data['etc']['marriage'])&&$data['etc']['marriage']=='y'?'checked':''?>>
+                <label for="marriage-y">기혼</label>
+            </td>
+        </tr>
+        <?php endif; if( $cfg['etc']['job'] != 'n' ) : ?>
+        <tr>
+            <th>직업 <?=$cfg['etc']['job']=='m'?'<span class="required"></span>':''?></th>
+            <td><input name="etc[job]" value="<?=$data['etc']['job']??''?>" type="text"></td>
+        </tr>
+        <?php endif; if( $cfg['etc']['interest'] != 'n' ) : ?>
+        <tr>
+            <th>관심분야 <?=$cfg['etc']['interest']=='m'?'<span class="required"></span>':''?></th>
+            <td><input name="etc[interest]" value="<?=$data['etc']['interest']??''?>" type="text"></td>
+        </tr>
+        <?php endif; ?>
+        <!-- etc E -->
+        <?php endif; ?>
+    </table>
+</div>
+
+<script>
+const pw_ch = `<input name="password" type="password">
+               <button type="button" class="btn btn-danger pw-cancel" >취소</button>`,
+pw_cs = `<button type="button" class="btn btn-warning pw-change" >변경</button>`;
+$(function(){
+    $(document).on('click', '.pw-change', function(){
+        $('#pw-td').html( pw_ch );
+    })
+    $(document).on('click', '.pw-cancel', function(){
+        $('#pw-td').html( pw_cs );
+    })
+})
+    $('#frm').validate({
+        rules: {
+            id: {
+                required: true,
+                <?=$cfg['id']=='email'?'email: true,':''?>
+                remote: {
+                    headers : {'X-CSRF-TOKEN': $('meta[name="X-CSRF-TOKEN"]').attr('content')},
+                    url: '/overlap-custom',
+                    type: 'post',
+                    dataType: 'json',
+                    data:{
+                        table:'member',
+                        filde: 'id',
+                        id: function(){ return $('input[name="id"]').val(); }
+                    }
+                }
+            },
+            password: {required: true, pwCheck: true},
+            passwordck: { required: true, equalTo: '#password' },
+            checkbox: { required: true, minlength: 1 },
+            <?=($cfg['personal']['name'] == 'm') ? '\'info[name]\' : {required: true},':''?>
+            <?=($cfg['personal']['nick'] == 'm') ? '\'info[nick]\' : {required: true},':''?>
+            <?=($cfg['personal']['add'] == 'm') ? '\'info[add][addH]\' : {required: true},':''?>
+            'info[email]' : {
+                <?=isset($cfg['personal']['email'])&&($cfg['personal']['email'] == 'm') ? 'required: true,':''?>
+                email: true	 
+            },
+            'info[phone]' : {
+                <?=($cfg['personal']['phone'] == 'm') ? 'required: true,':''?>
+                minlength: 12,
+                maxlength: 13
+            },
+            'info[tel]' : {
+                <?=($cfg['personal']['tel'] == 'm') ? 'required: true,':''?>
+                minlength: 11,
+                maxlength: 13
+            },
+            <?=($cfg['biz']['compNm'] == 'm') ? '\'biz[compNm]\' : {required: true},':''?>
+            <?=($cfg['biz']['ceoNm'] == 'm') ? '\'biz[ceoNm]\' : {required: true},':''?>
+            <?=($cfg['biz']['service'] == 'm') ? '\'biz[service]\' : {required: true},':''?>
+            <?=($cfg['biz']['item'] == 'm') ? '\'biz[item]\' : {required: true},':''?>
+            <?=($cfg['biz']['add'] == 'm') ? '\'biz[add][addH]\' : {required: true},':''?>
+            'biz[file]' : {
+                <?=($cfg['biz']['file'] == 'm') ? 'required: true,':''?>
+                extension: 'jpg|jpeg|gif|png'
+            },
+            'biz[compNo]' : {
+                <?=($cfg['biz']['compNo'] == 'm') ? 'required: true,':''?>
+                minlength: 12,
+                maxlength: 12
+            },
+            'biz[tel]' : {
+                <?=($cfg['biz']['tel'] == 'm') ? 'required: true,':''?>
+                minlength: 11,
+                maxlength: 13
+            },
+            <?=($cfg['etc']['birthday'] == 'm') ? '\'etc[birthday]\' : {required: true},':''?>
+            <?=($cfg['etc']['job'] == 'm') ? '\'etc[job]\' : {required: true},':''?>
+            <?=($cfg['etc']['interest'] == 'm') ? '\'etc[interest]\' : {required: true},':''?>
+            'etc[fax]' : {
+                <?=($cfg['etc']['fax'] == 'm') ? 'required: true,':''?>
+                minlength: 11,
+                maxlength: 13
+            },
+        },
+        messages: {
+            checkbox: {
+                required: '약관동의는 필수 입니다.'
+            },
+            passwordck: {
+                equalTo: '비밀번호가 일치하지 않습니다.'
+            },
+            'personal[phone]' : {
+                minlength: '- 포함 12자리이상 입력하세요',
+                maxlength: '- 포함 13자를 넘을 수 없습니다.'
+            },
+            'personal[tel]' : {
+                minlength: '- 포함 11자리이상 입력하세요',
+                maxlength: '- 포함 13자를 넘을 수 없습니다.'
+            },
+            'biz[compNo]' : {
+                minlength: '- 포함 12자리이상 입력하세요',
+                maxlength: '- 포함 12자를 넘을 수 없습니다.'
+            },
+            'biz[tel]' : {
+                minlength: '- 포함 11자리이상 입력하세요',
+                maxlength: '- 포함 13자를 넘을 수 없습니다.'
+            },
+            'biz[file]' : {
+                extension: 'jpg, jpeg, gif, png 파일만 가능합니다.',
+            },
+                
+            'etc[fax]' : {
+                minlength: '- 포함 11자리이상 입력하세요',
+                maxlength: '- 포함 13자를 넘을 수 없습니다.'
+            },
+        }
+    });
+</script>

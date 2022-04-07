@@ -1,0 +1,120 @@
+<div class="head-title">
+	<h4>게시글관리</h4>
+    <button type="button" onclick="$('#frms').submit()" class="btn btn-save">저장</button>
+</div>
+
+<div class="content">
+    <form id="frms" action="/requst-post-board-normal" enctype="multipart/form-data" method="post" target="ifrm">
+        <input type="hidden" name="<?=csrf_token()?>" value="<?=csrf_hash()?>">
+        <input type="hidden" name="ano" value="<?=$data['ano']??''?>">
+        <input type="hidden" name="parent" value="<?=$_GET['parent']??''?>">
+        <input type="hidden" name="code" value="<?=$_GET['code']?>">
+        <?=isset($data['user_id'])?'<input type="hidden" name="user_id" value="'.$data['user_id'].'">'.PHP_EOL:''?>
+        <input type="hidden" name="admin_id" value="<?=session('manager.ano')?>">
+        <input type="hidden" name="ip" value="<?=$data['ip']??$_SERVER['REMOTE_ADDR']?>">
+        <input type="hidden" name="return" value="/admin/board/content-list?code=<?=$_GET['code']?>">
+        <input type="hidden" name="writer" value="관리자">
+        
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5><?=$cfg['name']?></h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table-col">
+                            <colgroup>
+                                <col width="170px">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th>제목</th>
+                                <td>
+                                    <input name="is_notice" type="checkbox" value="y" id="notice-y" <?=isset($data['is_notice'])&&$data['is_notice']=='y'?'checked':''?>>
+                                    <label for="notice-y">공지</label>
+        
+                                    <?php if( isset( $cfg['horse'] ) ) :?>
+                                    <select name="horse">
+                                        <?php
+                                        foreach( $cfg['horse'] as $row ) :
+                                            $selected = isset($data['horse']) && $data['horse'] == $row ? 'selected' : '';
+                                        ?>
+                                        <option value="<?=$row?>" <?=$selected?>><?=$row?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                    <?php endif; ?>
+                                    <input name="title" type="text" value="<?=esc($data['title']??'')?>">
+                                </td>
+                                <?php if( $cfg['type'] == 'gallery' || $cfg['type'] == 'event' ) : ?>
+                                <tr>
+                                    <th>썸네일</th>
+                                    <td>
+                                        <input name="thumbnail[name]" type="hidden" value="<?=$data['thumbnail']['name']??''?>">
+                                        <input name="thumbnail[path]" type="hidden" value="<?=$data['thumbnail']['path']??''?>">
+                                        <img src="<?=$data['thumbnail']['path']??''?>" style="max-width: 30px;" id="preview0">
+                                        <input type="file" id="file0" data-preview="preview0" name="thumbnail" class="hide" onchange="upload_file(this)" accept=".jpg,.jpeg,.png,.gif">
+                                        <label for="file0" type="button" class="btn-file"></label>
+                                    </td>
+                                </tr>
+                                    <?php if( $cfg['type'] == 'event' ) : ?>
+                                <tr>
+                                    <th>이벤트 기간</th>
+                                    <td>
+                                        <input name="sdate" type="date" value="<?=$data['sdate']??''?>"> ~
+                                        <input name="edate" type="date" value="<?=$data['edate']??''?>">
+                                    </td>
+                                </tr>
+                                    <?php endif; ?>
+                                <?php endif; ?>
+                                <?php if( $cfg['type'] == 'youtube' ) : ?>
+                                <tr>
+                                    <th>유튜브 주소</th>
+                                    <td>
+                                        <input name="youtube" type="text" value="<?=$data['youtube']??''?>">
+                                    </td>
+                                </tr>
+                                <?php endif; ?>
+                                <?php if( $cfg['file'] ) : ?>
+                                <tr>
+                                    <th>첨부파일</th>
+                                    <td>
+                                        <input type="file" id="file99" name="file" class="hide" onchange="upload_file(this)">
+                                        <label for="file99" type="button" class="btn-file"></label>
+                                        <?=isset($data['file']['name'])&&$data['file']['name']?'<a href="/file-down?from='.$data['file']['path'].'&&to='.$data['file']['name'].'" style="margin-left: 30px;" class="file-down">다운로드</a>':''?>
+                                        
+                                    </td>
+                                </tr>
+                                <?php endif; ?>
+                                <tr>
+                                    <th>내용</th>
+                                    <td>
+                                        <textarea name="content" id="editor"><?=$data['content']??$cfg['basic']?></textarea>
+                                    </td>
+                                </tr>
+                                
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+</div>
+
+<script>
+    CKEDITOR.replace('editor',editor_param).on('dialogDefinition',function(ev){editor_img_chek(ev)});
+    $('#frms').validate({
+        rules: {
+            title: {required: true},
+            thumbnail: {
+                required: function(){
+                    return !$('input[name="thumbnail[path]"]').val() && !$('input[name="thumbnail"]').val() ? true : false;
+                }
+            },
+            sdate: {required: true},
+            edate: {required: true},
+            youtube: {required: true},
+        }
+    });
+    </script>
+    

@@ -1,0 +1,59 @@
+<div class="head-title">
+	<h4>관리자 정보</h4>
+    <button type="button" onclick="$('#frm').submit()" class="btn btn-save">저장</button>
+</div>
+<div class="content">
+	<div class="row">
+		<div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="icon-search4"> 기본정보</h5>
+                </div>
+                <div class="card-body">
+                    <form id="frm" method="post" action="/requst-post-normal" target="ifrm">
+                    <input name="<?=csrf_token()?>" type="hidden" value="<?=csrf_hash()?>">
+                    <input name="ano" type="hidden" value="<?=$data['ano']?>">
+                    <input name="table" type="hidden" value="manager">
+                    <table class="table-col">
+                        <colgroup>
+                            <col width="170px">
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>비밀번호</th>
+                            <td id="pw-td">
+                                <button type="button" class="btn btn-sm btn-gray js-edit">수정</button>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>이름</th>
+                            <td><input name="info[name]" type="text" value="<?=$data['info']['name']?>"></td>
+                        </tr>
+                    </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+const edit = `<input name="password" type="password"><button type="button" class="btn btn-sm btn-red js-cancel">취소</button>`,
+      cancel = `<button type="button" class="btn btn-sm btn-gray js-edit">수정</button>`;
+$(function(){
+    $(document).on('click', '.js-edit', function(){
+        $('#pw-td').html( edit );
+    });
+    $(document).on('click', '.js-cancel', function(){
+        $('#pw-td').html( cancel );
+    });
+})
+
+
+$('#frm').validate({
+    rules: {
+        password: { required: true },
+        'info[name]': { required: true },
+    }
+});
+</script>

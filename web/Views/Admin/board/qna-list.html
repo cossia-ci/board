@@ -1,0 +1,110 @@
+<div class="content">
+    <div class="row">
+        <div class="col-12">
+            <form method="get" action="?" >
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="icon-search4"> 검색</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table-col">
+                        <colgroup>
+                            <col width="170px">
+                            <col>
+                            <col width="170px">
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>검색어</th>
+                            <td>
+                                <select name="key">
+                                    <option value="user_id" selected>작성자</option>
+                                    <option value="title" <?=isset($_GET['key'])&&$_GET['key']=='title'?'selected':''?>>제목</option>
+                                </select>
+                                <input name="keyword" type="text" value="<?=$_GET['keyword']??''?>">
+                            </td>
+                            <th>답변</th>
+                            <td>
+                                <input name="type[]" type="checkbox" value="y" id="type-y" <?=in_array('y', $_GET['type'])?'checked':''?>>
+                                <label for="type-y">답변완료</label>
+                                <input name="type[]" type="checkbox" value="n" id="type-n" <?=in_array('n', $_GET['type'])?'checked':''?>>
+                                <label for="type-n">답변미완료</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>기간검색</th>
+                            <td colspan="3">
+                                <input name="sDate" type="date" class="date" value="<?=$_GET['sDate']??''?>">
+                                ~
+                                <input name="eDate" type="date" class="date" value="<?=$_GET['eDate']??''?>">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card-footer text-center">
+                    <button type="submit" class="btn btn-find">검색</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header header-elements-inline">
+                    <h5 class="icon-paragraph-justify3"> 리스트</h5>
+                </div>
+                <div class="card-body">
+                    <div class="body-header header-elements-inline">
+                        <div class="header-total">
+                            검색 <span><?=isset($page)?number_format($page->getTotal()):0?></span>
+                            /
+                            전체 <span><?=isset($total)?number_format($total):0?></span>
+                        </div>
+                        <?=per_page($_GET['perPage'])?>
+                    </div>
+                    <table class="table-row">
+                        <colgroup>
+                            <col width="60px">
+                            <col >
+                            <col width="10%">
+                            <col width="130px">
+                        </colgroup>
+                        <thead>
+                            <th>답변</th>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>작성일</th>
+                        </thead>
+                        <tbody>
+                            <?php
+                            if( isset($data) && count($data) ) :
+                                foreach( $data as $row ) :
+                            ?>
+                            <tr>
+                                <td class="text-center">
+                                    <?=$row['admin_id']?'Y':'N'?>
+                                </td>
+                                <td><a href="/admin/board/qna-read?ano=<?=$row['ano']?>"><?=esc($row['title'])?></a></td>
+                                <td class="text-center"><?=esc($row['user_id'])?></td>
+                                <td class="text-center"><?=substr($row['regDt'], 0, 10)?></td>
+                            </tr>
+                            <?php
+                                endforeach;
+                            else :
+                            ?>
+                            <tr>
+                                <td class="text-center" colspan="4">검색결과가 없습니다.</td>
+                            </tr>
+                            <?php endif; ?>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer text-right">
+                    <?=isset($page) ? $page->links() : '' ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

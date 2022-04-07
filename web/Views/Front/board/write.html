@@ -1,0 +1,183 @@
+<div class="container">
+    <div class="page-header">
+      <h1><?=$menu->getNowPageTitle()?></h1>
+    </div>
+    
+    <form id="frm" method="post" action="/requst-post-board-normal" enctype="multipart/form-data" target="ifrm" class="form-inline">
+        <input name="<?=csrf_token()?>" type="hidden" value="<?=csrf_hash()?>">
+        <input name="ano" type="hidden" value="<?=$data['ano']??''?>">
+        <input name="parent" type="hidden" value="<?=$cfg['parent']??''?>">
+        <input name="user_id" type="hidden" value="<?=session('member.ano')??0?>">
+        <input name="ip" type="hidden" value="<?=$_SERVER['REMOTE_ADDR']?>">
+        <input name="sendmail" type="hidden" value="<?=$cfg['write']['sendmail']??''?>">
+        <input name="code" type="hidden" value="<?=$cfg['code']??''?>">
+        <input name="return" type="hidden" value="<?=$cfg['return']??''?>">
+        
+    <div class="">
+        <table class="table">
+            <colgroup>
+                <col width="170px">
+                <col>
+            </colgroup>
+            <tr>
+                <th>작성자명</th>
+                <td><input name="writer" type="text" value="<?=$data['writer']??session('member.info.name')?>" class="form-control" ></td>
+            </tr>
+
+            <?php if($cfg['secret'] != 'n') : # 비밀번호 S ?>
+            <tr>
+                <th> <label>비밀글 <input name="is_secret" type="checkbox" value="y"></label></th>
+                <td>
+                    <input name="pw" type="password" class="form-control" disabled>
+                </td>
+            </tr>
+            <?php endif;  # 비밀번호 E ?>
+
+            <?php if($cfg['type'] == 'gallery') : # 갤러리 S ?>
+            <tr>
+                <th>썸네일</th>
+                <td>
+                    <?php if(isset($data['thumbnail']['name'])&&$data['file']['name']) : ?>
+                    <?=isset($data['thumbnail']['path'])&&$data['thumbnail']['path']?'<img src="'.$data['thumbnail']['path'].'" style="height: 100px;">':''?>
+                    <input name="thumbnail[name]" type="hidden" value="<?=$data['thumbnail']['name']??''?>">
+                    <input name="thumbnail[path]" type="hidden" value="<?=$data['thumbnail']['path']??''?>">
+                    <?php endif; ?>
+                    <input name="thumbnail" type="thumbnail" class="form-control">
+                </td>
+            </tr>
+            <?php endif;  # 갤러리 E ?>
+
+            <?php if($cfg['type'] == 'event') : # 이벤트 S ?>
+            <tr>
+                <th>썸네일</th>
+                <td>
+                    <?php if(isset($data['thumbnail']['name'])&&$data['file']['name']) : ?>
+                    <?=isset($data['thumbnail']['path'])&&$data['thumbnail']['path']?'<img src="'.$data['thumbnail']['path'].'" style="height: 100px;">':''?>
+                    <input name="thumbnail[name]" type="hidden" value="<?=$data['thumbnail']['name']??''?>">
+                    <input name="thumbnail[path]" type="hidden" value="<?=$data['thumbnail']['path']??''?>">
+                    <?php endif; ?>
+                    <input name="thumbnail" type="thumbnail" class="form-control">
+                </td>
+            </tr>
+            <tr>
+                <th>시작일시</th>
+                <td>
+                    <input name="sdate" type="datetime" class="form-control" value="<?=$data['sdate']??''?>">
+                </td>
+            </tr>
+            <tr>
+                <th>종료일시</th>
+                <td>
+                    <input name="edate" type="datetime" class="form-control" value="<?=$data['edate']??''?>">
+                </td>
+            </tr>
+            <?php endif;  # 이벤트 E ?>
+
+            <?php if($cfg['type'] == 'youtube') : # 유튜브 S ?>
+            <tr>
+                <th>주소</th>
+                <td>
+                    <input name="youtube" type="url" class="form-control" value="<?=$data['youtube']??''?>">
+                </td>
+            </tr>
+            <?php endif;  # 유튜브 E ?>
+
+            <?php if($cfg['type'] == 'write') :    #쓰기전용 S ?>
+                <?php if($cfg['write']['email'] != 'n') : ?>
+                <tr>
+                    <th>이메일</th>
+                    <td><input name="etc[email]" type="email" class="form-control" value="<?=$data['etc']['email']??''?>"></td>
+                </tr>
+                <?php endif;    if($cfg['write']['tel'] != 'n') : ?>
+                <tr>
+                    <th>전화번호</th>
+                    <td><input name="etc[tel]" type="tel" class="form-control phone" value="<?=$data['etc']['tel']??''?>"></td>
+                </tr>
+                <?php endif;    if($cfg['write']['phone'] != 'n') : ?>
+                <tr>
+                    <th>휴대폰</th>
+                    <td><input name="etc[phone]" type="tel" class="form-control phone" value="<?=$data['etc']['phone']??''?>"></td>
+                </tr>
+                <?php endif; ?>
+            <?php endif;    #쓰기전용 E ?>
+
+            <tr>
+                <th>제목</th>
+                <td>
+                    <div class="form-group">
+                    <?php if( $cfg['horse'] ) : #말머리 S ?>
+                    <select name="horse" class="form-control">
+                        <?php
+                        foreach( $cfg['horse'] as $val ) :
+                            $selected = isset($data['horse']) && $data['horse'] == $val ? 'selected' : '';
+                        ?>
+                        <option value="<?=$val?>" <?=$selected?>><?=$val?></option>
+                        <?php endforeach; ?>
+                    </select>
+                    <?php endif; #말머리 E ?>
+
+                    <input name="title" type="text" value="<?=$data['title']??''?>" class="form-control" >
+                    </div>
+                </td>
+            </tr>
+            <?php if( $cfg['file'] ) : #첨부파일 S ?>
+            <tr>
+                <th>첨부파일</th>
+                <td>
+                    <?php if(isset($data['file']['name'])&&$data['file']['name']) : ?>
+                    <?=isset($data['file']['name'])&&$data['file']['name']?'<a href="/file-down?from='.$data['file']['path'].'&&to='.$data['file']['name'].'" class="file-down">다운로드</a>&nbsp;&nbsp;':''?>
+                    <input name="file[name]" type="hidden" value="<?=$data['file']['name']??''?>">
+                    <input name="file[path]" type="hidden" value="<?=$data['file']['path']??''?>">
+                    <?php endif; ?>
+
+                    <input name="file" type="file" class="form-control">
+                </td>
+            </tr>
+            <?php endif;  #첨부파일 E ?>
+            <tr>
+                <th>내용</th>
+                <td><textarea name="content" id="editor"><?=$data['content']??''?></textarea></td>
+            </tr>
+        </table>
+        <center>
+            <button type="submit" class="btn btn-primary" >저장</button>
+        </center>
+    </div>
+    </form>
+</div>
+<script>
+CKEDITOR.replace('editor',<?=$cfg['edtimg']?'editor_file':'editor'?>).on('dialogDefinition',function(ev){editor_img_chek(ev)});
+$('#frm').validate({
+    rules: {
+        writer: { required: true },
+        title: { required: true },
+        content: {
+			required: function(){
+                CKEDITOR.instances.editor.updateElement();
+			}
+		},
+        <?php if($cfg['type'] == 'write') :    #쓰기전용 S ?>
+            <?php if($cfg['write']['email'] == 'm') : ?>
+        'etc[email]': { required: true, email: true },
+            <?php endif;    if($cfg['write']['tel'] == 'm') : ?>
+        'etc[tel]': { required: true },
+            <?php endif;    if($cfg['write']['phone'] == 'm') : ?>
+        'etc[phone]': { required: true },
+            <?php endif; ?>
+        <?php endif;    #쓰기전용 E ?>
+        <?php if($cfg['secret'] == 'm') : ?>
+        pw: { required: true },
+        <?php else : ?>
+        pw: { required: function(){
+            return $('input[name="is_secret"]').is(':checked');
+        } },
+        <?php endif; ?>
+    }
+})
+$(function(){
+    $(document).on('click', 'input[name="is_secret"]', function(){
+        const bool = $(this).is(':checked') ? false : true;
+        $('input[name="pw"]').prop('disabled', bool);
+    });
+})
+</script>

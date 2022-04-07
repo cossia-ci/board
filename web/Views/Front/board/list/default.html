@@ -1,0 +1,65 @@
+<table class="table table-bordered">
+    <colgroup>
+        <col width="20px">
+        <col>
+        <col width="100px">
+        <col width="100px">
+        <col width="70px">
+    </colgroup>
+    <thead>
+        <th class="text-center">No</th>
+        <th class="text-center">제목</th>
+        <th class="text-center">작성일</th>
+        <th class="text-center">작성자</th>
+        <th class="text-center">조회수</th>
+    </thead>
+    <tbody>
+
+        <?php       #공지사항 S
+        if( isset( $notice ) && count( $notice ) ) :
+            foreach( $notice as $row ) :
+                $link = $row['pw'] ? '#.' : '/bdread/'.$cfg['code'].'/'.$row['ano'] ;
+        ?>
+        <tr>
+            <td><i class="fad fa-bullhorn"></i></td>
+            <td>
+                <a href="<?=$link?>"><?=esc($row['title'])?></a>
+            </td>
+            <td class="text-center"><?=substr($row['regDt'], 0, 10)?></td>
+            <td class="text-center"><?=$row['writer']?></td>
+            <td class="text-center"><?=number_format($row['hit'])?></td>
+        </tr>
+        <?php
+            endforeach;
+        endif;      #공지사항 E
+        ?>
+
+        <?php       #게시글 LIST S
+        if( isset($data) && count($data) ) :
+            foreach( $data as $row ) :
+                $link = $row['pw'] ? '#.secret' : '/bdread/'.$cfg['code'].'/'.$row['ano'];
+        ?>
+        <tr>
+            <td class="text-center"><?=$no--?></td>
+            <td>
+                <?=$row['parent']?'<i class="fad fa-arrow-alt-right" style="margin-left: '.$row['depth'].'0px;"></i>':''?>
+                <?=$row['pw']?'<i class="fad fa-lock-alt"></i>':''?>
+                <a href="<?=$link?>" data-ano="<?=$row['ano']?>" data-code="<?=$cfg['code']?>" >
+                <?=esc($row['title'])?></a>
+                <?=is_new($row['regDt'], $cfg['new'])?>
+                <?=is_hot($row['hit'], $cfg['hot'])?>
+            </td>
+            <td class="text-center"><?=substr($row['regDt'], 0, 10)?></td>
+            <td class="text-center"><?=$row['writer']?></td>
+            <td class="text-center"><?=number_format($row['hit'])?></td>
+        </tr>
+        <?php
+            endforeach;
+        else :      #게시글 없음
+        ?>
+        <tr>
+            <td colspan="5" class="text-center">검색결과가 없습니다.</td>
+        </tr>
+        <?php endif;      #게시글 LIST E ?>
+    </tbody>
+</table>

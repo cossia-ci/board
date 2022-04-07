@@ -1,0 +1,72 @@
+<div class="page-content">
+    <div class="sidebar sidebar-dark sidebar-main sidebar-expand-md">
+        <div class="sidebar-mobile-toggler text-center">
+            <a href="#" class="sidebar-mobile-main-toggle">
+                <i class="icon-arrow-left8"></i>
+            </a>
+            Navigation
+            <a href="#" class="sidebar-mobile-expand">
+                <i class="icon-screen-full"></i>
+                <i class="icon-screen-normal"></i>
+            </a>
+        </div>
+        <div class="sidebar-content">
+            <div class="sidebar-user">
+                <div class="card-body">
+                    <div class="media">
+                        <div class="mr-3">
+                            <a href="#"><img src="/images/avatar5.png" width="38" height="38" class="rounded-circle" alt=""></a>
+                        </div>
+
+                        <div class="media-body">
+                            <div class="media-title font-weight-semibold"><?=session('manager.email')?></div>
+                            <div class="font-size-xs opacity-50"><?=session('manager.info.name')?></div>
+                        </div>
+
+                        <div class="ml-3 align-self-center">
+                            <a href="/admin/myinfo" class="text-white"><i class="fad fa-user-cog"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-sidebar-mobile">
+                <?=$menu->getLimitlessMenu()?>
+                
+                <ul class="nav nav-sidebar">
+                    <li class="nav-item">
+                        <a href="/admin/menu" class="nav-link">
+                            <i class="fad fa-folder-tree"></i>
+                            <span>메뉴관리</span>
+                        </a>
+                    </li>
+                    <!--
+                    <li class="nav-item">
+                        <a href="/admin/menu/admin" class="nav-link">
+                            <i class="fad fa-bezier-curve"></i>
+                            <span>관리자 메뉴관리</span>
+                        </a>
+                    </li>
+                    -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="page-header page-header-light">
+            <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+                <div class="d-flex">
+                    <div class="breadcrumb">
+                        <a href="/admin" class="breadcrumb-item"><i class="fad fa-home"></i> Home</a>
+                        <?php
+                        if( isset($nav) && count($nav) ) :
+                            foreach( $nav as $key => $row ) :
+                                if( $key == 0 ) echo '<span class="breadcrumb-item">'.$row.'</span>';
+                                else echo '<span class="breadcrumb-item active">'.$row.'</span>';
+                            endforeach;
+                        endif;
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        

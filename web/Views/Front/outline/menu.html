@@ -1,0 +1,26 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><img src="/images/top-logo.png" style="height: 25px;"></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <?=$menu->getGnbMenu('nav navbar-nav')?>
+            <ul class="nav navbar-nav navbar-right">
+                <?php if( is_login() ) : ?>
+                <li><a href="/mypage">마이페이지</a></li>
+                <li><a href="/logout">로그아웃</a></li>
+                <?php else : ?>
+                <li><a href="/log-in">로그인</a></li>
+                <li><a href="/join-us">회원가입</a></li>
+                <?php endif; ?>
+            </ul>
+        </div>
+    </div>
+</nav>

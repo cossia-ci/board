@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="page-header">
+        <h1>1:1 문의</h1>
+    </div>
+      <div class="row">
+        <div class="col-lg-2">
+            <?=view('Front/mypage/_left-menu.html')?>
+        </div>
+        <div class="col-lg-10">
+            <form id="frms" action="/requst-post-normal" method="post" enctype="multipart/form-data" target="ifrm">
+                <input type="hidden" name="<?=csrf_token()?>" value="<?=csrf_hash()?>">
+                <input type="hidden" name="ano" value="<?=$data['ano']??''?>">
+                <input type="hidden" name="table" value="qna">
+                <input type="hidden" name="user_id" value="<?=get_member_email( session('member.ano') )?>">
+                <input type="hidden" name="ip" value="<?=$_SERVER['REMOTE_ADDR']?>">
+                <input type="hidden" name="sendmail" value="<?=$sendmail??''?>">
+                <input type="hidden" name="return" value="/mypage/qna-list">
+            <table class="table table-bordered">
+                <colgroup>
+                    <col width="150px">
+                    <col>
+                </colgroup>
+                <tr>
+                    <th>제목</th>
+                    <td><input name="title" class="form-control" value="<?=$data['title']??''?>"></td>
+                </tr>
+                <tr>
+                    <th>첨부파일</th>
+                    <td>
+                        <input name="quesFile[name]" type="hidden" value="<?=$data['quesFile']['name']??''?>">
+                        <input name="quesFile[path]" type="hidden" value="<?=$data['quesFile']['path']??''?>">
+                        <img src="<?=$data['quesFile']['path']??''?>" style="max-height:30px; vertical-align: baseline ;" id="preview0" class="img-blank">
+                        <input name="quesFile" type="file" id="file0" data-preview="preview0" class="hide" onchange="upload_file(this)" autocomplete="off">
+                        <label for="file0" type="button" class="btn-file"></label>
+                        <?=isset($data['quesFile']['name'])&&$data['quesFile']['name']?'<a href="/file-down?from='.$data['quesFile']['path'].'&&to='.$data['quesFile']['name'].'" class="file-down">다운로드</a>':''?>
+                    </td>
+                </tr>
+                <tr>
+                    <th>내용</th>
+                    <td>
+                        <textarea id="editor" name="question"><?=$data['question']??''?></textarea>
+                    </td>
+                </tr>
+            </table>
+            <center>
+                <button type="submit" class="btn btn-primary">저장</button>
+            </center>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+CKEDITOR.replace('editor',editor_file).on('dialogDefinition',function(ev){editor_img_chek(ev)});
+$('#frms').validate({
+    rules: {
+        title: {required: true},
+        question: {required: function(){
+            CKEDITOR.instances.editor.updateElement();
+        }}
+    }
+})
+</script>

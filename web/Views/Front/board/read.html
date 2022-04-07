@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="page-header">
+      <h1><?=$menu->getNowPageTitle()?></h1>
+    </div>
+    <div class="">
+        <table class="table table-bordered">
+            <colgroup>
+                <col width="10%">
+                <col width="40%">
+                <col width="10%">
+                <col width="40%">
+            </colgroup>
+            <tr>
+                <th>작성자</th>
+                <td><?=esc($data['writer'])?></td>
+                <th>조회수</th>
+                <td><?=number_format( $data['hit'] )?></td>
+                
+            </tr>
+            <tr>
+                <th>첨부파일</th>
+                <td><?=isset($data['file']['name'])&&$data['file']['name']?'<a href="/file-down?from='.$data['file']['path'].'&&to='.$data['file']['name'].'" class="file-down">다운로드</a>':'-'?></td>
+                <th>아이피</th>
+                <td><?=$cfg['ip'] ? view_ip( $data['ip'] ) : $data['ip']?></td>
+            </tr>
+            <tr>
+                <th>제목</th>
+                <td colspan="3">
+                    <?=$data['horse']?'['.$data['horse'].'] ':''?>
+                    <?=esc($data['title'])?>
+                </td>
+            </tr>
+            <tr>
+                <th>내용</th>
+                <td colspan="3">
+                    <div class="board-content">
+                        <?=$data['content']?>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <?php if( $cfg['comment'] ) : ?>
+        <?php if( isset($cmt) && count( $cmt ) ) :?>
+    <div class="comment-warp">
+        <ul>
+            <?php foreach( $cmt as $row ) : ?>
+            <li>
+                <dt><?=$row['writer']?> (<?=view_ip( $row['ip'] )?>) <?=$row['regDt']?></dt>
+                <dd><?=nl2br( esc($row['comment']) )?></dd>
+            </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+        <?php endif; ?>
+    <form id="cmt" method="post" action="/requst-post-cmt" target="ifrm">
+        <input name="<?=csrf_token()?>" type="hidden" value="<?=csrf_hash()?>">
+        <input name="code" type="hidden" value="<?=$cfg['code']?>">
+        <input name="bdano" type="hidden" value="<?=$data['ano']?>">
+        <input name="user_id" type="hidden" value="<?=session('member.ano')?>">
+        <input name="writer" type="hidden" value="<?=session('member.info.name')??'비회원'?>">
+        <input name="ip" type="hidden" value="<?=$_SERVER['REMOTE_ADDR']?>">
+    <div class="comment-input">
+        <ul>
+            <li><textarea name="comment" class="form-control" style="resize: none; height: 100%;"></textarea></li>
+            <li><button type="submit" class="btn btn-info">저장</button></li>
+        </ul>
+    </div>
+    </form>
+    <?php endif; ?>
+    
+    <div>
+        <ul class="btn-warp">
+            <?=$cfg['btn']['replay']?'<li><a href="/bdreplay/'.$cfg['code'].'/'.$data['ano'].'" class="btn btn-primary">답글</a></li>':''?>
+
+            <?=$cfg['btn']['edit']?'<li><a href="/bdedit/'.$cfg['code'].'/'.$data['ano'].'" class="btn btn-success">수정</a></li>':''?>
+
+            <?=$cfg['btn']['delete']?'<li><a href="#.delete" data-ano="'.$data['ano'].'" data-code="'.$cfg['code'].'" class="btn btn-danger">삭제</a></li>':''?>
+        </ul>
+    </div>
+</div>

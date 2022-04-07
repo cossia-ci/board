@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="page-header"><h1>비밀번호 변경</h1></div>
+    <div class="">
+        <form id="frm" action="/requst-post-normal" method="POST" target="ifrm">
+        <input name="<?=csrf_token()?>" type="hidden" value="<?=csrf_hash()?>">
+        <input name="ano" type="hidden" value="<?=$ano?>">
+        <input name="table" type="hidden" value="member">
+        <input name="return" type="hidden" value="/log-in">
+        <ul style="list-style: none; margin: 0; padding: 0;">
+            <li class="form-group">
+                <label>비밀번호</label>
+                <input name="password" id="password" type="password" class="form-control">
+            </li>
+            <li class="form-group">
+                <label>비밀번호 확인</label>
+                <input name="pschek" id="pschek" type="password" class="form-control">
+            </li>
+            <li><button type="submit" class="btn btn-default">저장</button></li>
+        </ul>
+        </form>
+    </div>
+</div>
+<script>
+$('#frm').validate({
+    rules: {
+        password: {
+            required: true,
+            pwCheck: true,
+        },
+        pschek: {
+            required: true,
+            equalTo: '#password'
+        },
+    },
+    messages: {
+        pschek: {
+            equalTo: '비밀번호가 일치하지 않습니다.'
+        }
+    }
+
+});
+</script>

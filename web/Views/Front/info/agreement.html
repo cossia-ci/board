@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="page-header">
+      <h1><?=$menu->getNowPageTitle()?></h1>
+    </div>
+    <?=$menu->getNowPageString(' <i class="fad fa-angle-right"></i> ')?>
+    <div class="">
+        <div>
+            <?=$data['agreed']?>
+        </div>
+        <?php if( $data['trustUse'] == 'y' ) :?>
+        <div>
+            <?=$data['trust']?>
+        </div>
+        <?php endif; ?>
+        <?php if( $data['thirdPartyUse'] == 'y' ) :?>
+        <div>
+            <?=$data['thirdParty']?>
+        </div>
+        <?php endif; ?>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="page-header"><h1>아이디 찾기</h1></div>
+    <div class="">
+        <form id="frm" action="/post-find" method="POST">
+        <input name="<?=csrf_token()?>" type="hidden" value="<?=csrf_hash()?>">
+        <input name="type" type="hidden" value="id">
+        <ul style="list-style: none; margin: 0; padding: 0;">
+            <li class="form-group">
+                <label>이름</label>
+                <input name="name" type="text" class="form-control">
+            </li>
+            <li class="form-group">
+                <label>휴대폰 번호</label>
+                <input name="phone" type="tel" class="form-control phone">
+            </li>
+            <li><button type="submit" class="btn btn-default">찾기</button></li>
+        </ul>
+        <ul class="find">
+            <li><a href="/log-in">로그인</a></li>
+            <li><a href="/find-pw">비밀번호 찾기</a></li>
+            <li><a href="/join-us">회원가입</a></li>
+        </ul>
+        </form>
+    </div>
+</div>
+<script>
+$('#frm').validate({
+    rules: {
+        name: { required: true },
+        phone: { required: true }
+    }
+});
+</script>
