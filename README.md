@@ -4,6 +4,10 @@
 - `git clone https://github.com/cossia-ci/board.git [./|절대경로]`
 - `rm -r .git`
 
+## 설치 및 사용법
+- [유튜브](https://studio.youtube.com/channel/UCZxmOJr9p1wU3uLK7Cybxkw/playlists)
+- [코시아보드](https://cossia.kr)
+
 ## 책임 및 의무
 - 사용중 발생하는 오류 및 모든 상황은 사용자가 책임 집니다.
 - 본인 사용, 본인 수정 사용, 판매, 수정 판매 모두 가능합니다.
