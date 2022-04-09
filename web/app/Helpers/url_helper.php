@@ -171,8 +171,10 @@ if(! function_exists('get_count_table')){
     function get_count_table( string $table ) : int
 	{
 		$db = db_connect();
-		$builder = $db->table($table)->selectCount('ano')->where('`delDt` IS NULL', null, false);
-		$data = $builder->get()->getResult('array')[0];
+		if( $this->db->tableExists($table) ){
+			$builder = $db->table($table)->selectCount('ano')->where('`delDt` IS NULL', null, false);
+			$data = $builder->get()->getResult('array')[0];
+		}
 		return $data['ano']??0;
 	}
 }
