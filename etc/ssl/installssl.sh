@@ -11,4 +11,5 @@ sed -i s/-DOMAIN-/$DOMAIN/g ./docker-compose.yml
 docker-compose up --no-deps fcertbot
 docker rm Certbot
 
+docker restart $PROJECT-Nginx
 crontab -e 0 0 1 * * $SHELL_PATH/ssh.sh
