@@ -4,6 +4,26 @@
 - `git clone https://github.com/cossia-ci/board.git [./|절대경로]`
 - `rm -r .git`
 
+## 방화벽 포트 열기
+- `firewall-cmd --zone=public --add-port=80/tcp --permanent`
+- `firewall-cmd --zone=public --add-port=443/tcp --permanent`
+- `firewall-cmd --reload`
+
+## git 설치
+- `yum install -y git`
+
+## 도커 설치
+- `yum install -y yum-utils`
+- `yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo`
+- `yum install -y docker-ce docker-ce-cli containerd.io`
+- `systemctl enable docker`
+- `systemctl start docker`
+
+## 컴포즈 설치
+- `curl -L "https://github.com/docker/compose/releases/download/1.28.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
+- `chmod +x /usr/local/bin/docker-compose`
+- `systemctl restart docker`
+
 ## 설치 및 사용법
 - [유튜브](https://studio.youtube.com/channel/UCZxmOJr9p1wU3uLK7Cybxkw/playlists)
 - [코시아보드](https://cossia.kr)
