@@ -1,9 +1,5 @@
 # Cossia Boara
 
-## 복사
-- `git clone https://github.com/cossia-ci/board.git [./|절대경로]`
-- `rm -r .git`
-
 ## 방화벽 포트 열기
 - `firewall-cmd --zone=public --add-port=80/tcp --permanent`
 - `firewall-cmd --zone=public --add-port=443/tcp --permanent`
@@ -23,6 +19,10 @@
 - `curl -L "https://github.com/docker/compose/releases/download/1.28.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
 - `chmod +x /usr/local/bin/docker-compose`
 - `systemctl restart docker`
+
+## 복사
+- `git clone https://github.com/cossia-ci/board.git [./|절대경로]`
+- `rm -r .git`
 
 ## 설치 및 사용법
 - [유튜브](https://studio.youtube.com/channel/UCZxmOJr9p1wU3uLK7Cybxkw/playlists)
