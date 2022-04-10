@@ -12,4 +12,6 @@ docker-compose up --no-deps fcertbot
 docker rm Certbot
 
 docker restart $PROJECT-Nginx
-crontab -e 0 0 1 * * $SHELL_PATH/ssh.sh
+crontab -l > certbot
+echo "0 0 1 * * $SHELL_PATH/ssh.sh" >> certbot
+crontab certbot
