@@ -32,6 +32,7 @@
             <div class="card card-sidebar-mobile">
                 <?=$menu->getLimitlessMenu()?>
                 
+                <?php if( session('manager.level') > 90 ) : ?>
                 <ul class="nav nav-sidebar">
                     <li class="nav-item">
                         <a href="/admin/menu" class="nav-link">
@@ -48,6 +49,7 @@
                     </li>
                     -->
                 </ul>
+                <?php endif; ?>
             </div>
         </div>
     </div>
