@@ -5,7 +5,15 @@ const editor_file = {
 },
 editor = {
     customConfig : '/plugins/ckeditor/config.js',
-}
+},
+view_youtube = (obj) => {
+    Swal.fire({
+        allowOutsideClick: false,
+        html: `<iframe width="560" height="315" src="https://www.youtube.com/embed/${$(obj).data('id')}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+        width: 620,
+        confirmButtonText: '´Ý±â',
+    });
+};
 
 $(function(){
 	$(document).on('click', '.cookie-popup', function () {
