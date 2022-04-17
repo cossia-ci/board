@@ -18,7 +18,7 @@ class Controller extends \CodeIgniter\Controller
         $set = [
             'widget' => Widget::class,
             'menu' => new FrontMenu,
-            'siteinfo' => get_config_data('config', 'info')['data']
+            'siteinfo' => get_config_data('config', 'info')['data']??[]
         ];
         $this->header = $this->menu = $this->footer = $this->var_ = $set;
         $meta_info = get_config_data('infos', 'meta');

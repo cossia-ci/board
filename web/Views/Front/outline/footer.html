@@ -15,17 +15,17 @@
 
     <div class="foot-info container">
         <address>
-            <p>주소 : <?=$siteinfo['company']['post']?> <?=$siteinfo['company']['address']?>
-                <?=$siteinfo['company']['address2']?></p>
-            <p>대표 : <?=$siteinfo['company']['ceo']?></p>
+            <p>주소 : <?=$siteinfo['company']['post']??''?> <?=$siteinfo['company']['address']??''?>
+                <?=$siteinfo['company']['address2']??''?></p>
+            <p>대표 : <?=$siteinfo['company']['ceo']??''?></p>
             <br><br>
-            <p>Office : <?=$siteinfo['company']['tel']?></p>
-            <!- <p>Fax : <?=$siteinfo['company']['fax']?></p> ->
-            <p>E-mail : <?=$siteinfo['company']['email']?></p>
-            <p>사업자번호 : <?=$siteinfo['company']['number']?></p>
+            <p>Office : <?=$siteinfo['company']['tel']??''?></p>
+            <!- <p>Fax : <?=$siteinfo['company']['fax']??''?></p> ->
+            <p>E-mail : <?=$siteinfo['company']['email']??''?></p>
+            <p>사업자번호 : <?=$siteinfo['company']['number']??''?></p>
         </address>
         <div class="copy-right">
-            <p>Copyright ⓒ <?=$siteinfo['copy']?> All Rights Reserved.</p>
+            <p>Copyright ⓒ <?=$siteinfo['copy']??''?> All Rights Reserved.</p>
         </div>
     </div>
 

@@ -7,7 +7,7 @@
 
 <?=$meta??''?>
 
-	<title><?=$siteinfo['title']?></title>
+	<title><?=$siteinfo['title']??'코시아보드'?></title>
     <?=csrf_meta().PHP_EOL?>
     <link href="//pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet"/>
     <link href="/plugins/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai_sublime.css" rel="stylesheet">
@@ -41,10 +41,10 @@
     <script src="/js/front.js?<?=date('YmdHis')?>"></script>
     <script src="/js/front-board.js?<?=date('YmdHis')?>"></script>
 
-<?=$script?>
+<?=$script??''?>
     
-    <link rel="shortcut icon" href="<?=$siteinfo['favicon']['path']?>">
-    <link rel="icon" href="<?=$siteinfo['favicon']['path']?>">
+    <link rel="shortcut icon" href="<?=$siteinfo['favicon']['path']??'/images/favicon.png'?>">
+    <link rel="icon" href="<?=$siteinfo['favicon']['path']??'/images/favicon.png'?>">
 <script>
 if( /MSIE \d|Trident.*rv:/.test(navigator.userAgent) ){
     window.location.href = "microsoft-edge:" + window.location.href;
