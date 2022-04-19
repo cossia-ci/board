@@ -1,18 +1,5 @@
--- --------------------------------------------------------
--- 호스트:                          192.168.0.4
--- 서버 버전:                        10.4.18-MariaDB-1:10.4.18+maria~focal - mariadb.org binary distribution
--- 서버 OS:                        debian-linux-gnu
--- HeidiSQL 버전:                  11.2.0.6213
--- --------------------------------------------------------
+SET NAMES utf8;
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8 */;
-/*!50503 SET NAMES utf8mb4 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
--- 테이블 janda.co_admin_menu 구조 내보내기
 DROP TABLE IF EXISTS `co_admin_menu`;
 CREATE TABLE IF NOT EXISTS `co_admin_menu` (
   `ano` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -34,8 +21,6 @@ CREATE TABLE IF NOT EXISTS `co_admin_menu` (
   KEY `sort` (`sort`)
 ) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- 테이블 데이터 janda.co_admin_menu:~24 rows (대략적) 내보내기
-/*!40000 ALTER TABLE `co_admin_menu` DISABLE KEYS */;
 INSERT INTO `co_admin_menu` (`ano`, `parent`, `sort`, `icons`, `type`, `code`, `name`, `folder`, `controller`, `class`, `isView`, `regDt`, `editDt`, `delDt`) VALUES
 	(1, 0, 1, 'fad fa-cogs', 'folder', 'config', '기본설정', 'Config', '', '', 'y', '2022-03-28 09:20:08', '2022-03-28 14:09:11', NULL),
 	(2, 1, 2, 'fad fa-info', 'controller', 'base', '기본정보', 'Config', 'base', 'base', 'y', '2022-03-28 09:21:39', '2022-03-28 14:09:11', NULL),
@@ -61,9 +46,3 @@ INSERT INTO `co_admin_menu` (`ano`, `parent`, `sort`, `icons`, `type`, `code`, `
 	(22, 14, 23, 'fad fa-bullhorn', 'controller', 'faq', 'FAQ', 'board', 'faq', 'list', 'y', '2022-03-28 11:37:57', '2022-03-28 14:09:13', NULL),
 	(23, 14, 24, '', 'controller', 'faq', 'FAQ 등록/수정', 'board', 'faq', 'regist', 'n', '2022-03-28 11:38:24', '2022-03-28 14:09:13', NULL),
 	(24, 9, 13, '', 'controller', 'lvregist', '등급등록/수정', 'member', 'memLevel', 'regist', 'n', '2022-03-28 14:09:03', '2022-03-28 14:09:12', NULL);
-/*!40000 ALTER TABLE `co_admin_menu` ENABLE KEYS */;
-
-/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;

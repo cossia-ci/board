@@ -27,3 +27,5 @@ sed -i s/-MYSQL_DATABASE-/$MYSQL_DATABASE/g ../../web/app/Config/Database.php
 
 docker-compose up -d --build
 docker exec -it $PROJECT-PHP service cron start
+
+docker exec -i $PROJECT-Mariadb mysql -u root -p$MYSQL_ROOT_PASSWORD $MYSQL_DATABASE < ../../database/co_admin_menu.sql
