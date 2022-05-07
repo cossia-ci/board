@@ -509,6 +509,12 @@ class Model extends BaseModel
         return $this->builder()->testMode($test)->countAllResults($reset);
     }
 
+    public function countTotal()
+	{
+		$this->builder()->where($this->table . '.' . $this->deletedField, null);
+		return $this->builder()->countAllResults();
+	}
+
     /**
      * Provides a shared instance of the Query Builder.
      *
