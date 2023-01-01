@@ -1,0 +1,23 @@
+<!-- 이용약관 -->
+<div class="wrap">
+    <div class="page-header">
+      <h1><?=$menu->getNowPageTitle()?></h1>
+    </div>
+    <?=$menu->getNowPageString(' <i class="fad fa-angle-right"></i> ')?>
+    <div class="">
+        <div>
+            <?=$data['agreed']?>
+        </div>
+        <?php if( $data['trustUse'] == 'y' ) :?>
+        <div>
+            <?=$parser->setData($data_)->renderString(nl2br($data['trust']))?>
+        </div>
+        <?php endif; ?>
+        <?php if( $data['thirdPartyUse'] == 'y' ) :?>
+        <div>
+            <?=$parser->setData($data_)->renderString(nl2br($data['thirdParty']))?>
+        </div>
+        <?php endif; ?>
+    </div>
+</div>
+

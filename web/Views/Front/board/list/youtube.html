@@ -1,0 +1,39 @@
+<!-- 유튜브 -->
+<?php helper('text'); ?>
+<div class="list_youtube grid">
+    <div class="group"></div>
+        <ul>
+            <?php
+            if( isset($data) && count($data) ) :
+                foreach( $data as $row ) :
+                    $link = $row['pw'] ? '#.secret' : '/bdread/'.$cfg['code'].'/'.$row['ano'];
+            ?>
+            <li>
+                <div class="img_box">
+                    <a href="#." onclick="view_youtube(this)" data-id="<?=get_youtube_id($row['youtube'])?>" data-title="<?=esc($row['title'])?>" data-content="<?=strip_tags($row['content'])?>">
+                        <img class="card-img" src="<?=get_youtube_thumb($row['youtube'])?>" alt="">
+                    </a>
+                </div>
+                <div class="text_box">
+                    <a href="#." class="d-block" onclick="view_youtube(this)"
+                        data-id="<?=get_youtube_id($row['youtube'])?>">
+                        <h4>
+                            <?=esc($row['title'])?>
+                        </h4>
+                    </a>
+                    <p title="<?=ellipsize(strip_tags($row['content']), 100000);?>">
+                        <?=ellipsize(strip_tags($row['content']), 40);?>
+                    </p>
+                </div>
+            </li>
+            <?php
+                endforeach;
+            else :
+            ?>
+            <div class="">
+                등록된 게시글이 없습니다.
+            </div>
+            <?php endif; ?>
+        </ul>
+    </div>
+</div>

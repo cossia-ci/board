@@ -1,0 +1,33 @@
+<!-- 갤러리 -->
+<div class="list_gallery grid">
+    <div class="container_inner">
+        <div class="group">
+            <ul>
+                <?php
+                if( isset($data) && count($data) ) :
+                    foreach( $data as $row ) :
+                        $link = $row['pw'] ? '#.' : '/bdread/'.$cfg['code'].'/'.$row['ano'] ;
+                ?>
+                <li>
+                    <div class="img_box">
+                        <a href="<?=$link?>"> <img src="<?=$row['thumbnail']['thumb']??$row['thumbnail']['path']??''?>"> </a>
+                    </div>
+                    <div class="text_box">
+                        <a href="#." class="d-block">
+                            <h4>
+                                <?=esc($row['title'])?>
+                            </h4>
+                        </a>
+                        <p>
+                            <?=esc($row['content'])?>
+                        </p>
+                    </div>
+                </li>
+                <?php
+                    endforeach;
+                endif;
+                ?>
+            </ul>
+        </div>
+    </div>
+</div>

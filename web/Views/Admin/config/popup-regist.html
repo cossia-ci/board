@@ -1,0 +1,91 @@
+<div class="head-title">
+	<h4>팝업관리</h4>
+    <button type="submit" onclick="$('#frm').submit()" class="btn btn-save">저장</button>
+</div>
+
+<div class="content">
+    <div class="row">
+        <form id="frm" method="POST" action="/requst-post-normal" target="ifrm" >
+            <input type="hidden" name="<?=csrf_token()?>" value="<?=csrf_hash()?>">
+            <input type="hidden" name="ano" value="<?=$data['ano']??''?>">
+            <input type="hidden" name="table" value="popup">
+            <input type="hidden" name="return" value="/admin/config/popup-list">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2>기본설정</h2>
+                </div>
+                <div class="card-body">
+                    <table class="table-col">
+                        <colgroup>
+                            <col width="170px">
+                            <col>
+                            <col width="170px">
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>제목</th>
+                            <td><input name="title" type="text" value="<?=$data['title']??''?>" required></td>
+                            <th>타입</th>
+                            <td>
+                                <input name="type" type="radio" value="l" id="type-l" checked><label for="type-l" >레이어</label>
+                                <input name="type" type="radio" value="h" id="type-h" <?=(isset($data['type'])&&$data['type']=='h')?'checked':''?>><label for="type-h">헤더</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>창크기</th>
+                            <td>
+                                가로 : <input name="width" type="text" value="<?=$data['width']??''?>" style="width: 50px;" > px
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                세로 : <input name="height" type="text" value="<?=$data['height']??''?>" style="width: 50px;" > px
+                            </td>
+                            <th>창위치</th>
+                            <td>
+                                상단 : <input name="top" type="text" value="<?=$data['top']??''?>" style="width: 50px;" > px
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                좌측 : <input name="left" type="text" value="<?=$data['left']??''?>" style="width: 50px;"> px
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>출력페이지</th>
+                            <td><input name="page" type="text" value="<?=$data['page']??''?>"></td>
+                            <th>파라미터</th>
+                            <td><input name="param" type="text" value="<?=$data['param']??''?>"></td>
+                        </tr>
+                        <tr>
+                            <th>출력날짜</th>
+                            <td>
+                                <input name="sDate" type="date" value="<?=$data['sDate']??''?>" style="width: 130px;" > ~
+                                <input name="eDate" type="date" value="<?=$data['eDate']??''?>" style="width: 130px;" >
+                            </td>
+                            <th>출력시간</th>
+                            <td>
+                                <input name="sTime" type="time" value="<?=$data['sTime']??''?>" style="width: 120px;" > ~
+                                <input name="eTime" type="time" value="<?=$data['eTime']??''?>" style="width: 120px;" >
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>출력여부</th>
+                            <td>
+                                <input name="isView" type="radio" value="y" id="isView-y" checked><label for="isView-y">출력함</label>
+                                <input name="isView" type="radio" value="n" id="isView-n" <?=(isset($data['isView'])&&$data['isView']=='n')?'checked':''?>><label for="isView-n">출력안함</label>
+                            </td>
+                            <th>오늘하루 보이지 않음</th>
+                            <td>
+                                <input name="viewToday" type="radio" value="y" id="viewToday-y" checked><label for="viewToday-y">출력함</label>
+                                <input name="viewToday" type="radio" value="n" id="viewToday-n" <?=(isset($data['viewToday'])&&$data['viewToday']=='n')?'checked':''?>><label for="viewToday-n">출력안함</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>내용</th>
+                            <td colspan="3">
+                                <?=set_editor('content', $data['content']??'')?>
+                            </td>
+                        </tr>
+    
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

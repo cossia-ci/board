@@ -1,0 +1,17 @@
+<?php if( isset($data) && count($data) ) : ?>
+<div class="content_view">
+    <ul>
+        <?php
+        foreach( $data as $row ) :
+            $link = $row['pw'] ? '#.secret' : '/bdread/'.$code.'/'.$row['ano'];
+        ?>
+        <li>
+            <a href="<?=$link?>" data-ano="<?=$row['ano']?>" data-code="<?=$code?>">
+                <span class="text"><?=esc($row['title'])?></span> <span
+                    class="day"><?=substr($row['regDt'], 0, 10)?></span>
+            </a>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+</div>
+<?php endif; ?>

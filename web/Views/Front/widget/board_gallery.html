@@ -1,0 +1,20 @@
+<?php if( isset($data) && count($data) ) : ?>
+<div class="board_gallery">
+    <div class="content_group">
+        <div class="content_view">
+            <ul>
+                <?php
+                foreach( $data as $row ) : 
+                    $link = $row['pw'] ? '#.' : '/bdread/'.$code.'/'.$row['ano'] ;
+                ?>
+                <li>
+                    <a href="<?=$link?>">
+                        <div class="img_box"><img src="<?=$row['thumbnail']['path']?>"></div>
+                    </a>
+                </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </div>
+</div>
+<?php endif; ?>

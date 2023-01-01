@@ -1,0 +1,54 @@
+CRITICAL - 2022-10-25 09:42:38 --> Class "App\Controllers\Admin\Main\Imagick" not found
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-10-25 11:10:30 --> Undefined variable $post
+#0 /var/www/html/app/Models/ImageModel.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/a...', 20)
+#1 /var/www/html/app/Models/FileModel.php(23): App\Models\ImageModel::makeThumb('/board/2022/10/...', 540, 540)
+#2 /var/www/html/app/Controllers/Requst/BoardController.php(33): App\Models\FileModel::makeThumb(Array, 'event')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Requst\BoardController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Requst\BoardController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-10-25 11:11:19 --> Undefined variable $post
+#0 /var/www/html/app/Models/ImageModel.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/a...', 20)
+#1 /var/www/html/app/Models/FileModel.php(23): App\Models\ImageModel::makeThumb('/board/2022/10/...', 540, 540)
+#2 /var/www/html/app/Controllers/Requst/BoardController.php(33): App\Models\FileModel::makeThumb(Array, 'event')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Requst\BoardController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Requst\BoardController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-10-25 11:23:51 --> Implicit conversion from float 63.5 to int loses precision
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Implicit conver...', '/var/www/html/v...', 467)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Images/Handlers/GDHandler.php(467): imagecolorclosestalpha(Object(GdImage), 0, 0, 0, 63.5)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Images/Handlers/GDHandler.php(434): CodeIgniter\Images\Handlers\GDHandler->textOverlay('CossiaBoard', Array, true)
+#3 /var/www/html/vendor/codeigniter4/framework/system/Images/Handlers/BaseHandler.php(416): CodeIgniter\Images\Handlers\GDHandler->_text('CossiaBoard', Array)
+#4 /var/www/html/app/Models/ImageModel.php(33): CodeIgniter\Images\Handlers\BaseHandler->text('CossiaBoard', Array)
+#5 /var/www/html/app/Models/ImageModel.php(19): App\Models\ImageModel::watermarking('thumbnail/board...', 'CossiaBoard')
+#6 /var/www/html/app/Models/FileModel.php(23): App\Models\ImageModel::makeThumb('/board/2022/10/...', 540, 540)
+#7 /var/www/html/app/Controllers/Requst/BoardController.php(33): App\Models\FileModel::makeThumb(Array, 'event')
+#8 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Requst\BoardController->index()
+#9 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Requst\BoardController))
+#10 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-10-25 13:31:13 --> Undefined array key "ano"
+#0 /var/www/html/Views/Admin/member/member.html(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/V...', 99)
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Admin/member/me...', Array, true)
+#4 /var/www/html/app/Controllers/Admin/Controller.php(33): view('Admin/member/me...', Array)
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#6 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-10-25 13:35:59 --> App\Models\BaseModel::setWhere(): Return value must be of type App\Models\mix, App\Models\BaseModel returned
+#0 /var/www/html/app/Controllers/Admin/Member/MemberController.php(20): App\Models\BaseModel->setWhere()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Member\MemberController->list()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Member\MemberController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}

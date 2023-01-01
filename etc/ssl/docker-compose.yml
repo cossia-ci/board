@@ -1,0 +1,36 @@
+version: '3'
+services:
+  fcertbot:
+    image: certbot/certbot
+    container_name: Certbot
+    volumes:
+      - ../../web:/var/www/html
+      - ../../etc/log:/var/log/letsencrypt
+      - ../../etc/letsencrypt:/etc/letsencrypt
+    command: "certonly --webroot \
+              --agree-tos \
+              --non-interactive \
+              --no-eff-email \
+              --email -EMAIL- \
+              --force-renewal \
+              -v \
+              -w /var/www/html \
+              -d -DOMAIN- \
+              -d www.-DOMAIN-"
+    networks:
+      - docker-network
+
+  certbot:
+    image: certbot/certbot
+    container_name: Certbot
+    volumes:
+      - ../../web:/var/www/html
+      - ../../etc/log:/var/log/letsencrypt
+      - ../../etc/letsencrypt:/etc/letsencrypt
+    command: renew
+    networks:
+      - docker-network
+    
+networks:
+  docker-network: 
+    driver: bridge

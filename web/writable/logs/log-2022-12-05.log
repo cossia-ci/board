@@ -1,0 +1,33 @@
+CRITICAL - 2022-12-05 11:18:29 --> Trying to access array offset on value of type null
+#0 /var/www/html/app/Models/Menu/FrontMenu.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', '/var/www/html/a...', 126)
+#1 /var/www/html/app/Models/Menu/FrontMenu.php(119): App\Models\Menu\FrontMenu->getFinalParentNo(0)
+#2 /var/www/html/app/Models/Menu/FrontMenu.php(110): App\Models\Menu\FrontMenu->getNomalPageNm()
+#3 /var/www/html/Views/Front/outline/menu.html(36): App\Models\Menu\FrontMenu->getSubVisualNm()
+#4 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/outline/m...', Array, true)
+#7 /var/www/html/app/Controllers/Front/Controller.php(87): view('Front/outline/m...', Array)
+#8 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#9 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-05 11:22:04 --> Trying to access array offset on value of type null
+#0 /var/www/html/app/Models/Menu/FrontMenu.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', '/var/www/html/a...', 126)
+#1 /var/www/html/app/Models/Menu/FrontMenu.php(119): App\Models\Menu\FrontMenu->getFinalParentNo(0)
+#2 /var/www/html/app/Models/Menu/FrontMenu.php(110): App\Models\Menu\FrontMenu->getNomalPageNm()
+#3 /var/www/html/Views/Front/outline/menu.html(40): App\Models\Menu\FrontMenu->getSubVisualNm()
+#4 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/outline/m...', Array, true)
+#7 /var/www/html/app/Controllers/Front/Controller.php(87): view('Front/outline/m...', Array)
+#8 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#9 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-05 11:35:16 --> Undefined array key "name"
+#0 /var/www/html/Views/Front/outline/menu.html(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/V...', 46)
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/outline/m...', Array, true)
+#4 /var/www/html/app/Controllers/Front/Controller.php(87): view('Front/outline/m...', Array)
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#6 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#7 {main}

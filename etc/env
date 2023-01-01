@@ -1,0 +1,32 @@
+###############################################
+# CentOs port 안열었을경우
+###############################################
+systemctl start firewalld
+firewall-cmd --zone=public --add-port=21/tcp --permanent
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+firewall-cmd --zone=public --add-port=443/tcp --permanent
+firewall-cmd --zone=public --add-port=3306/tcp --permanent
+firewall-cmd --reload
+firewall-cmd --zone=public --list-all
+
+###############################################
+# FTP 설정
+###############################################
+ps -ax | grep vsftpd
+yum -y install vsftpd
+
+rm /etc/vsftpd/vsftpd.conf
+vi /etc/vsftpd/vsftpd.conf
+# 설정내용 shell/vsftpd.conf
+vi /etc/vsftpd/chroot_list
+root wq
+
+vi /etc/vsftpd/ftpusers
+vi /etc/vsftpd/user_list
+root 삭제
+
+
+setsebool -P ftpd_full_access on
+systemctl enable vsftpd
+systemctl restart vsftpd
+ps -ax | grep vsftpd

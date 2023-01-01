@@ -1,0 +1,22 @@
+CRITICAL - 2022-10-26 16:18:00 --> Undefined array key "edtimg"
+#0 /var/www/html/app/Models/BoardConfig.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 132)
+#1 /var/www/html/app/Controllers/Front/Board/BoardController.php(65): App\Models\BoardConfig->getWriteSet()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Board\BoardController->write('notice')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Board\BoardController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-10-26 16:30:30 --> App\Controllers\Front\Board\BoardController::redirectTo(): Argument #1 ($param) must be of type array, string given, called in /var/www/html/app/Controllers/Front/Board/BoardController.php on line 66
+#0 /var/www/html/app/Controllers/Front/Board/BoardController.php(66): App\Controllers\Front\Board\BoardController->redirectTo('/log-in')
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Board\BoardController->write('notice')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Board\BoardController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-26 16:31:45 --> App\Controllers\Front\Board\BoardController::redirectTo(): Argument #1 ($param) must be of type array, string given, called in /var/www/html/app/Controllers/Front/Board/BoardController.php on line 69
+#0 /var/www/html/app/Controllers/Front/Board/BoardController.php(69): App\Controllers\Front\Board\BoardController->redirectTo('/log-in')
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Board\BoardController->write('notice')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Board\BoardController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}

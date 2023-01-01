@@ -1,0 +1,11 @@
+CRITICAL - 2022-11-08 11:36:13 --> preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'preg_replace():...', '/var/www/html/a...', 196)
+#1 /var/www/html/app/Helpers/url_helper.php(196): preg_replace('/\\s+/', '', NULL)
+#2 /var/www/html/Views/Admin/board/qna-list.html(90): get_member_email(1)
+#3 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Admin/board/qna...', Array, true)
+#6 /var/www/html/app/Controllers/Admin/Controller.php(33): view('Admin/board/qna...', Array)
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}

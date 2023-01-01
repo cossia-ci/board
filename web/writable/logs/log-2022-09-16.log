@@ -1,0 +1,282 @@
+CRITICAL - 2022-09-16 10:55:09 --> Using $this when not in object context
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\FileModel::fileDownLoad()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\FileModel))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-09-16 10:58:39 --> Using $this when not in object context
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\FileModel::fileDownLoad()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\FileModel))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-09-16 10:58:40 --> Using $this when not in object context
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\FileModel::fileDownLoad()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\FileModel))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-09-16 11:01:44 --> Too few arguments to function CodeIgniter\HTTP\Response::__construct(), 0 passed in /var/www/html/app/Models/FileModel.php on line 43 and exactly 1 expected
+#0 /var/www/html/app/Models/FileModel.php(43): CodeIgniter\HTTP\Response->__construct()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\FileModel::fileDownLoad()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\FileModel))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-16 11:04:33 --> File not found: \uploads\2022\08\16\1660640239_2c0d7d65c395d8393dee.jpg
+#0 /var/www/html/vendor/codeigniter4/framework/system/Files/File.php(46): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('\\uploads\\2022\\0...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/DownloadResponse.php(107): CodeIgniter\Files\File->__construct('\\uploads\\2022\\0...', true)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/ResponseTrait.php(774): CodeIgniter\HTTP\DownloadResponse->setFilePath('\\uploads\\2022\\0...')
+#3 /var/www/html/app/Models/FileModel.php(46): CodeIgniter\HTTP\Response->download('\\uploads\\2022\\0...', NULL)
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\FileModel::fileDownLoad()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\FileModel))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-09-16 11:05:35 --> filesize(): stat failed for /var/www/html/public/\uploads\2022\08\16\1660640239_2c0d7d65c395d8393dee.jpg
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'filesize(): sta...', '/var/www/html/a...', 56)
+#1 /var/www/html/app/Models/FileModel.php(56): filesize('/var/www/html/p...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\FileModel::fileDownLoad()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\FileModel))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-16 11:05:36 --> filesize(): stat failed for /var/www/html/public/\uploads\2022\08\16\1660640239_2c0d7d65c395d8393dee.jpg
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'filesize(): sta...', '/var/www/html/a...', 56)
+#1 /var/www/html/app/Models/FileModel.php(56): filesize('/var/www/html/p...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\FileModel::fileDownLoad()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\FileModel))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-16 11:05:42 --> filesize(): stat failed for /var/www/html/public/\uploads\2022\08\16\1660640239_2c0d7d65c395d8393dee.jpg
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'filesize(): sta...', '/var/www/html/a...', 56)
+#1 /var/www/html/app/Models/FileModel.php(56): filesize('/var/www/html/p...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\FileModel::fileDownLoad()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\FileModel))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-16 11:05:52 --> filesize(): stat failed for /var/www/html/public/\uploads\2022\08\16\1660640239_2c0d7d65c395d8393dee.jpg
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'filesize(): sta...', '/var/www/html/a...', 56)
+#1 /var/www/html/app/Models/FileModel.php(56): filesize('/var/www/html/p...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\FileModel::fileDownLoad()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\FileModel))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-16 11:06:28 --> File not found: \uploads\2022\08\16\1660640239_2c0d7d65c395d8393dee.jpg
+#0 /var/www/html/vendor/codeigniter4/framework/system/Files/File.php(46): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('\\uploads\\2022\\0...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/DownloadResponse.php(107): CodeIgniter\Files\File->__construct('\\uploads\\2022\\0...', true)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/ResponseTrait.php(774): CodeIgniter\HTTP\DownloadResponse->setFilePath('\\uploads\\2022\\0...')
+#3 /var/www/html/app/Models/FileModel.php(46): CodeIgniter\HTTP\Response->download('\\uploads\\2022\\0...', NULL)
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\FileModel::fileDownLoad()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\FileModel))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-09-16 11:07:38 --> File not found: /uploads/2022/08/16/1660640239_2c0d7d65c395d8393dee.jpg
+#0 /var/www/html/vendor/codeigniter4/framework/system/Files/File.php(46): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('/uploads/2022/0...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/DownloadResponse.php(107): CodeIgniter\Files\File->__construct('/uploads/2022/0...', true)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/ResponseTrait.php(774): CodeIgniter\HTTP\DownloadResponse->setFilePath('/uploads/2022/0...')
+#3 /var/www/html/app/Models/FileModel.php(45): CodeIgniter\HTTP\Response->download('1660640239_2c0d...', NULL)
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\FileModel::fileDownLoad()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\FileModel))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-09-16 11:09:05 --> File not found: /uploads/2022/09/01/1661992332_7cbb6b155f3768cdb6fe.jpg
+#0 /var/www/html/vendor/codeigniter4/framework/system/Files/File.php(46): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('/uploads/2022/0...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/DownloadResponse.php(107): CodeIgniter\Files\File->__construct('/uploads/2022/0...', true)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/ResponseTrait.php(774): CodeIgniter\HTTP\DownloadResponse->setFilePath('/uploads/2022/0...')
+#3 /var/www/html/app/Models/FileModel.php(44): CodeIgniter\HTTP\Response->download('1661992332_7cbb...', NULL)
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\FileModel::fileDownLoad()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\FileModel))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-09-16 13:15:20 --> Invalid file: /var/www/html/app/Config/../../Views/개인정보처리방침 (내용).php
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/Parser.php(112): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/var/www/html/a...')
+#1 /var/www/html/app/Controllers/Front/Member/CertController.php(29): CodeIgniter\View\Parser->render('\xEA\xB0\x9C\xEC\x9D\xB8\xEC\xA0\x95\xEB\xB3\xB4\xEC\xB2\x98...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Member\CertController->JoinUs()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Member\CertController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-16 13:15:32 --> Invalid file: /var/www/html/app/Config/../../Views/개인정보처리방침 (내용).php
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/Parser.php(112): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/var/www/html/a...')
+#1 /var/www/html/app/Controllers/Front/Member/CertController.php(29): CodeIgniter\View\Parser->render('\xEA\xB0\x9C\xEC\x9D\xB8\xEC\xA0\x95\xEB\xB3\xB4\xEC\xB2\x98...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Member\CertController->JoinUs()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Member\CertController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-16 13:16:13 --> Invalid file: /var/www/html/app/Config/../../Views/개인정보처리방침 (내용).php
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/Parser.php(112): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/var/www/html/a...')
+#1 /var/www/html/app/Controllers/Front/Member/CertController.php(29): CodeIgniter\View\Parser->render('\xEA\xB0\x9C\xEC\x9D\xB8\xEC\xA0\x95\xEB\xB3\xB4\xEC\xB2\x98...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Member\CertController->JoinUs()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Member\CertController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-16 13:17:08 --> Undefined variable $agreement
+#0 /var/www/html/Views/Front/member/_memdata.html(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/V...', 169)
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/member/_m...', Array, true)
+#4 /var/www/html/Views/Front/member/joinus.html(10): view('Front/member/_m...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#6 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/member/jo...', Array, true)
+#8 /var/www/html/app/Controllers/Front/Controller.php(42): view('Front/member/jo...', Array)
+#9 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#10 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-16 13:17:11 --> Undefined variable $agreement
+#0 /var/www/html/Views/Front/member/_memdata.html(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/V...', 169)
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/member/_m...', Array, true)
+#4 /var/www/html/Views/Front/member/joinus.html(10): view('Front/member/_m...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#6 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/member/jo...', Array, true)
+#8 /var/www/html/app/Controllers/Front/Controller.php(42): view('Front/member/jo...', Array)
+#9 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#10 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-16 13:17:33 --> Invalid file: /var/www/html/app/Config/../../Views/개인정보처리방침 (내용).php
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/Parser.php(112): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/var/www/html/a...')
+#1 /var/www/html/app/Controllers/Front/Member/CertController.php(29): CodeIgniter\View\Parser->render('\xEA\xB0\x9C\xEC\x9D\xB8\xEC\xA0\x95\xEB\xB3\xB4\xEC\xB2\x98...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Member\CertController->JoinUs()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Member\CertController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-16 13:17:51 --> Invalid file: /var/www/html/app/Config/../../Views/개인정보처리방침 (내용).php
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/Parser.php(112): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/var/www/html/a...')
+#1 /var/www/html/app/Controllers/Front/Member/CertController.php(29): CodeIgniter\View\Parser->render('\xEA\xB0\x9C\xEC\x9D\xB8\xEC\xA0\x95\xEB\xB3\xB4\xEC\xB2\x98...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Member\CertController->JoinUs()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Member\CertController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-16 13:18:44 --> Invalid file: /var/www/html/app/Config/../../Views/개인정보처리방침 (내용).php
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/Parser.php(112): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/var/www/html/a...')
+#1 /var/www/html/app/Controllers/Front/Member/CertController.php(29): CodeIgniter\View\Parser->render('\xEA\xB0\x9C\xEC\x9D\xB8\xEC\xA0\x95\xEB\xB3\xB4\xEC\xB2\x98...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Member\CertController->JoinUs()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Member\CertController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-16 13:19:18 --> Too few arguments to function CodeIgniter\View\Parser::__construct(), 0 passed in /var/www/html/app/Controllers/Front/Member/CertController.php on line 19 and at least 1 expected
+#0 /var/www/html/app/Controllers/Front/Member/CertController.php(19): CodeIgniter\View\Parser->__construct()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Member\CertController->JoinUs()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Member\CertController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-16 13:19:50 --> Invalid file: /var/www/html/app/Config/../../Views/개인정보처리방침 (내용).php
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/Parser.php(112): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/var/www/html/a...')
+#1 /var/www/html/app/Controllers/Front/Member/CertController.php(29): CodeIgniter\View\Parser->render('\xEA\xB0\x9C\xEC\x9D\xB8\xEC\xA0\x95\xEB\xB3\xB4\xEC\xB2\x98...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Member\CertController->JoinUs()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Member\CertController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-16 13:20:33 --> Invalid file: /var/www/html/app/Config/../../Views/개인정보처리방침 (내용).php
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/Parser.php(112): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/var/www/html/a...')
+#1 /var/www/html/app/Controllers/Front/Member/CertController.php(29): CodeIgniter\View\Parser->render('\xEA\xB0\x9C\xEC\x9D\xB8\xEC\xA0\x95\xEB\xB3\xB4\xEC\xB2\x98...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Member\CertController->JoinUs()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Member\CertController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-16 13:20:45 --> Invalid file: /var/www/html/app/Config/../../Views/개인정보처리방침 (내용).php
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/Parser.php(112): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/var/www/html/a...')
+#1 /var/www/html/app/Controllers/Front/Member/CertController.php(29): CodeIgniter\View\Parser->render('\xEA\xB0\x9C\xEC\x9D\xB8\xEC\xA0\x95\xEB\xB3\xB4\xEC\xB2\x98...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Member\CertController->JoinUs()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Member\CertController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-16 13:21:24 --> CodeIgniter\View\Parser::renderString(): Argument #1 ($template) must be of type string, array given, called in /var/www/html/app/Controllers/Front/Member/CertController.php on line 31
+#0 /var/www/html/app/Controllers/Front/Member/CertController.php(31): CodeIgniter\View\Parser->renderString(Array)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Member\CertController->JoinUs()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Member\CertController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-16 13:23:01 --> CodeIgniter\View\Parser::renderString(): Argument #1 ($template) must be of type string, array given, called in /var/www/html/app/Controllers/Front/Member/CertController.php on line 31
+#0 /var/www/html/app/Controllers/Front/Member/CertController.php(31): CodeIgniter\View\Parser->renderString(Array)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Member\CertController->JoinUs()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Member\CertController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-16 13:23:16 --> CodeIgniter\View\Parser::renderString(): Argument #1 ($template) must be of type string, array given, called in /var/www/html/app/Controllers/Front/Member/CertController.php on line 31
+#0 /var/www/html/app/Controllers/Front/Member/CertController.php(31): CodeIgniter\View\Parser->renderString(Array)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Member\CertController->JoinUs()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Member\CertController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-16 13:23:33 --> Undefined variable $agreement
+#0 /var/www/html/Views/Front/member/_memdata.html(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/V...', 169)
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/member/_m...', Array, true)
+#4 /var/www/html/Views/Front/member/joinus.html(10): view('Front/member/_m...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#6 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/member/jo...', Array, true)
+#8 /var/www/html/app/Controllers/Front/Controller.php(42): view('Front/member/jo...', Array)
+#9 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#10 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-16 13:23:52 --> CodeIgniter\View\Parser::renderString(): Argument #1 ($template) must be of type string, array given, called in /var/www/html/app/Controllers/Front/Member/CertController.php on line 32
+#0 /var/www/html/app/Controllers/Front/Member/CertController.php(32): CodeIgniter\View\Parser->renderString(Array)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Member\CertController->JoinUs()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Member\CertController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-16 13:25:34 --> Undefined variable $agreement
+#0 /var/www/html/Views/Front/member/_memdata.html(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/V...', 169)
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/member/_m...', Array, true)
+#4 /var/www/html/Views/Front/member/joinus.html(10): view('Front/member/_m...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#6 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/member/jo...', Array, true)
+#8 /var/www/html/app/Controllers/Front/Controller.php(42): view('Front/member/jo...', Array)
+#9 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#10 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-16 13:26:30 --> Undefined variable $agreement
+#0 /var/www/html/Views/Front/member/_memdata.html(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/V...', 169)
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/member/_m...', Array, true)
+#4 /var/www/html/Views/Front/member/joinus.html(10): view('Front/member/_m...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#6 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/member/jo...', Array, true)
+#8 /var/www/html/app/Controllers/Front/Controller.php(42): view('Front/member/jo...', Array)
+#9 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#10 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-16 13:26:35 --> Undefined variable $agreement
+#0 /var/www/html/Views/Front/member/_memdata.html(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/V...', 169)
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/member/_m...', Array, true)
+#4 /var/www/html/Views/Front/member/joinus.html(10): view('Front/member/_m...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#6 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/member/jo...', Array, true)
+#8 /var/www/html/app/Controllers/Front/Controller.php(42): view('Front/member/jo...', Array)
+#9 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#10 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#11 {main}

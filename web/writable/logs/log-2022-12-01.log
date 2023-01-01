@@ -1,0 +1,89 @@
+CRITICAL - 2022-12-01 11:22:26 --> Undefined array key 2
+#0 /var/www/html/app/Models/Menu/FrontMenu.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 48)
+#1 /var/www/html/app/Models/Menu/FrontMenu.php(34): App\Models\Menu\FrontMenu->getIgnorePageNm()
+#2 /var/www/html/app/Controllers/Front/Controller.php(88): App\Models\Menu\FrontMenu->setSubVisual()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-12-01 11:22:33 --> Undefined array key 2
+#0 /var/www/html/app/Models/Menu/FrontMenu.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 48)
+#1 /var/www/html/app/Models/Menu/FrontMenu.php(34): App\Models\Menu\FrontMenu->getIgnorePageNm()
+#2 /var/www/html/app/Controllers/Front/Controller.php(88): App\Models\Menu\FrontMenu->setSubVisual()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-12-01 11:22:47 --> Undefined array key 2
+#0 /var/www/html/app/Models/Menu/FrontMenu.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 48)
+#1 /var/www/html/app/Models/Menu/FrontMenu.php(34): App\Models\Menu\FrontMenu->getIgnorePageNm()
+#2 /var/www/html/app/Controllers/Front/Controller.php(88): App\Models\Menu\FrontMenu->setSubVisual()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-12-01 11:24:12 --> Undefined array key 2
+#0 /var/www/html/app/Models/Menu/FrontMenu.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 48)
+#1 /var/www/html/app/Models/Menu/FrontMenu.php(34): App\Models\Menu\FrontMenu->getIgnorePageNm()
+#2 /var/www/html/app/Controllers/Front/Controller.php(88): App\Models\Menu\FrontMenu->setSubVisual()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-12-01 11:24:15 --> Undefined array key 2
+#0 /var/www/html/app/Models/Menu/FrontMenu.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 48)
+#1 /var/www/html/app/Models/Menu/FrontMenu.php(34): App\Models\Menu\FrontMenu->getIgnorePageNm()
+#2 /var/www/html/app/Controllers/Front/Controller.php(88): App\Models\Menu\FrontMenu->setSubVisual()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-12-01 11:24:42 --> Undefined array key 2
+#0 /var/www/html/app/Models/Menu/FrontMenu.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 48)
+#1 /var/www/html/app/Models/Menu/FrontMenu.php(34): App\Models\Menu\FrontMenu->getIgnorePageNm()
+#2 /var/www/html/app/Controllers/Front/Controller.php(88): App\Models\Menu\FrontMenu->setSubVisual()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-12-01 11:26:03 --> Undefined array key "privacy"
+#0 /var/www/html/app/Models/Menu/FrontMenu.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 47)
+#1 /var/www/html/app/Models/Menu/FrontMenu.php(49): App\Models\Menu\FrontMenu->getIgnorePageNm(1)
+#2 /var/www/html/app/Models/Menu/FrontMenu.php(34): App\Models\Menu\FrontMenu->getIgnorePageNm()
+#3 /var/www/html/app/Controllers/Front/Controller.php(88): App\Models\Menu\FrontMenu->setSubVisual()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-12-01 11:26:05 --> Undefined array key "privacy"
+#0 /var/www/html/app/Models/Menu/FrontMenu.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 47)
+#1 /var/www/html/app/Models/Menu/FrontMenu.php(49): App\Models\Menu\FrontMenu->getIgnorePageNm(1)
+#2 /var/www/html/app/Models/Menu/FrontMenu.php(34): App\Models\Menu\FrontMenu->getIgnorePageNm()
+#3 /var/www/html/app/Controllers/Front/Controller.php(88): App\Models\Menu\FrontMenu->setSubVisual()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-12-01 11:26:54 --> Undefined array key "privacy"
+#0 /var/www/html/app/Models/Menu/FrontMenu.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 47)
+#1 /var/www/html/app/Models/Menu/FrontMenu.php(49): App\Models\Menu\FrontMenu->getIgnorePageNm(1)
+#2 /var/www/html/app/Models/Menu/FrontMenu.php(34): App\Models\Menu\FrontMenu->getIgnorePageNm()
+#3 /var/www/html/app/Controllers/Front/Controller.php(88): App\Models\Menu\FrontMenu->setSubVisual()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-12-01 11:38:10 --> Undefined constant "App\Models\Menu\PHP_ELO"
+#0 /var/www/html/app/Controllers/Front/Controller.php(88): App\Models\Menu\FrontMenu->setSubVisual()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#2 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-12-01 13:23:58 --> Call to undefined function App\Models\Menu\checkIgnorePage()
+#0 /var/www/html/Views/Front/outline/menu.html(47): App\Models\Menu\FrontMenu->getSibling()
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/outline/m...', Array, true)
+#4 /var/www/html/app/Controllers/Front/Controller.php(87): view('Front/outline/m...', Array)
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#6 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-12-01 13:24:14 --> Array to string conversion
+#0 /var/www/html/Views/Front/outline/menu.html(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/var/www/html/V...', 47)
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/outline/m...', Array, true)
+#4 /var/www/html/app/Controllers/Front/Controller.php(87): view('Front/outline/m...', Array)
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#6 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#7 {main}

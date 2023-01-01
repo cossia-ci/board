@@ -1,0 +1,8 @@
+CRITICAL - 2022-10-27 16:26:16 --> Call to undefined function word_censor()
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include()
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Admin/main/inde...', Array, true)
+#3 /var/www/html/app/Controllers/Admin/Controller.php(33): view('Admin/main/inde...', Array)
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}

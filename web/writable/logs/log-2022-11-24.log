@@ -1,0 +1,94 @@
+CRITICAL - 2022-11-24 13:33:20 --> Invalid file: /var/www/html/app/Config/../../Views/blog_template.php
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/Parser.php(112): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/var/www/html/a...')
+#1 /var/www/html/app/Controllers/Admin/Controller.php(37): CodeIgniter\View\Parser->render('blog_template.p...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-11-24 13:33:43 --> Invalid file: /var/www/html/app/Config/../../Views/Admin/blog_template.html
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/Parser.php(112): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/var/www/html/a...')
+#1 /var/www/html/app/Controllers/Admin/Controller.php(37): CodeIgniter\View\Parser->render('Admin/blog_temp...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-11-24 13:36:54 --> Too few arguments to function CodeIgniter\View\Parser::__construct(), 0 passed in /var/www/html/app/Controllers/Admin/Controller.php on line 30 and at least 1 expected
+#0 /var/www/html/app/Controllers/Admin/Controller.php(30): CodeIgniter\View\Parser->__construct()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#2 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-11-24 13:37:23 --> Too few arguments to function CodeIgniter\View\Parser::__construct(), 0 passed in /var/www/html/app/Controllers/Admin/Main/IndexController.php on line 18 and at least 1 expected
+#0 /var/www/html/app/Controllers/Admin/Main/IndexController.php(18): CodeIgniter\View\Parser->__construct()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-24 13:38:02 --> Too few arguments to function CodeIgniter\View\Parser::__construct(), 0 passed in /var/www/html/app/Controllers/Admin/Controller.php on line 30 and at least 1 expected
+#0 /var/www/html/app/Controllers/Admin/Controller.php(30): CodeIgniter\View\Parser->__construct()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#2 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-11-24 13:38:19 --> Too few arguments to function CodeIgniter\View\Parser::__construct(), 0 passed in /var/www/html/app/Controllers/Admin/Controller.php on line 30 and at least 1 expected
+#0 /var/www/html/app/Controllers/Admin/Controller.php(30): CodeIgniter\View\Parser->__construct()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#2 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-11-24 14:03:13 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-11-24 14:46:49 --> Undefined variable $backUrl
+#0 /var/www/html/Views/Front/board/write.html(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/V...', 19)
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/board/wri...', Array, true)
+#4 /var/www/html/app/Controllers/Front/Controller.php(88): view('Front/board/wri...', Array)
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#6 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-11-24 14:54:33 --> Too few arguments to function CodeIgniter\Cookie\CookieStore::get(), 0 passed in /var/www/html/app/Controllers/Front/Board/BoardController.php on line 11 and at least 1 expected
+#0 /var/www/html/app/Controllers/Front/Board/BoardController.php(11): CodeIgniter\Cookie\CookieStore->get()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Board\BoardController->list('notice')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Board\BoardController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-24 14:55:15 --> Class "App\Controllers\Front\Board\Services" not found
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Board\BoardController->list('notice')
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Board\BoardController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-11-24 14:55:53 --> Too few arguments to function CodeIgniter\Cookie\CookieStore::get(), 0 passed in /var/www/html/app/Controllers/Front/Board/BoardController.php on line 13 and at least 1 expected
+#0 /var/www/html/app/Controllers/Front/Board/BoardController.php(13): CodeIgniter\Cookie\CookieStore->get()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Board\BoardController->list('notice')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Board\BoardController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-24 14:56:55 --> Too few arguments to function cookie(), 0 passed in /var/www/html/app/Controllers/Front/Board/BoardController.php on line 13 and at least 1 expected
+#0 /var/www/html/app/Controllers/Front/Board/BoardController.php(13): cookie()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Board\BoardController->list('notice')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Board\BoardController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-24 15:00:25 --> Undefined array key "notice"
+#0 /var/www/html/app/Controllers/Front/Board/BoardController.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 13)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Board\BoardController->list('notice')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Board\BoardController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-24 15:10:25 --> in_array(): Argument #2 ($haystack) must be of type array, null given
+#0 /var/www/html/app/Controllers/Front/Board/BoardController.php(90): in_array('1', NULL)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Board\BoardController->read('notice', '1')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Board\BoardController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-24 15:10:50 --> in_array(): Argument #2 ($haystack) must be of type array, null given
+#0 /var/www/html/app/Controllers/Front/Board/BoardController.php(90): in_array('1', NULL)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Board\BoardController->read('notice', '1')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Board\BoardController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}

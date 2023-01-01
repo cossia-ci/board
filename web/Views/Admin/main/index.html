@@ -1,0 +1,183 @@
+<div class="content">
+	<div class="row">
+		<div class="col-lg-4">
+			<div class="card bg-teal">
+				<div class="card-header d-flex">
+					<h6 class="card-title">회원</h6>
+				</div>
+				<div class="card-body text-right bg-index-icon bg-member">
+					<h3 class="font-weight-semibold mb-0"><?=number_format( get_count_table('co_member') )?></h3>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="card bg-indigo">
+				<div class="card-header d-flex">
+					<h6 class="card-title">1:1 문의</h6>
+				</div>
+				<div class="card-body text-right bg-index-icon bg-qna">
+					<h3 class="font-weight-semibold mb-0"><?=number_format( get_count_table('co_qna') )?></h3>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="card bg-brown">
+				<div class="card-header d-flex">
+					<h6 class="card-title">게시글</h6>
+				</div>
+				<div class="card-body text-right bg-index-icon bg-borad">
+					<h3 class="font-weight-semibold mb-0"><?=number_format( $bdtotal )?></h3>
+				</div>
+			</div>
+		</div>
+
+		
+	</div>
+	<div class="row">
+		<div class="col-lg-8">
+			<div class="card">
+				<div class="card-header d-flex">
+					<h5 class="card-title">1:1 문의</h5>
+					<div class="list-icons ml-auto">
+						
+						<a href="/admin/board/qna-list" class="fad fa-ellipsis-v"></a>
+					</div>
+				</div>
+				<div class="card-body" style="height: 284px;">
+					<table class="table-row">
+						<colgroup>
+							<col>
+							<col width="130px">
+						</colgroup>
+						<thead>
+							<th>제목</th>
+							<th>작성일</th>
+						</thead>
+						<tbody>
+							<?php
+							$some = get_table_some('qna');
+							if( count($some) ) :
+								foreach( $some as $row ) :
+							?>
+							<tr>
+								<td><a href="/admin/board/qna-read?ano=<?=$row['ano']?>"><?=$row['title']?></a></td>
+								<td class="text-center"><?=substr($row['regDt'], 0, 10)?></td>
+							</tr>
+							<?php
+								endforeach;
+							else :
+							?>
+							<tr>
+								<td colspan="2" class="text-center">등록된 문의가 없습니다.</td>
+							</tr>
+							<?php endif; ?>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<form action="/requst-post-normal" method="post" target="ifrm">
+			<input name="<?=csrf_token()?>" type="hidden" value="<?=csrf_hash()?>">
+			<input name="ano" type="hidden" value="<?=$memo['ano']??''?>">
+			<input name="group" type="hidden" value="manager">
+			<input name="code" type="hidden" value="memo">
+			<input name="table" type="hidden" value="config">
+			<div class="card">
+				<div class="card-header d-flex">
+					<h5 class="card-title">관리자 메모</h5>
+					<div class="list-icons ml-auto">
+						<button type="submit" class="fad fa-save fa-lg" style="background-color:inherit;"></button>
+					</div>
+				</div>
+				<div class="card-body">
+					<textarea name="data" style="height: 213px;"><?=esc($memo['data']??'')?></textarea>
+				</div>
+				<div class="card-footer">
+					최종 저장 시간 : <?=$memo['editDt']??''?>
+				</div>
+			</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-4">
+			<div class="card">
+				<div class="card-header d-flex">
+					<h5 class="card-title">최근 가입 회원</h5>
+					<div class="list-icons ml-auto">
+						<a href="/admin/member/member-list" class="fad fa-ellipsis-v"></a>
+					</div>
+				</div>
+				<div class="card-body" style="height: 284px;">
+					<table class="table-row">
+						<colgroup>
+							<col>
+							<col>
+							<col width="130px">
+						</colgroup>
+						<thead>
+							<th>승인</th>
+							<th>아이디</th>
+							<th>가입일</th>
+						</thead>
+						<tbody>
+							<?php
+							$some = get_table_some('member');
+							if( count($some) ) :
+								foreach( $some as $row ) :
+							?>
+							<tr>
+								<td class="text-center"><?=strtoupper($row['app'])?></td>
+								<td class="text-center"><?=$row['id']??ellipsize($row['socialId'],15)?></td>
+								<td class="text-center"><?=substr($row['regDt'], 0, 10)?></td>
+							</tr>
+							<?php
+								endforeach;
+							else :
+							?>
+							<tr>
+								<td colspan="3" class="text-center">가입회원이 없습니다.</td>
+							</tr>
+							<?php endif; ?>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-8">
+			<div class="card">
+				<div class="card-body cossia-info">
+					<p class="title">새로운 기능<i class="fad fa-question"></i></p>
+					<p class="text"><i class="fad fa-exclamation"></i><img src="/images/house.png" style="vertical-align: sub;">에 물어보세요<i class="fad fa-exclamation"></i></p>
+					<p class="link"><a href="//cossia.kr" target="_blank">물어보기 <i class="fad fa-edit"></i></a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+/*
+
+
+bootbox.dialog({
+	title: 'This is a form in a modal.',
+    message: '<div><input type="test"></div>',
+    buttons: {
+    	success: {
+        	label: 'Save',
+            className: 'btn-success',
+            callback: function () {
+            	var name = $('#name').val();
+                var answer = $('input[name="awesomeness"]:checked').val()
+                bootbox.alert({
+                	title: 'Hello ' + name + '!',
+                    message: 'You have chosen <strong>' + answer + '</strong>.'
+                });
+            }
+        }
+    }
+});
+*/
+</script>

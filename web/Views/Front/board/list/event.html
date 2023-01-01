@@ -1,0 +1,27 @@
+<div class="list_event grid">
+    <ul>
+        <?php
+        if( isset($data) && count($data) ) :
+            foreach( $data as $row ) :
+            $link = $row['pw'] ? '#.' : '/bdread/'.$cfg['code'].'/'.$row['ano'] ;
+        ?>
+        <li>
+            <a href="<?=$link?>">
+                <div class="img_box">
+                    <span><img src="<?=$row['thumbnail']['thumb']??$row['thumbnail']['path']??''?>"></span>
+                </div>
+                <div class="text_box">
+                    <h4><?=esc($row['title'])?></h4>
+                    <div class="info">
+                        <p><?=strip_tags($row['content'])?></p>
+                        <span class="day"><?=$row['sdate']?> ~ <?=$row['edate']?></span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <?php
+            endforeach;
+        endif;
+        ?>
+    </ul>
+</div>

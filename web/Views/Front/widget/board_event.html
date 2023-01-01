@@ -1,0 +1,46 @@
+<?php if( isset($data) && count($data) ) : ?>
+<div class="board_event_inner">
+    <div class="container">
+        <div class="title_group">
+            <div class="swiper_button_group">
+                <div class="swiper-button-prev xi-arrow-left"></div>
+                <div class="swiper-button-next xi-arrow-right"></div>
+                <a href="/bdlist/<?=$code?>" class="more xi-plus"></a>
+            </div>
+        </div>
+        <div class="swiper board_event_swiper" id="board-event-<?=$code?>">
+            <div class="swiper-wrapper">
+                <?php 
+                foreach( $data as $row ) :
+                    $link = $row['pw'] ? '#.secret' : '/bdread/'.$code.'/'.$row['ano'];
+                ?>
+                <div class="swiper-slide">
+                    <a href="<?=$link?>">
+                        <div class="img_box"><span><img src="<?=$row['thumbnail']['path']?>"></span></div>
+                        <div class="text_box">
+                            <h3><?=$row['title']?></h3>
+                            <p class="day"><?=$row['sdate']?> ~ <?=$row['edate']?></p>
+                        </div>
+                    </a>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+new Swiper("#board-event-<?=$code?>", {
+    loop: true,
+    spaceBetween: 30,
+    slidesPerView: 4,
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: ".board_event_inner .xi-arrow-right",
+        prevEl: ".board_event_inner .xi-arrow-left",
+    },
+});
+</script>
+<?php endif; ?>

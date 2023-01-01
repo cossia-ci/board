@@ -1,0 +1,24 @@
+<div class="wrap">
+    <div class="page-header">
+      <h1><?=$menu->getNowPageTitle()?></h1>
+    </div>
+
+    <div class="search-warp">
+        <form method="get" action="?" class="form-inline">
+            <select name="key" class="form-control">
+                <option value="title" <?=isset($_GET['key'])&&$_GET['key']=='title'?'selected':''?>>제목</option>
+            </select>
+            <input name="keyword" type="text" value="<?=$_GET['keyword']??''?>" class="form-control">
+            <button type="submit" class="btn btn-sm btn-default">검색</button>
+        </form>
+    </div>
+    <div class="">
+        <?=view('Front/board/list/'.$cfg['skin']['list'])?>
+    </div>
+    
+    <div class="button-warp">
+        <?=$cfg['btn']['write']?'<a href="/bdwrite/'.$cfg['code'].'" class="btn btn-primary" >글 작성</a>':''?>
+    </div>
+    <?=isset($page) ? $page->links() : '' ?>
+</div>
+

@@ -1,0 +1,9 @@
+CRITICAL - 2022-10-17 10:47:53 --> Array to string conversion
+#0 /var/www/html/Views/Front/main/index.html(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', '/var/www/html/V...', 12)
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/main/inde...', Array, true)
+#4 /var/www/html/app/Controllers/Front/Controller.php(44): view('Front/main/inde...', Array)
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#6 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#7 {main}

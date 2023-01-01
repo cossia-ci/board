@@ -1,0 +1,7 @@
+CRITICAL - 2022-08-18 09:10:13 --> Invalid file: Front/html/asdfasdf.html
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Front/html/asdf...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/html/asdf...', Array, true)
+#2 /var/www/html/app/Controllers/Front/Controller.php(41): view('Front/html/asdf...', Array)
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}

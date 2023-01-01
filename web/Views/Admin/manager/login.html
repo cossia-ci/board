@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Cossia Board Admin</title>
+    <?=csrf_meta().PHP_EOL?>
+	<link href="/plugins/limitless/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="/plugins/limitless/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+	<link href="/plugins/limitless/css/layout.min.css" rel="stylesheet" type="text/css">
+    <link href="//pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet"/>
+    <link href="/plugins/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai_sublime.css" rel="stylesheet">
+    <link href="/plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css">	
+    <link href="/css/admin.css?<?=date('YmdHis')?>" rel="stylesheet"/>
+
+	<script src="/plugins/jquery/jquery.min.js"></script>
+	<script src="/plugins/limitless/js/bootstrap.bundle.min.js"></script>
+	<script src="/plugins/loaders/blockui.min.js"></script>
+	<script src="/plugins/limitless/js/app.js"></script>
+    <script src="<?=(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on')?'//ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js':'//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js'?>"></script>
+    <script src="/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="/plugins/validation/jquery.validate.min.js"></script>
+    <script src="/plugins/validation/additional-methods.min.js"></script>
+    <script src="/plugins/ckeditor/ckeditor.js"></script>
+    <script src="/js/common.js?<?=date('YmdHis')?>"></script>
+    <script src="/js/admin.js?<?=date('YmdHis')?>"></script>
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+
+</head>
+<body>
+<!-- Main navbar -->
+<div class="page-content">
+    <div class="content-wrapper">
+        <div class="content d-flex justify-content-center align-items-center">
+            <form class="login-form" action="/admin/post-login" method="POST">
+                <input type="hidden" name="<?=csrf_token()?>" value="<?=csrf_hash()?>">
+                <div class="card mb-0">
+                    <div class="card-body" style="width: 300px;">
+                        <div class="text-center mb-3">
+                            <img src="/images/top-logo.png" style="width: 100%;">
+                        </div>
+
+                        <div class="form-group form-group-feedback form-group-feedback-left">
+                            <input name="email" type="email" class="form-control" placeholder="Email" style="width: 100%;">
+                            <div class="form-control-feedback">
+                                <i class="fad fa-envelope" style="margin-top: -5px;"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-group-feedback form-group-feedback-left">
+                            <input name="password" class="form-control" type="password" placeholder="Password" style="width: 100%;">
+                            <div class="form-control-feedback">
+                                <i class="fad fa-lock-alt" style="margin-top: -5px;"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group" >
+                            <button type="submit" class="btn btn-primary btn-block" style="margin: 0;">Log In<i class="fad fa-chevron-circle-right ml-2"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+$(function(){
+	$('.login-form').validate({
+		rules: {
+			email: {
+				required: true,
+				email: true
+			},
+			password: {
+				required: true,
+			}			
+		}
+	});
+});
+</script>
+<div><div><div>

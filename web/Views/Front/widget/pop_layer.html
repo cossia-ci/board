@@ -1,0 +1,20 @@
+<div 
+    class="layer-popup"
+    id="layer-<?=$data['ano']?>"
+    style="top:<?=$data['top']?>px; left:<?=$data['left']?>px;"
+    >
+    <div class="layer-warp">
+        <h2 class="layer-title"><?=$data['title']?></h2>
+        <div class="layer-content"
+        style="width:<?=$data['width']?>px; height:<?=$data['height']?>px;"
+        ><?=$data['content']?></div>
+        <?php if($data['viewToday'] == 'y') : ?>
+        <div class="layer-today">
+            <input type="checkbox" id="layer-ck-<?=$data['ano']?>" class="cookie-popup" data-type="<?=$data['type']?>" value="<?=$data['ano']?>" >
+            <label for="layer-ck-<?=$data['ano']?>">24시간 동안 열지 않기</label>
+        </div>
+        <?php else : ?>
+        <div class="layer-today"><a href="#." class="close-popup" data-type="<?=$data['type']?>" data-id="<?=$data['ano']?>">닫기</a> &nbsp;&nbsp;&nbsp; </div>
+        <?php endif; ?>
+    </div>
+</div>

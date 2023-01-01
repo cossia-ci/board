@@ -1,0 +1,99 @@
+<div class="content">
+    <div class="row">
+        <div class="col-3">
+            <ul class="tree-ul">
+                <li class="js-tree-act" data-act="add">하위생성</li>
+                <li class="js-tree-act" data-act="edit">수정</li>
+                <li class="js-tree-act" data-act="del">삭제</li>
+            </ul>
+            <div id="tree" class="tree-warp"></div>
+            <div class="card" style="margin-top: 10px;">
+                <div class="card-body">
+                    <ul class="bottom-tree">
+                        <li class="text-danger" style="font-size:14px; font-weight: bold">범주</li>
+                        <li><i class="fad fa-folder"></i> 폴더</li>
+                        <li><i class="fad fa-file-code"></i> 컨트롤러</li>
+                        <li><i class="fad fa-eye-slash"></i> 숨김페이지(폴더)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            <form id="frms" method="post" action="/requst-post-normal" target="ifrm">
+                <input type="hidden" name="<?=csrf_token()?>" value="<?=csrf_hash()?>">
+                <input type="hidden" name="ano" value="">
+                <input type="hidden" name="parent" value="0">
+                <input type="hidden" name="sort" value="999">
+                <input type="hidden" name="table" value="admin-menu">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>설정</h5>
+                        </div>
+                        <div class="card-body">
+                            <table class="table-col">
+                                <colgroup>
+                                    <col width="130px">
+                                    <col>
+                                    <col width="130px">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th>노출</th>
+                                    <td>
+                                        <input name="isView" type="radio" value="y" id="view-y" checked>
+                                        <label for="view-y">보임</label>
+                                        <input name="isView" type="radio" value="n" id="view-n">
+                                        <label for="view-n">숨김</label>
+                                    </td>
+                                    <th>타입</th>
+                                    <td>
+                                        <input name="type" type="radio" value="folder" id="type-f" >
+                                        <label for="type-f">폴더</label>
+                                        <input name="type" type="radio" value="controller" id="type-c" checked>
+                                        <label for="type-c">컨트롤러</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>폴더</th>
+                                    <td><input name="folder" type="text" class="switch-de" disabled></td>
+                                    <th>코드</th>
+                                    <td><input name="code" type="text" class="switch-de" placeholder="케밥-케이스" disabled></td>
+                                </tr>
+                                <tr>
+                                    <th>아이콘 <a href="//fontawesome.com/v5/search" class="fad fa-external-link" target="_blank" style="margin-left: 15px;"></a></th>
+                                    <td><input name="icons" type="text" class="switch-de" disabled></td>
+                                    <th>메뉴명</th>
+                                    <td>
+                                        <input name="name" type="text" class="switch-de" disabled>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>콘트롤러명</th>
+                                    <td>
+                                        <input name="controller" type="text" class="switch-de" disabled>
+                                    </td>
+                                    <th>연결클래스</th>
+                                    <td>
+                                        <input name="class" type="text" class="switch-de" placeholder="카멜케이스" disabled>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="card-footer text-center">
+                            <button type="submit" class="btn btn-save switch-de" disabled>저장</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+const menuList = <?=$menuList??[]?>;
+</script>
+<link href="/plugins/jstree/jstree.min.css" rel="stylesheet" type="text/css" />
+<script src="/plugins/jstree/jstree.min.js" type="text/javascript"></script>
+<script src="/js/admin-menu-tree.js?<?=date('YmdHis')?>" type="text/javascript"></script>

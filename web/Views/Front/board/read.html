@@ -1,0 +1,17 @@
+
+<div class="wrap grid page_view">
+    <div class="page-header">
+      <h1><?=$menu->getNowPageTitle()?></h1>
+    </div>
+    <?=view('Front/board/read/'.$cfg['skin']['read'])?>
+    
+    <div>
+        <ul class="btn-warp">
+            <li><a href="<?=$backUrl?>" class="btn btn-info" >목록</a></li>
+            <?=$cfg['btn']['replay']?'<li><a href="/bdreplay/'.$cfg['code'].'/'.$data['ano'].'" class="btn btn-primary">답글</a></li>':''?>
+            <?=$cfg['btn']['edit']?'<li><a href="/bdedit/'.$cfg['code'].'/'.$data['ano'].'" class="btn btn-success">수정</a></li>':''?>
+
+            <?=$cfg['btn']['delete']?'<li><a href="#.delete" data-ano="'.$data['ano'].'" data-code="'.$cfg['code'].'" class="btn btn-danger">삭제</a></li>':''?>
+        </ul>
+    </div>
+</div>

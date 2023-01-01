@@ -1,0 +1,46 @@
+CRITICAL - 2022-08-22 13:20:55 --> Invalid file: Front/html/asdfasdf.html
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Front/html/asdf...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/html/asdf...', Array, true)
+#2 /var/www/html/app/Controllers/Front/Controller.php(41): view('Front/html/asdf...', Array)
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-08-22 14:19:12 --> Invalid file: Front/html/asdfasdf.html
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Front/html/asdf...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/html/asdf...', Array, true)
+#2 /var/www/html/app/Controllers/Front/Controller.php(41): view('Front/html/asdf...', Array)
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-08-22 14:26:50 --> Undefined variable $is_index
+#0 /var/www/html/Views/Front/outline/header.html(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/V...', 25)
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/outline/h...', Array, true)
+#4 /var/www/html/app/Controllers/Front/Controller.php(41): view('Front/outline/h...', Array)
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#6 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-08-22 14:27:08 --> Undefined variable $is_index
+#0 /var/www/html/Views/Front/outline/header.html(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/V...', 25)
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/outline/h...', Array, true)
+#4 /var/www/html/app/Controllers/Front/Controller.php(41): view('Front/outline/h...', Array)
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#6 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-08-22 14:30:41 --> Invalid file: Front/html/asdfasdf.html
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Front/html/asdf...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/html/asdf...', Array, true)
+#2 /var/www/html/app/Controllers/Front/Controller.php(42): view('Front/html/asdf...', Array)
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-08-22 14:34:34 --> Invalid file: Front/html/asdfasdf.html
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Front/html/asdf...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/html/asdf...', Array, true)
+#2 /var/www/html/app/Controllers/Front/Controller.php(42): view('Front/html/asdf...', Array)
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}

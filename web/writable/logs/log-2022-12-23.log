@@ -1,0 +1,34 @@
+ERROR - 2022-12-23 04:49:21 --> Table 'origin.co_adminMenu' doesn't exist in engine
+CRITICAL - 2022-12-23 04:49:21 --> Table 'origin.co_adminMenu' doesn't exist in engine
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /var/www/html/vendor/codeigniter4/framework/system/Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 /var/www/html/app/Models/Menu/AdminMenu.php(11): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/app/Config/Routes.php(29): App\Models\Menu\AdminMenu->__construct(true)
+#8 /var/www/html/vendor/codeigniter4/framework/system/Router/RouteCollection.php(607): CodeIgniter\CodeIgniter->Config\{closure}(Object(CodeIgniter\Router\RouteCollection))
+#9 /var/www/html/app/Config/Routes.php(32): CodeIgniter\Router\RouteCollection->group('admin', Array, Object(Closure))
+#10 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(713): require('/var/www/html/a...')
+#11 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#12 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#14 {main}
+ERROR - 2022-12-23 04:49:24 --> Table 'origin.co_adminMenu' doesn't exist in engine
+CRITICAL - 2022-12-23 04:49:24 --> Table 'origin.co_adminMenu' doesn't exist in engine
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /var/www/html/vendor/codeigniter4/framework/system/Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 /var/www/html/app/Models/Menu/AdminMenu.php(11): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/app/Config/Routes.php(29): App\Models\Menu\AdminMenu->__construct(true)
+#8 /var/www/html/vendor/codeigniter4/framework/system/Router/RouteCollection.php(607): CodeIgniter\CodeIgniter->Config\{closure}(Object(CodeIgniter\Router\RouteCollection))
+#9 /var/www/html/app/Config/Routes.php(32): CodeIgniter\Router\RouteCollection->group('admin', Array, Object(Closure))
+#10 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(713): require('/var/www/html/a...')
+#11 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#12 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#14 {main}

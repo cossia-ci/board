@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="page-header">
+        <h1>로그인</h1>
+    </div>
+    <div class="">
+        <form id="frm" action="/post-login" method="POST">
+        <input type="hidden" name="<?=csrf_token()?>" value="<?=csrf_hash()?>">
+        <input type="hidden" name="return" value="<?=$_REQUEST['return_url']??session('return_url')?>">
+        <ul style="list-style: none; margin: 0; padding: 0;">
+            <li class="form-group">
+                <label>아이디</label>
+                <input name="id" type="text" class="form-control">
+            </li>
+            <li class="form-group">
+                <label>비밀번호</label>
+                <input name="password" type="password" class="form-control">
+            </li>
+            <li><button type="submit" class="btn btn-default">확인</button></li>
+        </ul>
+        <?php if($bool) : // 이름과 휴대폰이 m 일때만 찾을 수 있음 ?>
+        <ul class="find">
+            <li><a href="/find-id">아이디 찾기</a></li>
+            <li><a href="/find-pw">비밀번호 찾기</a></li>
+            <li><a href="/join-us">회원가입</a></li>
+        </ul>
+        <?php endif; ?>
+        </form>
+
+
+        
+<?php if( isset( $social['data']['kakao']['use'] ) && $social['data']['kakao']['use'] == 'y' ) : ?>
+<!-- 카카오 로그인 -->
+<img src="/images/kakao-login.png" class="js-kakao cursor-pointer">
+<script>
+const kakaourl = `https://kauth.kakao.com/oauth/authorize?client_id=<?=$social['data']['kakao']['api']?>&response_type=code&redirect_uri=<?=base_url()?>/social/kakao`;
+$(document).on('click', '.js-kakao', function(){
+    window.open(kakaourl, "kakaologin", "width=560,height=720");
+})
+</script>
+<?php endif; ?>
+
+        
+<?php if( isset( $social['data']['naver']['use'] ) && $social['data']['naver']['use'] == 'y' ) : ?>
+<!-- 네이버 로그인 -->
+<img src="/images/naver-login.png" class="js-naver cursor-pointer">
+<script>
+const naverurl = `https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=<?=$social['data']['naver']['id']?>&redirect_uri=<?=base_url()?>/social/naver&state=RAMDOM_STATE"`;
+
+$(document).on('click', '.js-naver', function(){
+    window.open(naverurl, "naverlogin", "width=560,height=720");
+})
+</script>
+<?php endif; ?>
+<style>
+.cursor-pointer {cursor: pointer;}
+</style>
+                
+
+    </div>
+</div>
+
+<script>
+$('#frm').validate({
+    rules: {
+        id: { required: true },
+        password: { required: true }
+    }
+});
+</script>

@@ -1,0 +1,42 @@
+<div class="wrap">
+    <div class="wrap_main">
+        <section class="sec1">
+            <?=$widget::bannerView('main')?>
+        </section>
+        <section class="sec2 grid">
+            <div class="notice board_default">
+                <div class="title_group">
+                    <h2 class="t_type1"><span>공지사항</span></h2><a href="/bdlist/notice"><span>MORE</span><i
+                            class="xi-plus-min"></i></a>
+                </div>
+                <?=$widget::getBoradSome('notice')?>
+            </div>
+            <div class="gallery board_gallery_slide">
+                <div class="title_group">
+                    <h2 class="t_type1"><span>갤러리</span></h2>
+                    <a href="/bdlist/gallery"><span>MORE</span>
+                        <i class="xi-plus-min"></i>
+                    </a>
+                </div>
+                <?php # =$widget::getBoradSome('gallery', 5, 'slide')?>
+                
+            </div>
+        </section>
+        
+        <section class="sec3 grid">
+            <h2 class="t_type1"><span>board gallery</span></h2>
+            <?php # =$widget::getBoradSome('gallery', 5, 'gallery')?>
+        </section>
+
+        <section class="sec4">
+            <?php # =$widget::getBoradSome('youtube', 5, 'youtube')?>
+        </section>
+
+        <section class="sec5 grid">
+            <h2 class="t_type1" style="margin-bottom:-35px;"><span>이벤트</span></h2>
+            <?php # =$widget::getBoradSome('event', 5, 'event')?>
+        </section>
+    </div>
+
+
+</div>

@@ -1,0 +1,238 @@
+CRITICAL - 2022-12-14 13:47:05 --> syntax error, unexpected token "}"
+#0 /var/www/html/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/var/www/html/v...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-12-14 13:49:44 --> 유효하지 않은 파일: Admin/outline/header32.html
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/outline/h...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Admin/outline/h...', Array, true)
+#2 /var/www/html/app/Controllers/Admin/Controller.php(31): view('Admin/outline/h...', Array)
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-12-14 13:59:33 --> Undefined variable $message
+#0 /var/www/html/app/Controllers/Admin/Main/IndexController.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/a...', 18)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-12-14 14:00:20 --> Call to a member function getValue() on null
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-14 14:07:59 --> Non-static method CodeIgniter\HTTP\IncomingRequest::setLocale() cannot be called statically
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-14 14:08:38 --> Non-static method CodeIgniter\HTTP\IncomingRequest::setLocale() cannot be called statically
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-14 14:13:39 --> Declaration of App\Controllers\Admin\Controller::initController(CodeIgniter\HTTP\Request $request, CodeIgniter\HTTP\ResponseInterface $response, Psr\Log\LoggerInterface $logger) must be compatible with CodeIgniter\Controller::initController(CodeIgniter\HTTP\RequestInterface $request, CodeIgniter\HTTP\ResponseInterface $response, Psr\Log\LoggerInterface $logger)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-12-14 14:23:45 --> Undefined constant "App\Controllers\Admin\Main\app"
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-14 14:24:39 --> Undefined constant "Config\app"
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-14 14:25:42 --> Access to undeclared static property Config\App::$defaultLocale
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-14 14:25:55 --> Undefined constant Config\App::defaultLocale
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-14 14:26:00 --> Access to undeclared static property Config\App::$defaultLocale
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-14 14:26:12 --> Access to undeclared static property Config\App::$defaultLocale
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-14 14:27:30 --> Undefined variable $app
+#0 /var/www/html/app/Controllers/Admin/Main/IndexController.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/a...', 18)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-12-14 14:27:41 --> Undefined variable $App
+#0 /var/www/html/app/Controllers/Admin/Main/IndexController.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/a...', 18)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-12-14 14:27:54 --> Class "App\Controllers\Admin\Main\Config\App" not found
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-14 14:28:00 --> Access to undeclared static property Config\App::$defaultLocale
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-14 14:28:11 --> Undefined constant "Config\App"
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-14 14:28:42 --> Undefined constant "App\Controllers\Admin\Main\app"
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-14 14:28:57 --> Undefined variable $defaultLocale
+#0 /var/www/html/app/Controllers/Admin/Main/IndexController.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/a...', 20)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-12-14 14:29:17 --> Undefined constant "Config\App"
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-14 14:29:27 --> Undefined constant "Config\App"
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-14 14:59:29 --> Call to undefined method CodeIgniter\HTTP\IncomingRequest::language()
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-14 15:00:05 --> Call to undefined method CodeIgniter\HTTP\IncomingRequest::getLanguage()
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-14 15:00:21 --> Call to undefined method CodeIgniter\HTTP\IncomingRequest::language()
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-14 15:00:29 --> Call to undefined method CodeIgniter\HTTP\IncomingRequest::language()
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-14 15:04:26 --> Object of class CodeIgniter\HTTP\IncomingRequest could not be converted to string
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-14 15:55:10 --> CodeIgniter\HTTP\IncomingRequest::setLocale(): Argument #1 ($locale) must be of type string, null given, called in /var/www/html/app/Controllers/Front/Controller.php on line 50
+#0 /var/www/html/app/Controllers/Front/Controller.php(50): CodeIgniter\HTTP\IncomingRequest->setLocale(NULL)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#2 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-12-14 15:55:13 --> CodeIgniter\HTTP\IncomingRequest::setLocale(): Argument #1 ($locale) must be of type string, null given, called in /var/www/html/app/Controllers/Front/Controller.php on line 50
+#0 /var/www/html/app/Controllers/Front/Controller.php(50): CodeIgniter\HTTP\IncomingRequest->setLocale(NULL)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#2 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-12-14 15:57:10 --> Undefined variable $getLocale
+#0 /var/www/html/Views/Front/outline/menu.html(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/V...', 14)
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/outline/m...', Array, true)
+#4 /var/www/html/app/Controllers/Front/Controller.php(50): view('Front/outline/m...', Array)
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#6 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-12-14 17:31:30 --> Trying to access array offset on value of type null
+#0 /var/www/html/app/Models/Menu/FrontMenu.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', '/var/www/html/a...', 136)
+#1 /var/www/html/app/Models/Menu/FrontMenu.php(129): App\Models\Menu\FrontMenu->getFinalParentNo(0)
+#2 /var/www/html/app/Models/Menu/FrontMenu.php(120): App\Models\Menu\FrontMenu->getNomalPageNm()
+#3 /var/www/html/Views/Front/outline/menu.html(45): App\Models\Menu\FrontMenu->getSubVisualNm()
+#4 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/outline/m...', Array, true)
+#7 /var/www/html/app/Controllers/Front/Controller.php(51): view('Front/outline/m...', Array)
+#8 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#9 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-14 17:31:42 --> Undefined array key "data"
+#0 /var/www/html/app/Helpers/url_helper.php(329): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 329)
+#1 /var/www/html/app/Controllers/Front/Member/CertController.php(19): get_change_word()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Member\CertController->JoinUs()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Member\CertController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-12-14 17:34:05 --> Undefined array key "data"
+#0 /var/www/html/app/Helpers/url_helper.php(329): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 329)
+#1 /var/www/html/app/Controllers/Front/Info/InfoController.php(15): get_change_word()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Info\InfoController->info('email')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Info\InfoController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-12-14 17:34:12 --> Undefined array key "data"
+#0 /var/www/html/app/Helpers/url_helper.php(329): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 329)
+#1 /var/www/html/app/Controllers/Front/Info/InfoController.php(15): get_change_word()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Info\InfoController->info('tos')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Info\InfoController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-12-14 17:34:16 --> Undefined array key "data"
+#0 /var/www/html/app/Helpers/url_helper.php(329): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 329)
+#1 /var/www/html/app/Controllers/Front/Info/InfoController.php(15): get_change_word()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Info\InfoController->info('privacy')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Info\InfoController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-12-14 17:35:43 --> Undefined array key "data"
+#0 /var/www/html/app/Helpers/url_helper.php(329): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 329)
+#1 /var/www/html/app/Controllers/Front/Info/InfoController.php(15): get_change_word()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Info\InfoController->info('privacy')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Info\InfoController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}

@@ -1,0 +1,290 @@
+CRITICAL - 2022-09-05 09:39:42 --> fgets(): Argument #1 ($stream) must be of type resource, CodeIgniter\Files\File given
+#0 /var/www/html/app/Controllers/Admin/Main/IndexController.php(19): fgets(Object(CodeIgniter\Files\File))
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-05 09:40:09 --> Call to undefined method CodeIgniter\Files\File::fgets()
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-09-05 09:41:13 --> Call to undefined method CodeIgniter\Files\File::fread()
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-09-05 09:41:18 --> Call to undefined method CodeIgniter\Files\File::read()
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-09-05 09:42:11 --> fread(): Argument #1 ($stream) must be of type resource, CodeIgniter\Files\File given
+#0 /var/www/html/app/Controllers/Admin/Main/IndexController.php(19): fread(Object(CodeIgniter\Files\File), 234)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-05 09:51:53 --> Undefined variable $rows
+#0 /var/www/html/app/Controllers/Admin/Main/IndexController.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/a...', 20)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-05 09:53:58 --> Call to undefined method CodeIgniter\Files\File::get()
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-09-05 10:04:58 --> Undefined variable $template
+#0 /var/www/html/app/Controllers/Admin/Main/IndexController.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/a...', 35)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-05 10:17:37 --> Invalid file: /var/www/html/app/Config/../../Views/
+namespace App\Controllers\Admin\{namespaceNm};
+use App\Models\BaseModel;
+class {controllerNm} extends \App\Controllers\Admin\Controller
+{
+	public function {classNm}()
+	{
+		$this->setBody(['{folder}', '{classNm}']);
+	}
+}.php
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/Parser.php(112): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/var/www/html/a...')
+#1 /var/www/html/app/Controllers/Admin/Main/IndexController.php(30): CodeIgniter\View\Parser->render('\r\nnamespace App...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-05 10:18:25 --> Invalid file: /var/www/html/app/Config/../../Views/
+namespace App\Controllers\Admin\{namespaceNm};
+use App\Models\BaseModel;
+class {controllerNm} extends \App\Controllers\Admin\Controller
+{
+	public function {classNm}()
+	{
+		$this->setBody(['{folder}', '{classNm}']);
+	}
+}.php
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/Parser.php(112): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/var/www/html/a...')
+#1 /var/www/html/app/Controllers/Admin/Main/IndexController.php(30): CodeIgniter\View\Parser->render('\r\nnamespace App...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-05 10:18:56 --> Invalid file: /var/www/html/app/Config/../../Views/<?php
+namespace App\Controllers\Admin\{namespaceNm};
+use App\Models\BaseModel;
+class {controllerNm} extends \App\Controllers\Admin\Controller
+{
+	public function {classNm}()
+	{
+		$this->setBody(['{folder}', '{classNm}']);
+	}
+}.php
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/Parser.php(112): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/var/www/html/a...')
+#1 /var/www/html/app/Controllers/Admin/Main/IndexController.php(31): CodeIgniter\View\Parser->render('<?php\r\nnamespac...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-05 10:20:34 --> Invalid file: /var/www/html/app/Config/../../Views/<?php
+namespace App\Controllers\Admin\{namespaceNm};
+use App\Models\BaseModel;
+class {controllerNm} extends \App\Controllers\Admin\Controller
+{
+	public function {classNm}()
+	{
+		$this->setBody(['{folder}', '{classNm}']);
+	}
+}.php
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/Parser.php(112): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/var/www/html/a...')
+#1 /var/www/html/app/Controllers/Admin/Main/IndexController.php(33): CodeIgniter\View\Parser->render('<?php\r\nnamespac...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-05 10:20:52 --> Invalid file: /var/www/html/app/Config/../../Views/<?php
+namespace App\Controllers\Admin\{namespaceNm};
+use App\Models\BaseModel;
+class {controllerNm} extends \App\Controllers\Admin\Controller
+{
+	public function {classNm}()
+	{
+		$this->setBody(['{folder}', '{classNm}']);
+	}
+}.php
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/Parser.php(112): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/var/www/html/a...')
+#1 /var/www/html/app/Controllers/Admin/Main/IndexController.php(30): CodeIgniter\View\Parser->render('<?php\r\nnamespac...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-05 10:21:12 --> Invalid file: /var/www/html/app/Config/../../Views/
+namespace App\Controllers\Admin\{namespaceNm};
+use App\Models\BaseModel;
+class {controllerNm} extends \App\Controllers\Admin\Controller
+{
+	public function {classNm}()
+	{
+		$this->setBody(['{folder}', '{classNm}']);
+	}
+}.php
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/Parser.php(112): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/var/www/html/a...')
+#1 /var/www/html/app/Controllers/Admin/Main/IndexController.php(30): CodeIgniter\View\Parser->render('\r\nnamespace App...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-05 10:21:36 --> Invalid file: /var/www/html/app/Config/../../Views/<?php
+namespace App\Controllers\Admin\{namespaceNm};
+use App\Models\BaseModel;
+class {controllerNm} extends \App\Controllers\Admin\Controller
+{
+	public function {classNm}()
+	{
+		$this->setBody(['{folder}', '{classNm}']);
+	}
+}.php
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/Parser.php(112): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/var/www/html/a...')
+#1 /var/www/html/app/Controllers/Admin/Main/IndexController.php(31): CodeIgniter\View\Parser->render('<?php\r\nnamespac...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-05 11:20:10 --> Call to undefined function character_limiter()
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include()
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/widget/bo...', Array, true)
+#3 /var/www/html/app/Controllers/Front/Widget/Widget.php(11): view('Front/widget/bo...', Array)
+#4 /var/www/html/Views/Front/main/index.html(34): App\Controllers\Front\Widget\Widget::getBoradSome('youtube', 5, 'youtube')
+#5 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#6 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/main/inde...', Array, true)
+#8 /var/www/html/app/Controllers/Front/Controller.php(42): view('Front/main/inde...', Array)
+#9 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#10 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-05 11:21:41 --> Call to undefined function character_limiter()
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include()
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/widget/bo...', Array, true)
+#3 /var/www/html/app/Controllers/Front/Widget/Widget.php(11): view('Front/widget/bo...', Array)
+#4 /var/www/html/Views/Front/main/index.html(34): App\Controllers\Front\Widget\Widget::getBoradSome('youtube', 5, 'youtube')
+#5 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#6 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/main/inde...', Array, true)
+#8 /var/www/html/app/Controllers/Front/Controller.php(42): view('Front/main/inde...', Array)
+#9 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#10 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-05 11:21:53 --> Call to undefined function character_limiter()
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include()
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/widget/bo...', Array, true)
+#3 /var/www/html/app/Controllers/Front/Widget/Widget.php(11): view('Front/widget/bo...', Array)
+#4 /var/www/html/Views/Front/main/index.html(34): App\Controllers\Front\Widget\Widget::getBoradSome('youtube', 5, 'youtube')
+#5 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#6 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/main/inde...', Array, true)
+#8 /var/www/html/app/Controllers/Front/Controller.php(42): view('Front/main/inde...', Array)
+#9 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#10 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-05 11:50:16 --> Trying to access array offset on value of type null
+#0 /var/www/html/app/Models/Menu/FrontMenu.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', '/var/www/html/a...', 96)
+#1 /var/www/html/Views/Front/info/base.html(4): App\Models\Menu\FrontMenu->getNowPageImage()
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Front/info/base...', Array, true)
+#5 /var/www/html/app/Controllers/Front/Controller.php(42): view('Front/info/base...', Array)
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#7 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-09-05 16:29:49 --> mkdir(): Permission denied
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mkdir(): Permis...', '/var/www/html/a...', 21)
+#1 /var/www/html/app/Controllers/Admin/Main/IndexController.php(21): mkdir('/var/www/html/a...', 511, true)
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-05 16:39:53 --> Trying to access array offset on value of type null
+#0 /var/www/html/vendor/codeigniter4/framework/system/Files/File.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', '/var/www/html/v...', 143)
+#1 /var/www/html/app/Controllers/Admin/Main/IndexController.php(34): CodeIgniter\Files\File->move('/var/www/html/a...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-05 16:41:24 --> Trying to access array offset on value of type null
+#0 /var/www/html/vendor/codeigniter4/framework/system/Files/File.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', '/var/www/html/v...', 143)
+#1 /var/www/html/app/Controllers/Admin/Main/IndexController.php(35): CodeIgniter\Files\File->move('/var/www/html/a...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Main\IndexController->index()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Main\IndexController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-05 17:50:58 --> Trying to access array offset on value of type null
+#0 /var/www/html/app/Models/Push.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', '/var/www/html/a...', 63)
+#1 /var/www/html/app/Controllers/Admin/Config/AppConfigController.php(14): App\Models\Push->setSendUsrs(1)
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Config\AppConfigController->config()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Config\AppConfigController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-05 17:53:45 --> Trying to access array offset on value of type null
+#0 /var/www/html/app/Models/Push.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', '/var/www/html/a...', 63)
+#1 /var/www/html/app/Controllers/Admin/Config/AppConfigController.php(14): App\Models\Push->setSendUsrs(1)
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Config\AppConfigController->config()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Config\AppConfigController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-05 17:59:02 --> Undefined variable $dat
+#0 /var/www/html/app/Models/Push.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/a...', 61)
+#1 /var/www/html/app/Controllers/Admin/Config/AppConfigController.php(14): App\Models\Push->setSendUsrs(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Config\AppConfigController->config()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Config\AppConfigController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-05 18:02:55 --> 22 : The requested URL returned error: 401 
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested U...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://fcm.goo...')
+#3 /var/www/html/app/Models/Push.php(107): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://fcm.goo...', Array)
+#4 /var/www/html/app/Controllers/Admin/Config/AppConfigController.php(17): App\Models\Push->send()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Config\AppConfigController->config()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Config\AppConfigController))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-05 18:04:31 --> 22 : The requested URL returned error: 401 
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested U...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://fcm.goo...')
+#3 /var/www/html/app/Models/Push.php(107): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://fcm.goo...', Array)
+#4 /var/www/html/app/Controllers/Admin/Config/AppConfigController.php(17): App\Models\Push->send()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Config\AppConfigController->config()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Config\AppConfigController))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}

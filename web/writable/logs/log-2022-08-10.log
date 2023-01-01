@@ -1,0 +1,12 @@
+CRITICAL - 2022-08-10 11:22:30 --> mkdir(): Permission denied
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mkdir(): Permis...', '/var/www/html/a...', 28)
+#1 /var/www/html/app/Models/FileModel.php(28): mkdir('/var/www/html/p...', 511, true)
+#2 /var/www/html/app/Models/FileModel.php(7): App\Models\FileModel::makeDir(false)
+#3 /var/www/html/app/Models/FileModel.php(19): App\Models\FileModel::singleUpload(Object(CodeIgniter\HTTP\Files\UploadedFile), false)
+#4 /var/www/html/app/Models/FileModel.php(18): App\Models\FileModel::fileRecursion(Array, Array, false)
+#5 /var/www/html/app/Controllers/Requst/PostController.php(18): App\Models\FileModel::fileRecursion(Array, Array)
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Requst\PostController->index()
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Requst\PostController))
+#8 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#10 {main}

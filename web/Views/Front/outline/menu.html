@@ -1,0 +1,64 @@
+<header>
+    <div class="main_top_banner">
+        <div class="grid">
+            <?=$widget::popups()?>
+        </div>
+    </div>
+    <div class="header_inner">
+        <a class="h_logo" href="/"><img src="/images/top-logo.png" style="height: 25px;"></a>
+        <nav><?=$menu->getGnbMenu('menu')?></nav>
+        <div class="my_menu">
+            <i class="xi-profile-o"></i>
+            <ul class="">
+                <?php if( is_login() ) : ?>
+                <li><a href="/mypage">마이페이지</a></li>
+                <li><a href="/logout">로그아웃</a></li>
+                <?php else : ?>
+                <li><a href="/log-in">로그인</a></li>
+                <li><a href="/join-us">회원가입</a></li>
+                <?php endif; ?>
+            </ul>
+        </div>
+        <div class="site_map_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="site_map">
+        <span class="sm_close"></span>
+        <div class="site_map_inner"><?=$menu->getGnbMenu('menu')?></div>
+    </div>
+</header>
+<?php if( !$is_index ) : ?>
+<div style="height: 100px;"></div>
+<div class="sub_visual nth_<?=$menu->getClassFinalNm()?>" >
+    <div class="container"> <h2 class="sub_title"><?=$menu->getSubVisualNm()?></h2> </div>
+        <div class="lnb_menu">
+            <div class="grid">
+                <ul>
+                    <li class="home" style="--a:3"><a href="/" class="xi-home-o"></a></li>
+                    <li style="--i:2">
+                        <div><span><?=$menu->getParentSort( true )?></span><i class="xi-angle-down-min"></i></div>
+                        <ul>
+                            <?php foreach( $menu->getFirstCategory() as $row ) : ?>
+                            <li><a href="<?=$row['href']?>"><?=$row['name']?></a></li>
+                            <?php endforeach; ?>
+                        </ul>
+                        
+                    </li>
+                    <li style="--i:1">
+                        <div><span><?=$menu->getNowPageTitle()?></span><i class="xi-angle-down-min"></i></div>
+                        <ul>
+                            <?php foreach( $menu->getSibling() as $row ) : ?>
+                            <li class="<?=$row['class']?'on':''?>"><a href="<?=$row['href']?>"><?=$row['name']?></a></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <h3 class="s_title"><?=$menu->getNowPageTitle()?></h3>
+</div>
+<?php endif; ?>
+

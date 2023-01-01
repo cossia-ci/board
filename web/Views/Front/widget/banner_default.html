@@ -1,0 +1,37 @@
+<?php
+$style = $data['widthType'] == '%' ? 'width:'.$data['width'].'%;' : 'width:'.$data['width'].'px; height:'.$data['height'].'px;';
+?>
+
+<div class="swiper-container" id="banner-<?=$data['code']?>" style="<?=$style?>">
+    <ul class="swiper-wrapper" >
+        <?php
+        foreach( $data['data'] as $row ) :
+            $img_ = '<img src="'.$row['img']['path'].'" alt="'.$row['img']['name'].'" style="width: 100%;">';
+            $img = $row['link'] ? '<a href="'.$row['link'].'" target="'.$row['target'].'">'.$img_.'</a>' : $img_;
+        ?>
+        <li class="swiper-slide"><?=$img?></li>
+        <?php endforeach; ?>
+    </ul>
+<?=($data['buttons'] == 'y')?'<div class="swiper-button-next"></div><div class="swiper-button-prev"></div>':''?>
+<?=($data['pagination'] == 'y')?'<div class="swiper-pagination"></div>':''?>
+</div>
+<script>
+
+new Swiper("#banner-<?=$data['code']?>", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    effect: '<?=$data['effect']?>',
+    loop: true,
+    centeredSlides: true,
+    speed: <?=$data['speed']?>,
+    autoHeight: true,
+    autoplay: {
+        delay: <?=($data['time'] * 1000)?>,
+        disableOnInteraction: false
+    }
+    <?=($data['pagination'] == 'y') ? ',pagination: {el: ".swiper-pagination", clickable: true,}' : '' ?>
+
+    <?=($data['buttons'] == 'y') ? ',navigation: {nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev",}' : '' ?>
+});
+
+</script>

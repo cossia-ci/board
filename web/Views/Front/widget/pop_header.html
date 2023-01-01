@@ -1,0 +1,13 @@
+<div id="header-<?=$data['ano']?>" style="width: 100%; height:<?=$data['height']?>px;" >
+    <div class="header-popup">
+        <div class="header-content"><?=$data['content']?></div>
+        <?php if($data['viewToday'] == 'y') : ?>
+        <div class="header-today">
+            <input type="checkbox" id="header-ck-<?=$data['ano']?>" class="cookie-popup" data-type="<?=$data['type']?>" value="<?=$data['ano']?>" >
+            <label for="header-ck-<?=$data['ano']?>">24시간 동안 열지 않기</label>
+        </div>
+        <?php else : ?>
+        <div class="header-today"><a href="#." class="close-popup" data-type="<?=$data['type']?>" data-id="<?=$data['ano']?>">닫기</a> &nbsp;&nbsp;&nbsp; </div>
+        <?php endif; ?>
+    </div>
+</div>

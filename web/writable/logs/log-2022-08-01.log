@@ -1,0 +1,76 @@
+CRITICAL - 2022-08-01 11:02:11 --> Class "App\Controllers\Front\Main\Google\Client" not found
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-08-01 11:05:34 --> Class "App\Controllers\Front\Main\Client" not found
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-08-01 11:05:50 --> Undefined constant "App\Controllers\Front\Main\Google"
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-08-01 11:05:54 --> Undefined constant "App\Controllers\Front\Main\App"
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-08-01 11:08:42 --> Class "App\Controllers\Front\Main\Google\Client" not found
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-08-01 11:09:00 --> Class "App\Controllers\Front\Main\Google\Client" not found
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-08-01 11:10:20 --> Class "App\Controllers\Front\Main\Google\Client" not found
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Main\IndexController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Main\IndexController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-08-01 16:08:13 --> json_decode(): Passing null to parameter #1 ($json) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'json_decode(): ...', '/var/www/html/a...', 84)
+#1 /var/www/html/app/Models/BaseModel.php(84): json_decode(NULL, true)
+#2 /var/www/html/vendor/codeigniter4/framework/system/BaseModel.php(1456): App\Models\BaseModel->jsonToArray(Array)
+#3 /var/www/html/vendor/codeigniter4/framework/system/BaseModel.php(628): CodeIgniter\BaseModel->trigger('afterFind', Array)
+#4 /var/www/html/app/Models/AuthModel.php(38): CodeIgniter\BaseModel->first()
+#5 /var/www/html/app/Controllers/Admin/Manager/CertController.php(19): App\Models\AuthModel::login(1, 'manager')
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Manager\CertController->PostLogIn()
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Manager\CertController))
+#8 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-08-01 16:17:42 --> Undefined array key "data"
+#0 /var/www/html/app/Controllers/Front/Member/CertController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 108)
+#1 /var/www/html/app/Controllers/Front/Member/CertController.php(10): App\Controllers\Front\Member\CertController->getCfgBool()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Member\CertController->logIn()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Member\CertController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-08-01 16:18:41 --> Undefined array key "data"
+#0 /var/www/html/app/Controllers/Front/Member/CertController.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 16)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Member\CertController->JoinUs()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Member\CertController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-08-01 16:20:10 --> Undefined array key "data"
+#0 /var/www/html/app/Controllers/Front/Member/CertController.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 16)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Member\CertController->JoinUs()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Member\CertController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}

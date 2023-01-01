@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <?=$meta??''?>
+	<title><?=$siteinfo['title']??'코시아보드'?></title>
+    <?=csrf_meta().PHP_EOL?>
+    <!--css-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="//pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet"/>
+    <link href="/plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
+	<link href="/plugins/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai_sublime.css" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" rel="stylesheet" >
+    <link href="/css/bootstrap-dialog.css" rel="stylesheet" type="text/css" />
+    <link href="/css/front.css?<?=date('YmdHis')?>" rel="stylesheet"/>
+    <link href="/css/board.css?<?=date('YmdHis')?>" rel="stylesheet"/>
+    <link href="/css/default.css?<?=date('YmdHis')?>" rel="stylesheet"/>
+    <link href="/css/<?=$is_index?'main':'content'?>.css?<?=date('YmdHis')?>" rel="stylesheet"/>
+    <!--javascript-->
+	<script src="/plugins/jquery/jquery.min.js"></script>
+    <script src="<?=(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on')?'//ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js':'//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js'?>"></script>
+    <script src="/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="/plugins/validation/jquery.validate.min.js"></script>
+    <script src="/plugins/validation/additional-methods.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap-dialog.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" rel="stylesheet" type="text/css" />
+    <script src="/plugins/ckeditor/ckeditor.js"></script>
+    <script src="/js/common.js?<?=date('YmdHis')?>"></script>
+    <script src="/js/front-board.js?<?=date('YmdHis')?>"></script>
+    <script src="/js/default.js?<?=date('YmdHis')?>"></script>
+    <script src="/js/front.js?<?=date('YmdHis')?>"></script>
+    <?=$script??''?>
+    <link rel="shortcut icon" href="<?=isset($siteinfo['favicon']['path'])&&$siteinfo['favicon']['path']!=''?$siteinfo['favicon']['path']:'/images/favicon.png'?>">
+    <link rel="icon" href="<?=isset($siteinfo['favicon']['path'])&&$siteinfo['favicon']['path']!=''?$siteinfo['favicon']['path']:'/images/favicon.png'?>">
+<script>
+if( /MSIE \d|Trident.*rv:/.test(navigator.userAgent) ){
+    window.location.href = "microsoft-edge:" + window.location.href;
+    setTimeout(function(){
+        window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+    },1);
+}
+</script>
+</head>
+<body>

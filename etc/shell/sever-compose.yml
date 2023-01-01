@@ -1,0 +1,58 @@
+version: '3'
+services:
+    web:
+        image: nginx
+        container_name: Nginx
+        restart: always
+        environment:
+            - DOMAIN=-DOMAIN-
+            - TZ=Asia/Seoul
+        ports:
+            - 80:80
+            - 443:443
+        volumes:
+            - /usr/share/zoneinfo/Asia/Seoul:/etc/localtime:ro
+            - ./etc/nginx:/etc/nginx/conf.d
+            - ./web:/var/www/html
+            - ./etc/letsencrypt:/etc/letsencrypt
+        depends_on:
+            - php
+            - database
+        networks:
+            - docker-network
+    php:
+        image: cossia/board:8.1.2
+        container_name: PHP
+        restart: always
+        environment:
+            - TZ=Asia/Seoul
+        volumes:
+            - /usr/share/zoneinfo/Asia/Seoul:/etc/localtime:ro
+            - ./etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini
+            - ./web:/var/www/html
+        depends_on:
+            - database
+        networks:
+            - 'docker-network'
+
+    database:
+        image: mariadb:10.4
+        container_name: Mariadb
+        restart: always
+        environment:
+            - MYSQL_DATABASE=-DBNAME-
+            - MYSQL_ROOT_PASSWORD=-DBPASSWORD-
+            - MYSQL_USER=root
+            - MYSQL_PASSWORD=-DBPASSWORD-
+            - TZ=Asia/Seoul
+        ports:
+            - 3306:3306
+        volumes:
+            - /usr/share/zoneinfo/Asia/Seoul:/etc/localtime:ro
+            - ./database:/var/lib/mysql
+        networks:
+            - docker-network
+
+networks:
+  docker-network: 
+    driver: bridge

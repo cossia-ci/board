@@ -1,0 +1,86 @@
+CRITICAL - 2022-10-18 15:21:09 --> Undefined array key "thumbnail"
+#0 /var/www/html/Views/Admin/board/content-regist.html(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/V...', 55)
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Admin/board/con...', Array, true)
+#4 /var/www/html/app/Controllers/Admin/Controller.php(31): view('Admin/board/con...', Array)
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#6 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-10-18 15:39:20 --> syntax error, unexpected identifier "max", expecting "," or ";"
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Admin/board/con...', Array, true)
+#2 /var/www/html/app/Controllers/Admin/Controller.php(31): view('Admin/board/con...', Array)
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-18 15:39:50 --> syntax error, unexpected token ":"
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Admin/board/con...', Array, true)
+#2 /var/www/html/app/Controllers/Admin/Controller.php(31): view('Admin/board/con...', Array)
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-18 15:40:43 --> syntax error, unexpected identifier "max", expecting ")"
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Admin/board/con...', Array, true)
+#2 /var/www/html/app/Controllers/Admin/Controller.php(31): view('Admin/board/con...', Array)
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-18 15:40:56 --> syntax error, unexpected identifier "max", expecting "," or ";"
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Admin/board/con...', Array, true)
+#2 /var/www/html/app/Controllers/Admin/Controller.php(31): view('Admin/board/con...', Array)
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-18 15:55:28 --> Undefined variable $status
+#0 /var/www/html/app/Controllers/Admin/Board/BoardController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/a...', 26)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Board\BoardController->regist()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Board\BoardController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-18 15:56:07 --> Too few arguments to function App\Controllers\Admin\Board\BoardController::regist(), 0 passed in /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php on line 832 and exactly 1 expected
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Board\BoardController->regist()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Board\BoardController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-10-18 15:56:16 --> Undefined variable $status
+#0 /var/www/html/app/Controllers/Admin/Board/BoardController.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/a...', 24)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Board\BoardController->regist()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Board\BoardController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-10-18 15:58:42 --> Method App\Controllers\Front\Controller::__destruct() cannot declare a return type
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-10-18 17:22:15 --> Undefined constant "App\Controllers\Front\N"
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#1 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#2 {main}
+CRITICAL - 2022-10-18 17:22:36 --> syntax error, unexpected token "const"
+#0 /var/www/html/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/var/www/html/v...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 /var/www/html/app/Controllers/Front/Main/IndexController.php(4): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(264): include_once('/var/www/html/a...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/var/www/html/v...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#8 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#9 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-10-18 17:23:16 --> Undefined constant "App\Controllers\Front\N"
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#1 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#2 {main}
+CRITICAL - 2022-10-18 17:23:22 --> Undefined property: App\Controllers\Front\Main\IndexController::$N
+#0 /var/www/html/app/Controllers/Front/Controller.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/var/www/html/a...', 45)
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Front\Controller->__destruct()
+#2 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#3 {main}

@@ -1,0 +1,47 @@
+<?php if( isset($data) && count($data) ) : ?>
+<div class="board_youtube grid">
+    <div class="content_view">
+        <div class="swiper board_youtube_slide" id="board-<?=$code?>">
+            <div class="swiper-wrapper">
+                <?php foreach( $data as $row ) : ?>
+                <div class="swiper-slide">
+                    <div class="item_youtube">
+                        <a href="#." onclick="view_youtube(this)" data-id="<?=get_youtube_id($row['youtube'])?>" data-title="<?=esc($row['title'])?>" data-content="<?=esc($row['content'])?>">
+                            <img class="card-img" src="<?=get_youtube_thumb($row['youtube'])?>" alt="">
+                        </a>
+                    </div>
+                    <div class="item_text">
+                        <div class="title_group">
+                            <h2 class="t_type1"><span>
+                                    <?=$row['title']?>
+                                </span></h2>
+                            <a href="/bdlist/<?=$code?>"><span>MORE</span><i class="xi-plus-min"></i></a>
+                        </div>
+                        <p><?=esc($row['content'])?></p>
+                        <span class="day">
+                            <?=substr($row['regDt'], 0, 10)?>
+                        </span>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    new Swiper("#board-<?=$code?>", {
+        loop: true,
+        effect: "fade",
+        slidesPerView: 1,
+        autoplay: {
+            delay: 4500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".board_youtube .swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
+<?php endif; ?>

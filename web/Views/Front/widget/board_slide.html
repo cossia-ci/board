@@ -1,0 +1,44 @@
+<?php if( isset($data) && count($data) ) : ?>
+<div class="board-some-slide">
+    <div class="swiper-container" id="board-<?=$code?>">
+        <ul class="swiper-wrapper">
+            <?php 
+            foreach( $data as $row ) :
+                $link = $row['pw'] ? '#.secret' : '/bdread/'.$code.'/'.$row['ano'];
+            ?>
+            <li class="swiper-slide"><a href="<?=$link?>">
+                    <div class="img_box"><img src="<?=$row['thumbnail']['path']?>"></div>
+                    <div class="text_box">
+                        <h5>
+                            <?=$row['title']?>
+                        </h5>
+                        <span class="day">
+                            <?=substr($row['regDt'], 0, 10)?>
+                        </span>
+                    </div>
+                </a>
+            </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+</div>
+<script>
+    new Swiper("#board-<?=$code?>", {
+        loop: true,
+        spaceBetween: 30,
+        slidesPerView: 2,
+        autoplay: {
+            delay: 4500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".board-some-slide .swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".board-some-slide .swiper-button-next",
+            prevEl: ".board-some-slide .swiper-button-prev",
+        }
+    });
+</script>
+<?php endif; ?>

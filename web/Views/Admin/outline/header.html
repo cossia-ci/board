@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Cossia Board Admin</title>
+    <?=csrf_meta().PHP_EOL?>
+	<link href="/plugins/limitless/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="/plugins/limitless/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+	<link href="/plugins/limitless/css/layout.min.css" rel="stylesheet" type="text/css">
+    <link href="//pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet"/>
+    <link href="/plugins/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai_sublime.css" rel="stylesheet">
+    <link href="/plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css">	
+    <link href="/css/bootstrap-dialog.css" rel="stylesheet" type="text/css" />
+    <link href="/css/admin.css?<?=date('YmdHis')?>" rel="stylesheet"/>
+	<script src="/plugins/jquery/jquery.min.js"></script>
+	<script src="/plugins/limitless/js/bootstrap.bundle.min.js"></script>
+	<script src="/plugins/loaders/blockui.min.js"></script>
+	<script src="/plugins/limitless/js/app.js"></script>
+    <script src="<?=(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on')?'//ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js':'//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js'?>"></script>
+    <script src="/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="/plugins/validation/jquery.validate.min.js"></script>
+    <script src="/plugins/validation/additional-methods.min.js"></script>
+    <script src="/plugins/limitless/js/bootbox.min.js"></script>
+    <script src="/plugins/ckeditor/ckeditor.js"></script>
+    <script src="/js/common.js?<?=date('YmdHis')?>"></script>
+    <script src="/js/admin.js?<?=date('YmdHis')?>"></script>
+    <link rel="shortcut icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+</head>
+<script>
+if( /MSIE \d|Trident.*rv:/.test(navigator.userAgent) ){
+    window.location.href = "microsoft-edge:" + window.location.href;
+    setTimeout(function(){
+        window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+    },1);
+}
+</script>
+
+<body>
+
+
+<div class="navbar navbar-expand-md navbar-dark">
+    <div class="navbar-brand">
+        <a href="/admin" class="d-inline-block">
+            <img src="/images/adm-logo.png" style="height: 20px;" alt="">
+        </a>
+    </div>
+    <div class="d-md-none">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+            <i class="fad fa-folder-tree"></i>
+        </button>
+        <button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+            <i class="fad fa-bars"></i>
+        </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-mobile">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+                    <i class="fad fa-bars"></i>
+                </a>
+            </li>
+        </ul>
+
+        <span class="badge ml-md-3 mr-md-auto">&nbsp;</span>
+
+        <ul class="navbar-nav">
+            <li style="padding-right: 20px;">
+                <a href="/" target="_blank"><i class="fad fa-home"></i></a>
+            </li>
+            <li>
+                <a href="/admin/logout"><i class="fad fa-sign-out"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>

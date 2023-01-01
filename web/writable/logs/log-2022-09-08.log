@@ -1,0 +1,87 @@
+CRITICAL - 2022-09-08 10:02:06 --> Declaration of App\Models\Social\Kakao::validate($param) must be compatible with CodeIgniter\Controller::validate($rules, array $messages = []): bool
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-09-08 10:04:10 --> Declaration of App\Models\Social\Kakao::validate(array $param) must be compatible with CodeIgniter\Controller::validate($rules, array $messages = []): bool
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-09-08 10:04:33 --> Declaration of App\Models\Social\Kakao::validate(array $param) must be compatible with CodeIgniter\Controller::validate($rules, array $messages = []): bool
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-09-08 10:05:45 --> Declaration of App\Models\Social\Kakao::validate(array $param): void must be compatible with CodeIgniter\Controller::validate($rules, array $messages = []): bool
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-09-08 10:07:54 --> Declaration of App\Models\Social\Kakao::validate(array $param) must be compatible with CodeIgniter\Controller::validate($rules, array $messages = []): bool
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-09-08 10:15:53 --> Trying to access array offset on value of type null
+#0 /var/www/html/app/Models/Social/ValidatMemberInfo.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', '/var/www/html/a...', 9)
+#1 /var/www/html/app/Models/Social/Kakao.php(68): App\Models\Social\ValidatMemberInfo::validateId(Array)
+#2 /var/www/html/app/Models/Social/Kakao.php(59): App\Models\Social\Kakao->validateId(Array)
+#3 /var/www/html/app/Models/Social/Kakao.php(42): App\Models\Social\Kakao->getKakaoInfo(Array)
+#4 /var/www/html/app/Models/Social/Kakao.php(25): App\Models\Social\Kakao->getToken('m_jBgaf1S5yw0kT...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\Social\Kakao->login()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\Social\Kakao))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-08 10:16:08 --> Trying to access array offset on value of type null
+#0 /var/www/html/app/Models/Social/ValidatMemberInfo.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', '/var/www/html/a...', 9)
+#1 /var/www/html/app/Models/Social/Kakao.php(68): App\Models\Social\ValidatMemberInfo::validateId(Array)
+#2 /var/www/html/app/Models/Social/Kakao.php(59): App\Models\Social\Kakao->validateId(Array)
+#3 /var/www/html/app/Models/Social/Kakao.php(42): App\Models\Social\Kakao->getKakaoInfo(Array)
+#4 /var/www/html/app/Models/Social/Kakao.php(25): App\Models\Social\Kakao->getToken('lToGssBTFQ6wNHq...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\Social\Kakao->login()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\Social\Kakao))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-08 10:18:09 --> Trying to access array offset on value of type null
+#0 /var/www/html/app/Models/Social/ValidatMemberInfo.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', '/var/www/html/a...', 9)
+#1 /var/www/html/app/Models/Social/Kakao.php(68): App\Models\Social\ValidatMemberInfo::validateId(Array)
+#2 /var/www/html/app/Models/Social/Kakao.php(59): App\Models\Social\Kakao->validateId(Array)
+#3 /var/www/html/app/Models/Social/Kakao.php(42): App\Models\Social\Kakao->getKakaoInfo(Array)
+#4 /var/www/html/app/Models/Social/Kakao.php(25): App\Models\Social\Kakao->getToken('86ByF6FmBN0L75_...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\Social\Kakao->login()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\Social\Kakao))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-08 10:37:05 --> Undefined array key "profile_nickname"
+#0 /var/www/html/app/Models/Social/Kakao.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 87)
+#1 /var/www/html/app/Models/Social/Kakao.php(73): App\Models\Social\Kakao->autoJoin(Array)
+#2 /var/www/html/app/Models/Social/Kakao.php(59): App\Models\Social\Kakao->validateId(Array)
+#3 /var/www/html/app/Models/Social/Kakao.php(42): App\Models\Social\Kakao->getKakaoInfo(Array)
+#4 /var/www/html/app/Models/Social/Kakao.php(25): App\Models\Social\Kakao->getToken('oDZrxLJF8rKB-0R...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\Social\Kakao->login()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\Social\Kakao))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-08 11:33:59 --> Undefined variable $param
+#0 /var/www/html/app/Models/Social/Naver.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/a...', 65)
+#1 /var/www/html/app/Models/Social/Naver.php(56): App\Models\Social\Naver->validateId(Array)
+#2 /var/www/html/app/Models/Social/Naver.php(41): App\Models\Social\Naver->getNaverInfo(Array)
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\Social\Naver->login()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\Social\Naver))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-09-08 11:34:39 --> Undefined array key "id"
+#0 /var/www/html/app/Models/Social/Naver.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 65)
+#1 /var/www/html/app/Models/Social/Naver.php(56): App\Models\Social\Naver->validateId(Array)
+#2 /var/www/html/app/Models/Social/Naver.php(41): App\Models\Social\Naver->getNaverInfo(Array)
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\Social\Naver->login()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\Social\Naver))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-09-08 15:29:01 --> Undefined array key "nickname"
+#0 /var/www/html/app/Models/Social/Kakao.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/a...', 72)
+#1 /var/www/html/app/Models/Social/Kakao.php(58): App\Models\Social\Kakao->arrangementData(Array)
+#2 /var/www/html/app/Models/Social/Kakao.php(42): App\Models\Social\Kakao->getKakaoInfo(Array)
+#3 /var/www/html/app/Models/Social/Kakao.php(25): App\Models\Social\Kakao->getToken('50taJlZckn_FCel...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\Social\Kakao->login()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\Social\Kakao))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#8 {main}

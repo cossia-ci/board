@@ -1,0 +1,118 @@
+<div class="head-title">
+	<h4>등급관리</h4>
+    <a href="/admin/member/memlevel-regist" class="btn btn-add">등록</a>
+</div>
+
+<div class="content">
+    <div class="row">
+        <div class="col-12">
+            <form method="get" action="?" >
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="icon-search4"> 검색</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table-col">
+                        <colgroup>
+                            <col width="170px">
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>이름</th>
+                            <td>
+                                <input name="key" type="hidden" value="name">
+                                <input name="keyword" type="text" value="<?=$_GET['keyword']??''?>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>기간검색</th>
+                            <td>
+                                <input name="sDate" type="date" class="date" value="<?=$_GET['sDate']??''?>">
+                                ~
+                                <input name="eDate" type="date" class="date" value="<?=$_GET['eDate']??''?>">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card-footer text-center">
+                    <button type="submit" class="btn btn-find">검색</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header header-elements-inline">
+                    <h5 class="icon-paragraph-justify3"> 리스트</h5>
+                </div>
+                <div class="card-body">
+                    <div class="body-header header-elements-inline">
+                        <div class="header-total">
+                            검색 <span><?=isset($page)?number_format($page->getTotal()):0?></span>
+                            /
+                            전체 <span><?=isset($total)?number_format($total):0?></span>
+                        </div>
+                        <?=per_page($_GET['perPage'])?>
+                    </div>
+                    <table class="table-row">
+                        <colgroup>
+                            <col width="1%">
+                            <col width="100px">
+                            <col>
+                            <col width="150px">
+                            <col width="60px">
+                        </colgroup>
+                        <thead>
+                            <th>
+                                <input type="checkbox" id="all" class="js-all-click" data-target="anos[]">
+                                <label for="all"></label>
+                            </th>
+                            <th>레벨</th>
+                            <th>이름</th>
+                            <th>생성일</th>
+                            <th>수정</th>
+                        </thead>
+                        <tbody>
+                            <?php
+                            if( isset($data) && count($data) ) :
+                                foreach( $data as $row ) :
+                            ?>
+                            <tr>
+                                <td class="text-center">
+                                    <input name="anos[]" type="checkbox" id="ano-<?=$row['ano']?>" value="<?=$row['ano']?>">
+                                    <label for="ano-<?=$row['ano']?>"></label>
+                                </td>
+                                <td class="text-center"><?=$row['level']?></td>
+                                <td class="text-center"><?=$row['name']?></td>
+                                <td class="text-center"><?=substr($row['regDt'], 0, 10)?></td>
+                                <td class="text-center">
+                                    <a href="/admin/member/memlevel-regist?ano=<?=$row['ano']?>" class="btn btn-edit">수정</a>
+                                </td>
+                            </tr>
+                            <?php
+                                endforeach;
+                            else :
+                            ?>
+                            <tr>
+                                <td colspan="5" class="text-center">검색결과가 없습니다.</td>
+                            </tr>
+                            <?php endif; ?>
+                        </tbody>
+                        <tfoot>
+                            <td colspan="5">
+                                <label class="label-checked"></label>
+                                <button type="button" class="btn btn-white btn-sm js-del-row" data-table="memberLevel">삭제</button>
+                            </td>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="card-footer text-right">
+                    <?=isset($page) ? $page->links() : '' ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

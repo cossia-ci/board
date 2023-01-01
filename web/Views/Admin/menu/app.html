@@ -1,0 +1,114 @@
+<div class="head-title">
+	<h4>앱설정</h4>
+    <button type="button" onclick="$('#frm').submit()" class="btn btn-save">저장</button>
+</div>
+
+<div class="content">
+<form id="frm" action="/requst-post-normal" method="post" enctype="multipart/form-data" target="ifrm">
+        <input type="hidden" name="<?=csrf_token()?>" value="<?=csrf_hash()?>">
+        <input type="hidden" name="ano" value="<?=$data['ano']??''?>">
+        <input type="hidden" name="group" value="config">
+        <input type="hidden" name="code" value="app">
+        <input type="hidden" name="table" value="config">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5>기본설정</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table-col">
+                        <colgroup>
+                            <col width="170px">
+                            <col>
+                        </colgroup>
+                        <tr>
+                           <th>Projec Id</th> 
+                           <td><input name="data[id]" type="text" value="<?=$data['data']['id']??''?>"></td>
+                        </tr>
+                        <tr>
+                           <th>Config File</th> 
+                           <td>
+                                <input name="data[file][name]" type="hidden" value="<?=$data['data']['file']['name']??''?>">
+                                <input name="data[file][path]" type="hidden" value="<?=$data['data']['file']['path']??''?>">
+                                <input type="file" id="file0" name="data[file]" class="hide" accept=".json"onchange="upload_file(this)" autocomplete="off">
+                                <label for="file0" type="button" class="btn-file"></label>
+<?php if( isset($data['data']['file']['name']) && $data['data']['file']['name']  ) : ?>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="/file-down?from=<?=$data['data']['file']['path']??''?>&&to=<?=$data['data']['file']['name']??''?>">다운로드 [<?=$data['data']['file']['name']??''?>]</a>
+<?php endif; ?>
+                                 
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5>메시지 설정</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table-row">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="10%">
+                            <col>
+                            <col width="7%">
+                        </colgroup>
+                        <thead>
+                            <th>코드</th>
+                            <th>제목</th>
+                            <th>메시지</th>
+                            <th><button type="button" class="btn-edit js-add-msg">추가</button></th>
+                        </thead>
+                        <tbody id="mgs-body">
+                            <?php
+                            if( isset($data['data']['msg']) && count($data['data']['msg']) ) :
+                                foreach( $data['data']['msg'] as $key => $row ) :
+                            ?>
+                            <tr id="msg-<?=$key?>" class="app-msg">
+                                <td><input name="data[msg][<?=$key?>][code]" type="text" value="<?=$row['code']??''?>"></td>
+                                <td><input name="data[msg][<?=$key?>][title]" type="text" value="<?=$row['title']??''?>"></td>
+                                <td><input name="data[msg][<?=$key?>][msg]" type="text" value="<?=$row['msg']??''?>" style="width: 100%"></td>
+                                <td class="text-center"><button type="button" class="btn-edit js-del-msg" data-index="<?=$key?>">삭제</button></td>
+                            </tr>
+                            <?php
+                                endforeach;
+                            endif ;
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer">
+                    <ul>
+                        <li><dt>회원명</dt><dd>{memberNm}</dd></li>
+                        <li><dt>사이트명</dt><dd>{memberNm}</dd></li>
+                        <li><dt>회사명</dt><dd>{memberNm}</dd></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+
+<script>
+const msg_tr = `<tr id="msg-%index%" class="app-msg">
+                    <td><input name="data[msg][0][code]" type="text"></td>
+                    <td><input name="data[msg][0][title]" type="text"></td>
+                    <td><input name="data[msg][0][msg]" type="text" style="width: 100%"></td>
+                    <td class="text-center"><button type="button" class="btn-edit js-del-msg" data-index="%index%">삭제</button></td>
+                </tr>`;
+$(document).on('click', '.js-add-msg', function(){
+    $('#mgs-body').append( msg_tr.co_split({index: index++}) );
+    sort_input_index('app-msg');
+})
+$(document).on('click', '.js-del-msg', function(){
+    $(`#msg-${$(this).data('index')}`).remove();
+})
+</script>

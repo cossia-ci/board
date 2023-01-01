@@ -1,0 +1,83 @@
+<div class="wrap">
+    <div class="page-header">
+        <h1>
+            <?=$menu->getNowPageTitle()?>
+        </h1>
+    </div>
+    <form id="frm" method="post" action="/requst-post-board-normal" enctype="multipart/form-data" target="ifrm"
+        class="form-inline">
+        <input name="<?=csrf_token()?>" type="hidden" value="<?=csrf_hash()?>">
+        <input name="ano" type="hidden" value="<?=$data['ano']??''?>">
+        <input name="parent" type="hidden" value="<?=$cfg['parent']??''?>">
+        <input name="user_id" type="hidden" value="<?=session('member.ano')??0?>">
+        <input name="ip" type="hidden" value="<?=$_SERVER['REMOTE_ADDR']?>">
+        <input name="sendmail" type="hidden" value="<?=$cfg['write']['sendmail']??''?>">
+        <input name="code" type="hidden" value="<?=$cfg['code']??''?>">
+        <input name="return" type="hidden" value="<?=$cfg['return']??''?>">
+        <?=view('Front/board/write/'.$cfg['skin']['write'])?>
+        <center>
+            <a href="<?=$backUrl?>" class="btn btn-info" >목록</a>
+            <button type="submit" class="btn btn-primary">저장</button>
+        </center>
+    </form>
+</div>
+
+<script>
+    $('#frm').validate({
+        rules: {
+            writer: { required: true },
+            title: { required: true },
+            content: {
+                required: function () {
+                    CKEDITOR.instances.content.updateElement();
+                }
+            },
+        <?php if($cfg['type'] == 'write') : #쓰기전용 S ?>
+            <?php if ($cfg['write']['email'] == 'm') : ?>
+        'etc[email]' : { required: true, email: true },
+            <?php endif; if ($cfg['write']['tel'] == 'm') : ?>
+        'etc[tel]' : { required: true },
+            <?php endif; if ($cfg['write']['phone'] == 'm') : ?>
+        'etc[phone]' : { required: true },
+            <?php endif; ?>
+        <?php endif; #쓰기전용 E ?>
+
+
+        <?php if($cfg['type'] == 'gallery' || $cfg['type'] == 'event') : #갤러리 이벤트 S ?>
+    thumbnail: {
+                required: function(){
+                    return $('input[name="thumbnail[name]"]').val()?false:true;
+                },
+                extension: 'jpg|jpeg|gif|png'
+            },
+        <?php endif; #갤러리 이벤트 E ?>
+
+        <?php if ($cfg['secret'] == 'm') : ?>
+        pw : { required: true },
+        <?php else : ?>
+        pw : {
+            required: function () {
+                return $('input[name="is_secret"]').is(':checked');
+            }
+    },
+        <?php endif; ?>
+    },
+    /*
+    submitHandler: function(){
+        const editor = CKEDITOR.instances.content;
+        editor.updateElement();
+        const bool = editor.getData().length ? true : false;
+        if( !bool ){
+            alert('내용이 없습니다.');
+        }
+        return bool;
+    }
+    */
+})
+    $(function () {
+        $(document).on('click', 'input[name="is_secret"]', function () {
+            const bool = $(this).is(':checked') ? false : true;
+            $('input[name="pw"]').prop('disabled', bool);
+        });
+    })
+</script>

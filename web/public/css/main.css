@@ -1,0 +1,21 @@
+@charset "utf-8";
+/*
+* YOUR WEB Style Sheets
+* File Name : default.css
+* Description : 메인 페이지 스타일시트
+* Author : Web business Team / Jeong Sang Hoon
+* Date : 2022.08.16
+* Update : 2022.08.16
+* Copyright(c) 2022 YOUR WEB Communications. All Rights Reserved.
+*/
+
+
+.wrap_main section{margin-bottom:120px;}
+.t_type1{font-size:26px; font-weight: 700;}
+
+.sec1{width:100%; height:500px;}
+.sec1 .banner_view{width:100%; height:100%; overflow: hidden; position: relative;}
+.sec1 .banner_view img{width:100%;}
+.sec2{display: flex;}
+.sec2 > div{width:50%;}
+.sec4 { padding: 120px 0; background: #f2f2f2; }

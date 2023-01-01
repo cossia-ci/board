@@ -1,0 +1,346 @@
+CRITICAL - 2022-09-06 09:11:55 --> 22 : The requested URL returned error: 401 
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested U...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://fcm.goo...')
+#3 /var/www/html/app/Models/Push.php(107): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://fcm.goo...', Array)
+#4 /var/www/html/app/Controllers/Admin/Config/AppConfigController.php(18): App\Models\Push->send()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Config\AppConfigController->config()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Config\AppConfigController))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-06 09:12:43 --> 22 : The requested URL returned error: 401 
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested U...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://fcm.goo...')
+#3 /var/www/html/app/Models/Push.php(107): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://fcm.goo...', Array)
+#4 /var/www/html/app/Controllers/Admin/Config/AppConfigController.php(18): App\Models\Push->send()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Config\AppConfigController->config()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Config\AppConfigController))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-06 09:15:13 --> 22 : The requested URL returned error: 401 
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested U...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://fcm.goo...')
+#3 /var/www/html/app/Models/Push.php(107): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://fcm.goo...', Array)
+#4 /var/www/html/app/Controllers/Admin/Config/AppConfigController.php(18): App\Models\Push->send()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Config\AppConfigController->config()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Config\AppConfigController))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-06 09:16:20 --> 22 : The requested URL returned error: 401 
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested U...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://fcm.goo...')
+#3 /var/www/html/app/Models/Push.php(108): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://fcm.goo...', Array)
+#4 /var/www/html/app/Controllers/Admin/Config/AppConfigController.php(18): App\Models\Push->send()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Config\AppConfigController->config()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Config\AppConfigController))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-06 09:18:53 --> 22 : The requested URL returned error: 401 
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested U...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://fcm.goo...')
+#3 /var/www/html/app/Models/Push.php(109): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://fcm.goo...', Array)
+#4 /var/www/html/app/Controllers/Admin/Config/AppConfigController.php(18): App\Models\Push->send()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Config\AppConfigController->config()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Config\AppConfigController))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-06 09:18:57 --> 22 : The requested URL returned error: 401 
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested U...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://fcm.goo...')
+#3 /var/www/html/app/Models/Push.php(109): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://fcm.goo...', Array)
+#4 /var/www/html/app/Controllers/Admin/Config/AppConfigController.php(18): App\Models\Push->send()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Config\AppConfigController->config()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Config\AppConfigController))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-06 09:28:12 --> 22 : The requested URL returned error: 401 
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested U...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://fcm.goo...')
+#3 /var/www/html/app/Models/Push.php(109): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://fcm.goo...', Array)
+#4 /var/www/html/app/Controllers/Admin/Config/AppConfigController.php(18): App\Models\Push->send()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Config\AppConfigController->config()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Config\AppConfigController))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-06 14:17:12 --> Invalid file: Admin/member/social.html
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/member/so...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Admin/member/so...', Array, true)
+#2 /var/www/html/app/Controllers/Admin/Controller.php(31): view('Admin/member/so...', Array)
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-06 14:17:32 --> Invalid file: Admin/member/social.html
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/member/so...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Admin/member/so...', Array, true)
+#2 /var/www/html/app/Controllers/Admin/Controller.php(31): view('Admin/member/so...', Array)
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-06 14:20:42 --> Undefined variable $level
+#0 /var/www/html/Views/Admin/member/social.html(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/V...', 30)
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Admin/member/so...', Array, true)
+#4 /var/www/html/app/Controllers/Admin/Controller.php(31): view('Admin/member/so...', Array)
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#6 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-09-06 14:28:01 --> Undefined array key "data"
+#0 /var/www/html/Views/Admin/member/social.html(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/V...', 27)
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Admin/member/so...', Array, true)
+#4 /var/www/html/app/Controllers/Admin/Controller.php(31): view('Admin/member/so...', Array)
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#6 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-09-06 14:28:22 --> Undefined array key "data"
+#0 /var/www/html/Views/Admin/member/social.html(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/V...', 27)
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Admin/member/so...', Array, true)
+#4 /var/www/html/app/Controllers/Admin/Controller.php(31): view('Admin/member/so...', Array)
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#6 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-09-06 14:28:37 --> syntax error, unexpected identifier "data", expecting "," or ";"
+#0 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Admin/member/so...', Array, true)
+#2 /var/www/html/app/Controllers/Admin/Controller.php(31): view('Admin/member/so...', Array)
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-06 15:36:51 --> Class "App\Models\Social\kakao" not found
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Member\SocialController->index()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Member\SocialController))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-09-06 15:47:50 --> Class "App\Models\Social\Services" not found
+#0 /var/www/html/app/Controllers/Admin/Member/SocialController.php(10): App\Models\Social\kakao->__construct()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Member\SocialController->index()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Member\SocialController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-06 15:48:14 --> Class "App\Models\Social\Services" not found
+#0 /var/www/html/app/Controllers/Admin/Member/SocialController.php(11): App\Models\Social\kakao->__construct()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Member\SocialController->index()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Member\SocialController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-06 15:48:22 --> Undefined variable $curl
+#0 /var/www/html/app/Models/Social/Kakao.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/a...', 30)
+#1 /var/www/html/app/Controllers/Admin/Member/SocialController.php(12): App\Models\Social\kakao->getToken()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Member\SocialController->index()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Member\SocialController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-06 15:48:41 --> 6 : Could not resolve host: oauth
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('6', 'Could not resol...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('GET', 'http://oauth/au...')
+#3 /var/www/html/app/Models/Social/Kakao.php(30): CodeIgniter\HTTP\CURLRequest->request('GET', 'http://oauth/au...', Array)
+#4 /var/www/html/app/Controllers/Admin/Member/SocialController.php(12): App\Models\Social\kakao->getToken()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Member\SocialController->index()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Member\SocialController))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-06 15:50:03 --> 6 : Could not resolve host: oauth
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('6', 'Could not resol...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('GET', 'http://oauth/au...')
+#3 /var/www/html/app/Models/Social/Kakao.php(32): CodeIgniter\HTTP\CURLRequest->request('GET', 'http://oauth/au...', Array)
+#4 /var/www/html/app/Controllers/Admin/Member/SocialController.php(12): App\Models\Social\kakao->getToken()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Member\SocialController->index()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Member\SocialController))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-06 15:50:50 --> 6 : Could not resolve host: oauth
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('6', 'Could not resol...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('GET', 'http://oauth/au...')
+#3 /var/www/html/app/Models/Social/Kakao.php(33): CodeIgniter\HTTP\CURLRequest->request('GET', 'http://oauth/au...', Array)
+#4 /var/www/html/app/Controllers/Admin/Member/SocialController.php(12): App\Models\Social\kakao->getToken()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Member\SocialController->index()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Member\SocialController))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-06 15:54:39 --> 6 : Could not resolve host: oauth
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('6', 'Could not resol...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('GET', 'http://oauth/au...')
+#3 /var/www/html/app/Models/Social/Kakao.php(33): CodeIgniter\HTTP\CURLRequest->request('GET', 'http://oauth/au...', Array)
+#4 /var/www/html/app/Controllers/Admin/Member/SocialController.php(12): App\Models\Social\kakao->getToken()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Member\SocialController->index()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Member\SocialController))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-06 15:56:21 --> 6 : Could not resolve host: oauth
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('6', 'Could not resol...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('GET', 'http://oauth/au...')
+#3 /var/www/html/app/Models/Social/Kakao.php(33): CodeIgniter\HTTP\CURLRequest->request('GET', 'http://oauth/au...', Array)
+#4 /var/www/html/app/Controllers/Admin/Member/SocialController.php(12): App\Models\Social\kakao->getToken()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Member\SocialController->index()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Member\SocialController))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-06 15:56:47 --> 6 : Could not resolve host: oauth
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('6', 'Could not resol...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('GET', 'http://oauth/au...')
+#3 /var/www/html/app/Models/Social/Kakao.php(33): CodeIgniter\HTTP\CURLRequest->request('GET', 'http://oauth/au...', Array)
+#4 /var/www/html/app/Controllers/Admin/Member/SocialController.php(12): App\Models\Social\kakao->getToken()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Member\SocialController->index()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Member\SocialController))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-06 15:58:06 --> 6 : Could not resolve host: oauth
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('6', 'Could not resol...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('GET', 'http://oauth/au...')
+#3 /var/www/html/app/Models/Social/Kakao.php(33): CodeIgniter\HTTP\CURLRequest->request('GET', 'http://oauth/au...', Array)
+#4 /var/www/html/app/Controllers/Admin/Member/SocialController.php(13): App\Models\Social\kakao->getToken()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Member\SocialController->index()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Member\SocialController))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-06 16:03:39 --> 22 : The requested URL returned error: 404 Not Found
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested U...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('GET', 'https://kapi.ka...')
+#3 /var/www/html/app/Models/Social/Kakao.php(33): CodeIgniter\HTTP\CURLRequest->request('GET', 'https://kapi.ka...', Array)
+#4 /var/www/html/app/Controllers/Admin/Member/SocialController.php(13): App\Models\Social\kakao->getToken()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Member\SocialController->index()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Member\SocialController))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-06 16:06:24 --> Call to undefined method CodeIgniter\Router\RouteCollection::any()
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(713): require()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-09-06 16:17:22 --> Call to undefined method CodeIgniter\HTTP\Response::getCode()
+#0 /var/www/html/app/Controllers/Admin/Member/SocialController.php(13): App\Models\Social\kakao->getToken()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Member\SocialController->index()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Member\SocialController))
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-06 16:27:48 -->  route cannot be found while reverse-routing.
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 /var/www/html/vendor/codeigniter4/framework/system/Common.php(832): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 /var/www/html/app/Models/Social/Kakao.php(36): redirect('/social/kakao/g...')
+#3 /var/www/html/app/Controllers/Admin/Member/SocialController.php(13): App\Models\Social\kakao->getToken()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Member\SocialController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Member\SocialController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-09-06 16:37:40 -->  route cannot be found while reverse-routing.
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 /var/www/html/vendor/codeigniter4/framework/system/Common.php(832): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 /var/www/html/app/Models/Social/Kakao.php(35): redirect('/social/kakao/g...', 'location', 302)
+#3 /var/www/html/app/Controllers/Admin/Member/SocialController.php(13): App\Models\Social\kakao->getToken()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Member\SocialController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Member\SocialController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-09-06 16:39:34 --> Undefined variable $route
+#0 /var/www/html/app/Models/Social/Kakao.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/var/www/html/a...', 35)
+#1 /var/www/html/app/Controllers/Admin/Member/SocialController.php(13): App\Models\Social\kakao->getToken()
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Admin\Member\SocialController->index()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Member\SocialController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-06 17:23:26 --> json_decode(): Passing null to parameter #1 ($json) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'json_decode(): ...', '/var/www/html/a...', 16)
+#1 /var/www/html/app/Controllers/Front/Social/KakaoController.php(16): json_decode(NULL, true)
+#2 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Front\Social\KakaoController->getToken()
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front\Social\KakaoController))
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-06 17:43:17 --> Call to undefined method App\Models\Social\kakao::initController()
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-09-06 17:43:58 --> Call to undefined method App\Models\Social\kakao::initController()
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-09-06 17:44:06 --> Call to undefined method App\Models\Social\kakao::initController()
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-09-06 17:44:20 --> Call to undefined method App\Models\Social\kakao::initController()
+#0 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#1 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-09-06 18:10:07 --> Cannot redeclare App\Models\Social\kakao::getToken()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-09-06 18:10:27 --> 22 : The requested URL returned error: 400 Bad Request
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested U...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://kauth.k...')
+#3 /var/www/html/app/Models/Social/Kakao.php(33): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://kauth.k...', Array)
+#4 /var/www/html/app/Models/Social/Kakao.php(40): App\Models\Social\kakao->getToken('GPRctR1OEFBC8_-...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\Social\kakao->login()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\Social\kakao))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-06 18:12:26 --> 22 : The requested URL returned error: 400 Bad Request
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested U...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://kauth.k...')
+#3 /var/www/html/app/Models/Social/Kakao.php(39): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://kauth.k...', Array)
+#4 /var/www/html/app/Models/Social/Kakao.php(24): App\Models\Social\kakao->getToken('GPRctR1OEFBC8_-...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\Social\kakao->login()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\Social\kakao))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-06 18:12:33 --> 22 : The requested URL returned error: 400 Bad Request
+#0 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(656): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested U...')
+#1 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(364): CodeIgniter\HTTP\CURLRequest->sendRequest(Array)
+#2 /var/www/html/vendor/codeigniter4/framework/system/HTTP/CURLRequest.php(140): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://kauth.k...')
+#3 /var/www/html/app/Models/Social/Kakao.php(39): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://kauth.k...', Array)
+#4 /var/www/html/app/Models/Social/Kakao.php(24): App\Models\Social\kakao->getToken('C61YUSeYCxvKKrN...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Models\Social\kakao->login()
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Models\Social\kakao))
+#7 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#9 {main}

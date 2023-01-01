@@ -1,0 +1,11 @@
+
+<!-- 개인정보취급방침 -->
+<div class="wrap ">
+    <?=$menu->getNowPageString(' <i class="fad fa-angle-right"></i> ')?>
+    <div class="grid">
+        <div class="container">
+            <?=$parser->setData($data_)->renderString(nl2br($data))?>
+        </div>
+    </div>
+    
+</div>

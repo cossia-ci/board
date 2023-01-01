@@ -1,0 +1,9 @@
+CRITICAL - 2022-09-13 09:18:11 --> Undefined array key "data"
+#0 /var/www/html/Views/Admin/config/popup-regist.html(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', '/var/www/html/V...', 82)
+#1 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(210): include('/var/www/html/V...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('Admin/config/po...', Array, true)
+#4 /var/www/html/app/Controllers/Admin/Controller.php(31): view('Admin/config/po...', Array)
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(326): App\Controllers\Admin\Controller->__destruct()
+#6 /var/www/html/public/index.php(9): CodeIgniter\CodeIgniter->run()
+#7 {main}

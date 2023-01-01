@@ -1,0 +1,85 @@
+<div class="head-title">
+	<h4>소셜 로그인 설정</h4>
+    <button type="submit" onclick="$('#frm').submit()" class="btn btn-save">저장</button>
+</div>
+<div class="content">
+    <div class="row">
+        <form id="frm" method="post" action="/requst-post-normal" target="ifrm">
+            <input type="hidden" name="<?=csrf_token()?>" value="<?=csrf_hash()?>">
+            <input type="hidden" name="table" value="config">
+            <input type="hidden" name="ano" value="<?=$data['ano']??''?>">
+            <input type="hidden" name="group" value="config">
+            <input type="hidden" name="code" value="social">
+
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header header-elements-inline">
+                    <h5>네이버 로그인 설정</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table-col">
+                        <colgroup>
+                            <col width="170px">
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>사용</th>
+                            <td>
+                                <input name="data[naver][use]" type="radio" value="y" id="naver-use-y" <?=(isset($data['data']['naver']['use'])&&$data['data']['naver']['use']=='y') ? 'checked' : '' ?> >
+                                <label for="naver-use-y">사용함</label>
+                                <input name="data[naver][use]" type="radio" value="n" id="naver-use-n" <?=(isset($data['data']['naver']['use'])&&$data['data']['naver']['use']=='n')||!isset($data['data']['naver']['use']) ? 'checked' : '' ?> >
+                                <label for="naver-use-n">사용안함</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Client ID</th>
+                            <td><input name="data[naver][id]" type="text" value="<?=$data['data']['naver']['id']??''?>"></td>
+                        </tr>
+                        <tr>
+                            <th>Client Secret</th>
+                            <td><input name="data[naver][secret]" type="text" value="<?=$data['data']['naver']['secret']??''?>"></td>
+                        </tr>
+                        <tr>
+                            <th>CallbackURL</th>
+                            <td><?=base_url()?>/social/naver</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header header-elements-inline">
+                    <h5>카카오 로그인 설정</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table-col">
+                        <colgroup>
+                            <col width="170px">
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>사용</th>
+                            <td>
+                                <input name="data[kakao][use]" type="radio" value="y" id="kakao-use-y" <?=(isset($data['data']['kakao']['use'])&&$data['data']['kakao']['use']=='y') ? 'checked' : '' ?> >
+                                <label for="kakao-use-y">사용함</label>
+                                <input name="data[kakao][use]" type="radio" value="n" id="kakao-use-n" <?=(isset($data['data']['kakao']['use'])&&$data['data']['kakao']['use']=='n')||!isset($data['data']['kakao']['use']) ? 'checked' : '' ?> >
+                                <label for="kakao-use-n">사용안함</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>REST API 키</th>
+                            <td><input name="data[kakao][api]" type="text" value="<?=$data['data']['kakao']['api']??''?>"></td>
+                        </tr>
+                        <tr>
+                            <th>Redirect URI</th>
+                            <td><?=base_url()?>/social/kakao</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>

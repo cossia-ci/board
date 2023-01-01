@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="page-header">
+        <h1>회원가입</h1>
+    </div>
+    <form id="frm" action="/post-join" method="POST" enctype="multipart/form-data" target="ifrm">
+    <input type="hidden" name="<?=csrf_token()?>" value="<?=csrf_hash()?>">
+    <input name="app" type="hidden" value="<?=$cfg['app']?>">
+    <input name="level" type="hidden" value="<?=$cfg['appLv']?>">
+
+    <?=view('Front/member/_memdata.html')?>
+
+    <textarea class="form-control">
+        <?=$parser->setData($data_)->renderString($tos)?>
+    </textarea>
+    <input name="tos" type="checkbox" id="tos-checkbox" class="js-all-checkbox" value="y" >
+    <label for="tos-checkbox">이용약관 동의(필수)</label>
+
+    <textarea class="form-control">
+        <?=$parser->setData($data_)->renderString($privacy)?>
+    </textarea>
+    <input name="privacy" type="checkbox" id="privacy-checkbox" class="js-all-checkbox" value="y" >
+    <label for="privacy-checkbox">개인정보 처리방침에 동의(필수)</label>
+    <textarea class="form-control">
+        <?=$parser->setData($data_)->renderString($agreement['agreed'])?>
+    </textarea>
+    <input name="agreed" type="checkbox" id="agreed-checkbox" class="js-all-checkbox" value="y" >
+    <label for="agreed-checkbox">개인정보 수집 동의(필수)</label>
+    
+    <input type="checkbox" id="all-checkbox">
+    <label for="all-checkbox">전체동의</label>
+    
+    <?php if( isset($agreement['trustUse']) && $agreement['trustUse'] == 'y' ) : ?>
+    <textarea class="form-control">
+        <?=$parser->setData($data_)->renderString($agreement['trust'])?>
+    </textarea>
+    <input name="agreed[trust]" type="checkbox" id="trust-checkbox" class="js-all-checkbox" value="y" >
+    <label for="trust-checkbox">위탁 동의(선택)</label>
+    <?php endif; ?>
+    <?php if( isset($agreement['thirdPartyUse']) && $agreement['thirdPartyUse'] == 'y' ) : ?>
+    <textarea class="form-control">
+        <?=$parser->setData($data_)->renderString($agreement['thirdParty'])?>
+    </textarea>
+    <input name="agreed[thirdParty]" type="checkbox" id="thirdParty-checkbox" class="js-all-checkbox" value="y" >
+    <label for="thirdParty-checkbox">제 3자 제공 동의(선택)</label>
+    <?php endif; ?>
+
+    <center>
+    <button type="submit" class="btn btn-primary" >확인</button>
+    </center>
+    </form>
+</div>
+<script>
+$(document).on('click', '#all-checkbox', function(){
+    if( $(this).is(':checked') ) $('.js-all-checkbox').prop('checked', true);
+    else $('.js-all-checkbox').prop('checked', false);
+})
+</script>

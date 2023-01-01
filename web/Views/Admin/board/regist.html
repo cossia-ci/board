@@ -1,0 +1,453 @@
+<div class="head-title">
+	<h4>게시판목록</h4>
+    <button type="button" onclick="$('#frms').submit()" class="btn btn-save">저장</button>
+</div>
+<div class="content">
+    <form id="frms" action="/requst-post-board-regist" method="post" target="ifrm">
+        <input type="hidden" name="<?=csrf_token()?>" value="<?=csrf_hash()?>">
+        <input type="hidden" name="ano" value="<?=$data['ano']??''?>">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>기본정보</h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table-col">
+                            <colgroup>
+                                <col width="170px">
+                                <col>
+                                <col width="170px">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th>코드</th>
+                                <td><?=$data['code']??'<input name="code" type="text" class="eng-only" value="">'?></td>
+                                <th>타입</th>
+                                <td>
+                                    <?php
+                                    foreach( get_board_type() as $key => $val ) :
+                                        if( isset($data['type']) ) $checked = $data['type'] == $key ? 'checked' : '';
+                                        else $checked = $key == 'default' ? 'checked' : '';
+                                    ?>
+                                    <input name="type" type="radio" value="<?=$key?>" id="type-<?=$key?>" <?=$checked?>>
+                                    <label for="type-<?=$key?>"><?=$val?></label>
+                                    <?php endforeach; ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이름</th>
+                                <td><input name="name" type="text" value="<?=$data['name']??''?>"></td>
+                                <th>스킨 (List)</th>
+                                <td>
+                                    <select name="skin[list]">
+                                        <?php foreach( $skinList as $key => $val ) : ?>
+                                        <option value="<?=$val?>" <?=isset($data['skin']['list'])&&$data['skin']['list']==$val?'selected':''?>><?=get_exp_word($val)?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>스킨 (Read)</th>
+                                <td>
+                                    <select name="skin[read]">
+                                        <?php foreach( $skinRead as $key => $val ) : ?>
+                                        <option value="<?=$val?>" <?=isset($data['skin']['read'])&&$data['skin']['read']==$val?'selected':''?>><?=get_exp_word($val)?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </td>
+                                <th>스킨 (Write)</th>
+                                <td>
+                                    <select name="skin[write]">
+                                        <?php foreach( $skinWrite as $key => $val ) : ?>
+                                        <option value="<?=$val?>" <?=isset($data['skin']['write'])&&$data['skin']['write']==$val?'selected':''?>><?=get_exp_word($val)?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-12 board-nomal <?=isset($data['type'])&&$data['type']=='write'?'hide':''?>">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>기능/권한</h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table-col">
+                            <colgroup>
+                                <col width="170px">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th>코멘트 기능</th>
+                                <td>
+                                    <input name="auth[comment]" type="radio" value="n" id="auth-comment-n" checked>
+                                    <label for="auth-comment-n">사용안함</label>
+                                    <input name="auth[comment]" type="radio" value="all" id="auth-comment-all" <?=isset($data['auth']['comment'])&&$data['auth']['comment']=='all'?'checked':''?>>
+                                    <label for="auth-comment-all">전체(회원+비회원)</label>
+                                    <input name="auth[comment]" type="radio" value="mem" id="auth-comment-mem" <?=isset($data['auth']['comment'])&&$data['auth']['comment']=='mem'?'checked':''?>>
+                                    <label for="auth-comment-mem">회원전용</label>
+                                    <input name="auth[comment]" type="radio" value="adm" id="auth-comment-adm" <?=isset($data['auth']['comment'])&&$data['auth']['comment']=='adm'?'checked':''?>>
+                                    <label for="auth-comment-adm">관리자전용</label>
+        
+                                    <input name="auth[comment]" type="radio" value="sps" id="auth-comment-sps" <?=isset($data['auth']['comment'])&&$data['auth']['comment']=='sps'?'checked':''?>>
+                                    <label for="auth-comment-sps">특정회원등급</label>
+        
+                                    
+        
+                                    <button type="button" class="btn btn-sm btn-gray" data-target="comment" <?=isset($data['auth']['comment'])&&$data['auth']['comment']!='sps'||!isset($data['auth']['comment'])?'disabled':''?>>선택</button>
+                                    <ul id="comment-ul" class="auth-sps-list">
+                                    <?php
+                                    if(isset($data['auth']['commentsps']) && count( $data['auth']['commentsps'] )) :
+                                        foreach( $data['auth']['commentsps'] as $val ) :
+                                    ?>
+                                        <li id="sps-comment-<?=$val?>">
+                                            <input name="auth[commentsps][]" type="hidden" value="<?=$val?>"><?=get_member_level($val)?>
+                                            <span class="icon-bin" onclick="remove_level(this)" data-name="comment" data-index="<?=$val?>"></span>
+                                        </li>
+                                    <?php
+                                        endforeach;
+                                    endif;
+                                    ?>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>답변 기능</th>
+                                <td>
+                                    <input name="auth[replay]" type="radio" value="n" id="auth-replay-n" checked>
+                                    <label for="auth-replay-n">사용안함</label>
+                                    <input name="auth[replay]" type="radio" value="all" id="auth-replay-all" <?=isset($data['auth']['replay'])&&$data['auth']['replay']=='all'?'checked':''?>>
+                                    <label for="auth-replay-all">전체(회원+비회원)</label>
+                                    <input name="auth[replay]" type="radio" value="mem" id="auth-replay-mem" <?=isset($data['auth']['replay'])&&$data['auth']['replay']=='mem'?'checked':''?>>
+                                    <label for="auth-replay-mem">회원전용</label>
+                                    <input name="auth[replay]" type="radio" value="adm" id="auth-replay-adm" <?=isset($data['auth']['replay'])&&$data['auth']['replay']=='adm'?'checked':''?>>
+                                    <label for="auth-replay-adm">관리자전용</label>
+                                    <input name="auth[replay]" type="radio" value="sps" id="auth-replay-sps" <?=isset($data['auth']['replay'])&&$data['auth']['replay']=='sps'?'checked':''?>>
+                                    <label for="auth-replay-sps">특정회원등급</label>
+                                    <button type="button" class="btn btn-sm btn-gray" data-target="replay" <?=isset($data['auth']['replay'])&&$data['auth']['replay']!='sps'||!isset($data['auth']['replay'])?'disabled':''?>>선택</button>
+                                    <ul id="replay-ul" class="auth-sps-list">
+                                        <?php
+                                        if(isset($data['auth']['replaysps']) && count( $data['auth']['replaysps'] )) :
+                                            foreach( $data['auth']['replaysps'] as $val ) :
+                                        ?>
+                                            <li id="sps-replay-<?=$val?>">
+                                                <input name="auth[replaysps][]" type="hidden" value="<?=$val?>"><?=get_member_level($val)?>
+                                                <span class="icon-bin" onclick="remove_level(this)" data-name="replay" data-index="<?=$val?>"></span>
+                                            </li>
+                                        <?php
+                                            endforeach;
+                                        endif;
+                                        ?>
+                                    </ul>
+        
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>리스트 권한</th>
+                                <td>
+                                    <input name="auth[list]" type="radio" value="all" id="auth-list-all" checked>
+                                    <label for="auth-list-all">전체(회원+비회원)</label>
+                                    <input name="auth[list]" type="radio" value="mem" id="auth-list-mem" <?=isset($data['auth']['list'])&&$data['auth']['list']=='mem'?'checked':''?>>
+                                    <label for="auth-list-mem">회원전용</label>
+                                    <input name="auth[list]" type="radio" value="adm" id="auth-list-adm" <?=isset($data['auth']['list'])&&$data['auth']['list']=='adm'?'checked':''?>>
+                                    <label for="auth-list-adm">관리자전용</label>
+        
+                                    <input name="auth[list]" type="radio" value="sps" id="auth-list-sps" <?=isset($data['auth']['list'])&&$data['auth']['list']=='sps'?'checked':''?>>
+                                    <label for="auth-list-sps">특정회원등급</label>
+                                    <button type="button" class="btn btn-sm btn-gray" data-target="list" <?=isset($data['auth']['list'])&&$data['auth']['list']!='sps'||!isset($data['auth']['list'])?'disabled':''?>>선택</button>
+                                    <ul id="list-ul" class="auth-sps-list">
+                                        <?php
+                                        if(isset($data['auth']['listsps']) && count( $data['auth']['listsps'] )) :
+                                            foreach( $data['auth']['listsps'] as $val ) :
+                                        ?>
+                                            <li id="sps-list-<?=$val?>">
+                                                <input name="auth[listsps][]" type="hidden" value="<?=$val?>"><?=get_member_level($val)?>
+                                                <span class="icon-bin" onclick="remove_level(this)" data-name="list" data-index="<?=$val?>"></span>
+                                            </li>
+                                        <?php
+                                            endforeach;
+                                        endif;
+                                        ?>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>읽기 권한</th>
+                                <td>
+                                    <input name="auth[read]" type="radio" value="all" id="auth-read-all" checked>
+                                    <label for="auth-read-all">전체(회원+비회원)</label>
+                                    <input name="auth[read]" type="radio" value="mem" id="auth-read-mem" <?=isset($data['auth']['read'])&&$data['auth']['read']=='mem'?'checked':''?>>
+                                    <label for="auth-read-mem">회원전용</label>
+                                    <input name="auth[read]" type="radio" value="adm" id="auth-read-adm" <?=isset($data['auth']['read'])&&$data['auth']['read']=='adm'?'checked':''?>>
+                                    <label for="auth-read-adm">관리자전용</label>
+        
+                                    <input name="auth[read]" type="radio" value="sps" id="auth-read-sps" <?=isset($data['auth']['read'])&&$data['auth']['read']=='sps'?'checked':''?>>
+                                    <label for="auth-read-sps">특정회원등급</label>
+                                    <button type="button" class="btn btn-sm btn-gray" data-target="read" <?=isset($data['auth']['read'])&&$data['auth']['read']!='sps'||!isset($data['auth']['read'])?'disabled':''?>>선택</button>
+                                    <ul id="read-ul" class="auth-sps-list">
+                                        <?php
+                                        if(isset($data['auth']['readsps']) && count( $data['auth']['readsps'] )) :
+                                            foreach( $data['auth']['readsps'] as $val ) :
+                                        ?>
+                                            <li id="sps-read-<?=$val?>">
+                                                <input name="auth[readsps][]" type="hidden" value="<?=$val?>"><?=get_member_level($val)?>
+                                                <span class="icon-bin" onclick="remove_level(this)" data-name="read" data-index="<?=$val?>"></span>
+                                            </li>
+                                        <?php
+                                            endforeach;
+                                        endif;
+                                        ?>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>쓰기 권한</th>
+                                <td>
+                                    <input name="auth[write]" type="radio" value="all" id="auth-write-all" checked>
+                                    <label for="auth-write-all">전체(회원+비회원)</label>
+                                    <input name="auth[write]" type="radio" value="mem" id="auth-write-mem" <?=isset($data['auth']['write'])&&$data['auth']['write']=='mem'?'checked':''?>>
+                                    <label for="auth-write-mem">회원전용</label>
+                                    <input name="auth[write]" type="radio" value="adm" id="auth-write-adm" <?=isset($data['auth']['write'])&&$data['auth']['write']=='adm'?'checked':''?>>
+                                    <label for="auth-write-adm">관리자전용</label>
+        
+                                    <input name="auth[write]" type="radio" value="sps" id="auth-write-sps" <?=isset($data['auth']['write'])&&$data['auth']['write']=='sps'?'checked':''?>>
+                                    <label for="auth-write-sps">특정회원등급</label>
+                                    <button type="button" class="btn btn-sm btn-gray" data-target="write" <?=isset($data['auth']['write'])&&$data['auth']['write']!='sps'||!isset($data['auth']['write'])?'disabled':''?>>선택</button>
+                                    <ul id="write-ul" class="auth-sps-list">
+                                        <?php
+                                        if(isset($data['auth']['writesps']) && count( $data['auth']['writesps'] )) :
+                                            foreach( $data['auth']['writesps'] as $val ) :
+                                        ?>
+                                            <li id="sps-write-<?=$val?>">
+                                                <input name="auth[writesps][]" type="hidden" value="<?=$val?>"><?=get_member_level($val)?>
+                                                <span class="icon-bin" onclick="remove_level(this)" data-name="write" data-index="<?=$val?>"></span>
+                                            </li>
+                                        <?php
+                                            endforeach;
+                                        endif;
+                                        ?>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>비밀글</th>
+                                <td>
+                                    <input name="auth[secret]" type="radio" value="n" id="secret-n" checked>
+                                    <label for="secret-n">사용안함</label>
+                                    <input name="auth[secret]" type="radio" value="cho" id="secret-cho" <?=isset($data['auth']['secret'])&&$data['auth']['secret']=='cho'?'checked':''?>>
+                                    <label for="secret-cho">선택</label>
+                                    <input name="auth[secret]" type="radio" value="mst" id="secret-mst" <?=isset($data['auth']['secret'])&&$data['auth']['secret']=='mst'?'checked':''?>>
+                                    <label for="secret-mst">필수</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 board-nomal <?=isset($data['type'])&&$data['type']=='write'?'hide':''?>">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>리스트 화면</h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table-col">
+                            <colgroup>
+                                <col width="170px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>공지사항 목록 수</th>
+                                <td>
+                                    <input name="list[notice]" class="num-only" type="number" value="<?=$data['list']['notice']??3?>" style="width:60px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>공지사항 노출</th>
+                                <td>
+                                    <input name="list[noticeView]" type="radio" value="f" id="noticeView-f" checked>
+                                    <label for="noticeView-f">첫페이지만</label>
+                                    <input name="list[noticeView]" type="radio" value="a" id="noticeView-a" <?=isset($data['list']['noticeView'])&&$data['list']['noticeView']=='a'?'checked':''?>>
+                                    <label for="noticeView-a">모든페이지</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>페이지당 목록 수</th>
+                                <td>
+                                    <input name="list[perPage]" class="num-only" type="number" value="<?=$data['list']['perPage']??10?>" style="width:60px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>NEW아이콘 효력</th>
+                                <td>
+                                    <input name="list[new]" class="num-only" type="number" value="<?=$data['list']['new']??24?>" style="width:60px"> 시간
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>HOT아이콘 효력</th>
+                                <td>
+                                    <input name="list[hot]" class="num-only" type="number" value="<?=$data['list']['hot']??100?>" style="width:60px"> 회 이상 조회된 게시글
+                                </td>
+                            </tr>
+                            <tr id="thumb-tr" class="<?=isset($data['type'])&&($data['type']=='gallery'||$data['type']=='event')?'':'hide'?>">
+                                <th>썸네일 크기</th>
+                                <td>
+                                    <input name="list[thumb][width]" class="num-only" type="number" value="<?=$data['list']['thumb']['width']??''?>" style="width:60px" >
+                                    X
+                                    <input name="list[thumb][height]" class="num-only" type="number" value="<?=$data['list']['thumb']['height']??''?>" style="width:60px" >
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>특수기능</h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table-col">
+                            <colgroup>
+                                <col width="170px">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th>말머리</th>
+                                <td>
+                                    <input type="text" name="horse" placeholder="입력후 엔터">
+                                    <ul id="horse-ul" class="horse-list">
+                                        <?php
+                                        if( isset($data['item']['horse']) && count($data['item']['horse']) ) :
+                                            foreach( $data['item']['horse'] as $key => $val ) :
+                                        ?>
+                                        <li id="horse-<?=$key?>" >
+                                            <input name="item[horse][]" type="hidden" value="<?=$val?>"><?=$val?>
+                                            <span class="fad fa-trash-alt" onclick="$('#horse-<?=$key?>').remove()"></span>
+                                          </li>
+                                        <?php
+                                            endforeach;
+                                        endif;
+                                        ?>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="board-nomal <?=isset($data['type'])&&$data['type']=='write'?'hide':''?>">
+                                <th>아이피 형식</th>
+                                <td>
+                                    <input name="item[ip]" type="radio" value="n" id="item-ip-n" checked>
+                                    <label for="item-ip-n">모두보여짐 (192.168.0.1)</label>
+                                    <input name="item[ip]" type="radio" value="y" id="item-ip-y" <?=isset($data['item']['ip'])&&$data['item']['ip']=='y'?'checked':''?>>
+                                    <label for="item-ip-y">중간가림 (192.♡.0.♡)</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>파일업로드</th>
+                                <td>
+                                    <input name="item[file]" type="radio" value="n" id="item-file-n" checked>
+                                    <label for="item-file-n">사용안함</label>
+                                    <input name="item[file]" type="radio" value="y" id="item-file-y" <?=isset($data['item']['file'])&&$data['item']['file']=='y'?'checked':''?>>
+                                    <label for="item-file-y">사용</label>
+                                </td>
+                            </tr>
+                            <tr class="board-write <?=isset($data['type'])&&$data['type']=='write'?'':'hide'?>">
+                                <th>작성자명</th>
+                                <td>
+                                    <input name="write[name]" type="radio" value="n" id="write-name-n" checked>
+                                    <label for="write-name-n">사용안함</label>
+                                    <input name="write[name]" type="radio" value="y" id="write-name-y" <?=isset($data['write']['name'])&&$data['write']['name']=='y'?'checked':''?>>
+                                    <label for="write-name-y">선택</label>
+                                    <input name="write[name]" type="radio" value="m" id="write-name-m" <?=isset($data['write']['name'])&&$data['write']['name']=='m'?'checked':''?>>
+                                    <label for="write-name-m">필수</label>
+                                </td>
+                            </tr>
+                            <tr class="board-write <?=isset($data['type'])&&$data['type']=='write'?'':'hide'?>">
+                                <th>이메일</th>
+                                <td>
+                                    <input name="write[email]" type="radio" value="n" id="write-email-n" checked>
+                                    <label for="write-email-n">사용안함</label>
+                                    <input name="write[email]" type="radio" value="y" id="write-email-y" <?=isset($data['write']['email'])&&$data['write']['email']=='y'?'checked':''?>>
+                                    <label for="write-email-y">선택</label>
+                                    <input name="write[email]" type="radio" value="m" id="write-email-m" <?=isset($data['write']['email'])&&$data['write']['email']=='m'?'checked':''?>>
+                                    <label for="write-email-m">필수</label>
+                                </td>
+                            </tr>
+                            <tr class="board-write <?=isset($data['type'])&&$data['type']=='write'?'':'hide'?>">
+                                <th>전화번호</th>
+                                <td>
+                                    <input name="write[tel]" type="radio" value="n" id="write-tel-n" checked>
+                                    <label for="write-tel-n">사용안함</label>
+                                    <input name="write[tel]" type="radio" value="y" id="write-tel-y" <?=isset($data['write']['tel'])&&$data['write']['tel']=='y'?'checked':''?>>
+                                    <label for="write-tel-y">선택</label>
+                                    <input name="write[tel]" type="radio" value="m" id="write-tel-m" <?=isset($data['write']['tel'])&&$data['write']['tel']=='m'?'checked':''?>>
+                                    <label for="write-tel-m">필수</label>
+                                </td>
+                            </tr>
+                            <tr class="board-write <?=isset($data['type'])&&$data['type']=='write'?'':'hide'?>">
+                                <th>휴대폰</th>
+                                <td>
+                                    <input name="write[phone]" type="radio" value="n" id="write-phone-n" checked>
+                                    <label for="write-phone-n">사용안함</label>
+                                    <input name="write[phone]" type="radio" value="y" id="write-phone-y" <?=isset($data['write']['phone'])&&$data['write']['phone']=='y'?'checked':''?>>
+                                    <label for="write-phone-y">선택</label>
+                                    <input name="write[phone]" type="radio" value="m" id="write-phone-m" <?=isset($data['write']['phone'])&&$data['write']['phone']=='m'?'checked':''?>>
+                                    <label for="write-phone-m">필수</label>
+                                </td>
+                            </tr>
+                            <tr class="board-write <?=isset($data['type'])&&$data['type']=='write'?'':'hide'?>">
+                                <th>등록시 메일수신</th>
+                                <td>
+                                    <input name="write[sendmail]" type="text" value="<?=$data['write']['sendmail']??''?>" <?=isset($data['write']['email'])&&$data['write']['email']=='m'?'':'disabled'?>>
+                                    쉼표(,)로 구분 ex)ex@naver.com,xo@gmail.com
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>글쓰기 기본양식</th>
+                                <td>
+                                    <?=set_editor('basic', $data['basic']??'', 'editor-basic')?>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-12 board-nomal <?=isset($data['type'])&&$data['type']=='write'?'hide':''?>">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>상단 하단 꾸미기</h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table-col">
+                            <colgroup>
+                                <col width="170px">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th>상단</th>
+                                <td>
+                                    <?=set_editor('outline[head]', $data['outline']['head']??'', 'editor-head')?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>하단</th>
+                                <td>
+                                    <?=set_editor('outline[foot]', $data['outline']['foot']??'', 'editor-foot')?>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+</div>
+<script>
+const memLevels = <?=json_encode($level)?>;
+</script>
+<script src="/js/admin-board-regist.js?<?=date('YmdHis')?>"></script>
